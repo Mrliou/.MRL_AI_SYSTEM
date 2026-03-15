@@ -49,6 +49,44 @@ Implements `SEED(X) = STORE(RECURSE(FLOW(MARK(STRUCTURE(X)))))`.
 | `amplify(P_k, N_k, eta_k)` | `P_{k+1} = N_k · P_k · η_k` |
 | `reverseProject(P0, N_seed, eta_seed)` | `δP₀ = P₀ / (N_seed · η_seed)` |
 
+## .fltnz Reversible Chain Parser — `fltnz_parser.py`
+
+Bidirectional txt ↔ fltnz ↔ map ↔ flpkg ↔ trace chain.
+Design principle: 怎麼過去，就怎麼回來.
+
+| Command | Purpose |
+|---------|---------|
+| `encode --src <file> --dst <out.fltnz>` | Tokenise text into a .fltnz envelope |
+| `decode --src <in.fltnz> --dst <out.txt>` | Reconstruct original text from .fltnz |
+| `verify --src <in.fltnz>` | Check checksum integrity |
+| `pack   --src <in.fltnz> --dst <out.flpkg>` | Seal .fltnz into a .flpkg bundle |
+| `unpack --src <in.flpkg> --dst <out.fltnz>` | Extract .fltnz from a .flpkg bundle |
+
+```bash
+python 09_workflow/fltnz_parser.py encode --src README.md --dst /tmp/readme.fltnz
+python 09_workflow/fltnz_parser.py verify --src /tmp/readme.fltnz
+python 09_workflow/fltnz_parser.py decode --src /tmp/readme.fltnz --dst /tmp/readme_out.txt
+```
+
+## MRL Librarian — `mrl_librarian.py`
+
+T/X/Y/Z four-dimensional file index worker. Entry point for FileIndexGovernance (core group 5).
+
+| Dimension | Meaning | Values |
+|-----------|---------|--------|
+| T | Temporal state | `principle` · `spec` · `prototype` · `runnable` · `entry` |
+| X | Layer | `L0`–`L7` · `MetaEnv` · `Platform` |
+| Y | Core group | `1`=MotherCore … `6`=PersonaHistory |
+| Z | Relation depth | `0`=standalone · `1`=linked · `2`=hub |
+
+```bash
+python 09_workflow/mrl_librarian.py index              # rebuild index
+python 09_workflow/mrl_librarian.py search --layer L3  # filter by layer
+python 09_workflow/mrl_librarian.py search --group 3   # filter by core group
+python 09_workflow/mrl_librarian.py search --state runnable
+python 09_workflow/mrl_librarian.py query  --path 03_memory/merkle/memory_chain.py
+```
+
 ## Fluin memory CLI
 
 | Script | Purpose |
