@@ -1,12 +1,42 @@
 # 05_persona
 
-Persona definitions for FlowAgent agents (L4 WORLD / L5 MIRROR layer).
+Persona definitions and world module for FlowAgent agents (L4 WORLD / L5 MIRROR layer).
 
-## Purpose
+## Files
 
-Each persona defines an agent's identity, capability scope, and behavioural constraints. Personas are referenced by `persona_id` in every trace record and compliance decision.
+| File | Purpose |
+|------|---------|
+| `world_module.py` | World Module entry point — nodes, state, trajectory, particle-globe coordinates |
 
-## Planned fields (per persona file)
+## world_module.py
+
+Official entry point for the WorldModule core group (Y=4).
+Manages memory-particle nodes, key-value world state, ordered trajectory history,
+and particle-globe coordinates for 3-D visualisation.
+
+```bash
+# Set a world node
+python 05_persona/world_module.py set --node FlowSeed --data '{"type":"persona","layer":"L1"}'
+
+# Read it back
+python 05_persona/world_module.py get --node FlowSeed
+
+# Set a world-state key
+python 05_persona/world_module.py state --key active_persona --value FlowSeed
+
+# Full snapshot
+python 05_persona/world_module.py snap
+
+# Attach particle-globe coordinates
+python 05_persona/world_module.py globe --node FlowSeed --lat 25.0 --lon 121.5
+
+# Rewind trajectory by 1 step
+python 05_persona/world_module.py rewind --step 1
+```
+
+Runtime data is written to `05_persona/_data/world/` (gitignored).
+
+## Persona definition format (planned)
 
 ```yaml
 id: <persona_id>
@@ -17,6 +47,5 @@ constraints: []         # extra rules beyond rootlaw
 world: AI | Platform | Real
 ```
 
-## Status
+See `00_rootlaw/rootlaw.yaml` for invariants that apply to all personas.
 
-Persona definitions are in progress. See `00_rootlaw/rootlaw.yaml` for invariants that apply to all personas.
