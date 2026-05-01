@@ -123,7 +123,11 @@ copilot/update-directory-structure     ← 已 merged (PR #1)
 ## 8. 下一步建議
 
 1. **合併 PR #12**：MRL_AGI v2.0 Phase 2（5 個補齊模組）已就緒，完成後即可達到 13/13 子系統全通。
-2. **打 v2.0.0 tag**：作為多智能體系統第一個完整里程碑。
-3. **建立 Release + CHANGELOG**：讓版本進度可被外部追蹤。
-4. **部署管道選型**：若需要實際伺服器部署，可加入 `deploy.yml` workflow（Docker build → push → restart）。
-5. **清理已合併分支**：目前有 15+ 已合併分支仍保留，可統一刪除以整理空間。
+   - 本 PR 全部勾選完畢（248 tests passing），可直接點擊 Merge。
+2. **打 v2.0.0 tag** ✅ 準備好了：
+   - `CHANGELOG.md` 已建立，完整記錄 v1.0.0 → v2.0.0 每個里程碑。
+   - 合併 PR #12 後執行 `git tag v2.0.0 && git push origin v2.0.0` 即可觸發自動 Release。
+3. **deploy.yml** ✅ 已建立（`.github/workflows/deploy.yml`）：
+   - Push to main → 自動跑 `pytest tests/` (MRL_RUNTIME_MODE=test)
+   - Push tag `v*.*.*` → 測試通過後自動打包 zip + 建立 GitHub Release
+4. **清理已合併分支**：目前有 15+ 已合併分支仍保留，可統一刪除以整理空間。
