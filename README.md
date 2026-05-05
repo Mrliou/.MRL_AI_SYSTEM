@@ -100,11 +100,21 @@ Distilled from the three major mainstream AI systems (OpenAI / Anthropic / Googl
 
 | Module | Purpose |
 |--------|---------|
-| `09_workflow/MRL_mother_assembly.py` | **Unified system entry point** — boots and wires all **12 subsystems** together. Now includes chat, multi-agent, scheduler, LLM gateway, context management, and configuration. |
+| `09_workflow/MRL_mother_assembly.py` | **Unified system entry point** — boots and wires all **15 subsystems** together. Includes chat, multi-agent, scheduler, LLM gateway, context management, configuration, guardrail, metrics, and host_guard. |
 | `09_workflow/plugins/` | Plugin directory — drop `*.py` files here following the plugin contract |
+
+### Safety & parsing modules (v1.1 — 本地安全層)
+
+> 完全本地可控，無任何外部 API 依賴。
+
+| Module | Feature | Implementation |
+|--------|---------|---------------|
+| `09_workflow/guardrail.py` | **安全護欄鏈** — pre/post content safety | `InputGuardrail` + `OutputGuardrail` + `GuardrailChain`; policies: strict / standard / permissive; deny-list, PII detection, length limits, repetition check |
+| `09_workflow/output_parser.py` | **結構化輸出解析** — extract structured data from LLM text | `JSONParser` · `ListParser` · `KeyValueParser` · `CodeBlockParser` · `TableParser` · `ParserChain` |
 
 ## Design principles
 
+- **Local-only / 完全本地** — all inference via Ollama/llama-cpp or stub; no cloud APIs required
 - **Deny-by-default** — all external actions blocked unless explicitly allowlisted
 - **Audit everything** — every action writes to both Merkle chain and JSONL before execution
 - **Human override** — REQUIRE_HUMAN decisions never execute without a recorded proof
@@ -141,7 +151,7 @@ python 09_workflow/fltnz_parser.py encode --src README.md --dst /tmp/readme.fltn
 # 4. Inspect world state
 python 05_persona/world_module.py snap
 
-# ── MotherAssembly v2 (boots all 12 subsystems at once) ──────────────────────
+# ── MotherAssembly v2 (boots all 15 subsystems at once) ──────────────────────
 
 # 5. Boot and check status
 python 09_workflow/MRL_mother_assembly.py boot
@@ -163,11 +173,19 @@ python 09_workflow/MRL_mother_assembly.py chat --message "Hello, who are you?"
 # Continue the same session:
 python 09_workflow/MRL_mother_assembly.py chat --message "What can you do?" --sid <session_id>
 
-# 10. Multi-agent task
+# 10. Multi-agent task (round-robin or sequential)
 python 09_workflow/MRL_mother_assembly.py multi-agent \
     --goal "Write a technical summary of the MRL AI System."
 
-# 10.5 Backup before update/upgrade
+# 11. Guardrail check (local safety — no external API)
+python 09_workflow/MRL_mother_assembly.py guard --text "Hello world" --direction input
+python 09_workflow/MRL_mother_assembly.py guard --text "bad content" --policy strict
+
+# 12. Structured output parsing (local, stdlib only)
+python 09_workflow/MRL_mother_assembly.py parse --text '{"answer": 42}' --type json
+python 09_workflow/MRL_mother_assembly.py parse --text "Name: Alice\nAge: 30" --type kv
+
+# 13. Backup before update/upgrade
 python 09_workflow/MRL_mother_assembly.py backup --label before-upgrade
 
 # Guarded update entrypoint (creates backup first)
@@ -221,6 +239,20 @@ python 09_workflow/config_manager.py show
 python 09_workflow/config_manager.py get  --key llm.default_model
 python 09_workflow/config_manager.py set  --key llm.default_model --value gpt-4o
 
+# ── Individual v1.1 safety/parsing modules ───────────────────────────────────
+
+# Guardrail checks (local, stdlib only)
+python 09_workflow/guardrail.py check-input  --text "Hello world"
+python 09_workflow/guardrail.py check-output --text "Here is the answer."
+python 09_workflow/guardrail.py demo
+
+# Output parsers (local, stdlib only)
+python 09_workflow/output_parser.py parse-json  --text '{"a":1}'
+python 09_workflow/output_parser.py parse-list  --text "- item1\n- item2"
+python 09_workflow/output_parser.py parse-kv    --text "Key: Value"
+python 09_workflow/output_parser.py parse-code  --text '```python\nprint(1)\n```'
+python 09_workflow/output_parser.py demo
+
 # ── Individual v1 industry modules ───────────────────────────────────────────
 
 # Vector store (RAG)
@@ -247,13 +279,26 @@ python 09_workflow/plugin_manager.py discover --dir 09_workflow/plugins
 
 ## LLM provider configuration
 
-Set environment variables to enable real LLM calls (optional — Mock adapter works without any keys):
+### Option A — Local-only (Ollama, zero cloud)
+
+```bash
+# Install Ollama: https://ollama.com  (no account, runs fully offline)
+ollama pull llama3        # download model once
+ollama serve              # keep running in background
+
+# MRL auto-detects Ollama — no config change needed:
+python 09_workflow/mother_assembly.py chat --message "Explain MRL in one sentence"
+```
+
+### Option B — Cloud providers (optional)
+
+Set environment variables to enable cloud LLM calls:
 
 ```bash
 export MRL_LLM_DEFAULT_MODEL=gpt-4o          # or claude-3-5-sonnet
 export MRL_LLM_OPENAI_API_KEY=sk-...
 export MRL_LLM_ANTHROPIC_API_KEY=sk-ant-...
-export MRL_LLM_LOCAL_BASE_URL=http://localhost:11434/v1   # Ollama
+export MRL_LLM_LOCAL_BASE_URL=http://localhost:11434/v1   # Ollama override
 ```
 
 Or persist to `data/config.json`:
