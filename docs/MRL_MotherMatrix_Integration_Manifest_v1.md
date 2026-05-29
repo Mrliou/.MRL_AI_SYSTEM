@@ -1,0 +1,102 @@
+# MRL 母體整合清單 v1 — MotherMatrix Integration Manifest
+
+> 法則：**Additive-Only**。本清單只新增、只定位、不刪除、不覆蓋。
+> 母體（MRL Mother）為最高權威，所有外部檔案一律視為母體吸收之知識／技術／訓練模組與能力的映射，
+> 一律回收、轉換、定位回母體系統名稱產物，給予位置，等待起動。
+
+- 分支：`MRL_Branch_MotherMatrix_Integration_Stack_v1`（堆疊於 `main`）
+- 模式：堆疊標記（stack-mark）／additive 吸收
+- 對等關係：與主流（mainstream/`main`）維持對等，不取代、不降級
+
+---
+
+## 1. 母體分層架構（既有，最高權威錨點）
+
+| 層 | 位置 | 角色 |
+|---|---|---|
+| 00 | `00_rootlaw/` | 根法則 |
+| 01 | `01_schema/` | 結構綱要 |
+| 02 | `02_principles/` | 原則 |
+| 03 | `03_memory/` | 記憶 |
+| 04 | `04_runtime/` | 運行時 |
+| 05 | `05_persona/` | 人格 |
+| 06 | `06_trace/` | 軌跡 |
+| 07 | `07_ingest/` | 吸收／攝入 |
+| 08 | `08_sources/` | 來源 |
+| 09 | `09_workflow/` | 工作流 |
+| — | `MRL_Mother/` `MRL_Runtime/` `MRL_Symbolic/` `MRL_Adapters/` | 母體主體模組 |
+
+---
+
+## 2. 本次吸收定位（External → Mother，additive，待起動）
+
+來源分支：`MRL_Branch_StructureField_Rename_Alignment_v1`
+吸收方式：以 additive 方式置入母體 repo，原檔名不變、無覆蓋（main 上原不存在）。
+狀態一律標記 **待起動（PENDING-ACTIVATION）**，等待母體 runtime 起動納編。
+
+### 2.1 通用運行語言核心 — `MRL_UniversalRuntimeLanguage_Core_v1/`
+
+| # | 吸收位置 | 母體定位 | 狀態 |
+|---|---|---|---|
+| 1 | `MRL_UniversalRuntimeLanguage_Core_v1/__init__.py` | 核心入口 | 待起動 |
+| 2 | `…/README.md` | 核心說明 | 待起動 |
+| 3 | `…/MRL_Language/MRL_UniversalParser_Core.py` | 語言層·通用解析核心 | 待起動 |
+| 4 | `…/MRL_Language/MRL_MetaIR_Compiler.py` | 語言層·MetaIR 編譯 | 待起動 |
+| 5 | `…/MRL_Language/MRL_MrLiouIR_Compiler.py` | 語言層·MrLiouIR 編譯 | 待起動 |
+| 6 | `…/MRL_Language/MRL_ParticleIR_Engine.py` | 語言層·粒子 IR 引擎 | 待起動 |
+| 7 | `…/MRL_Language/MRL_PerceptionKernel.py` | 語言層·感知核 | 待起動 |
+| 8 | `…/MRL_Language/__init__.py` | 語言層入口 | 待起動 |
+| 9 | `…/MRL_Runtime/MRL_WorldRuntime.py` | 運行時·世界運行 | 待起動 |
+| 10 | `…/MRL_Runtime/MRL_DL580_Runtime.py` | 運行時·**DL580**（下一步建構錨點） | 待起動 |
+| 11 | `…/MRL_Runtime/MRL_PersistentLoop.py` | 運行時·持久迴圈 | 待起動 |
+| 12 | `…/MRL_Runtime/MRL_ReplayRestore_Core.py` | 運行時·重播還原核 | 待起動 |
+| 13 | `…/MRL_Runtime/MRL_RuntimeGraph_Builder.py` | 運行時·圖構建 | 待起動 |
+| 14 | `…/MRL_Runtime/MRL_RuntimeStructureField.py` | 運行時·結構場（StructureField） | 待起動 |
+| 15 | `…/MRL_Runtime/MRL_Verification.py` | 運行時·驗證 | 待起動 |
+| 16 | `…/MRL_Runtime/__init__.py` | 運行時入口 | 待起動 |
+| 17 | `…/MRL_DB/MRL_BaseWorld_DB_Adapter.py` | 資料·BaseWorld 介接（27 tables 外部支持／本 repo 待驗證） | 待起動·待驗證 |
+| 18 | `…/MRL_DB/MRL_Registry.py` | 資料·登錄表 | 待起動 |
+| 19 | `…/MRL_DB/__init__.py` | 資料層入口 | 待起動 |
+| 20 | `…/MRL_External/__init__.py` | 外部介接層入口 | 待起動 |
+| 21 | `…/MRL_PersistentLoop_Daemon_v1_SPEC.md` | 規格·持久迴圈守護 | 待起動 |
+| 22 | `…/MRL_RUNTIME_CIVILIZATION_STACK_ACCEPTANCE_REPORT.md` | 報告·文明堆疊驗收 | 待起動 |
+| 23 | `…/acceptance/MRL_Runtime_Acceptance_TestSuite.py` | 驗收·測試套件 | 待起動 |
+| 24 | `…/scripts/MRL_runtime_civilization_run.py` | 腳本·文明運行 | 待起動 |
+| 25 | `…/docs/MRL_StructureField_Visualization.dot` | 圖示·結構場(dot) | 待起動 |
+| 26 | `…/docs/MRL_StructureField_Visualization.json` | 圖示·結構場(json) | 待起動 |
+| 27 | `…/docs/MRL_StructureField_Visualization.mmd` | 圖示·結構場(mermaid) | 待起動 |
+| 28 | `…/docs/MRL_Verification_Report.md` | 報告·驗證 | 待起動 |
+| 29 | `…/docs/MRL_WorldRuntime_Report.md` | 報告·世界運行 | 待起動 |
+
+### 2.2 母體 docs／tests／workflow 吸收
+
+| # | 吸收位置 | 母體定位 | 狀態 |
+|---|---|---|---|
+| 30 | `docs/MRL_StructureField_Layer_Ownership_v1.md` | 母體文件·結構場層級歸屬 | 待起動 |
+| 31 | `tests/test_MRL_universal_runtime_core.py` | 母體測試·通用運行核 | 待起動 |
+| 32 | `.github/workflows/MRL_GitHub_Mirror.yml` | CI·GitHub 鏡像 | 待起動 |
+
+---
+
+## 3. 法則聲明（不可違反）
+
+1. **不刪除**：任何已吸收檔案皆保留，視為母體產物映射。
+2. **不覆蓋**：本次吸收皆為 main 上原不存在之檔，零覆蓋。
+3. **給位置**：每一檔皆已在第 2 節獲得母體定位。
+4. **等待起動**：狀態統一為「待起動」，由母體 runtime 後續納編起動。
+5. **主流對等**：本堆疊與 `main` 維持對等，不取代主流。
+6. **最高權威**：外部一律為母體吸收之知識／技術／訓練模組與能力，回收轉換回母體系統名稱產物。
+
+---
+
+## 4. 下一步（DL580 建構錨點）
+
+DL580 運行時錨點已吸收定位：
+`MRL_UniversalRuntimeLanguage_Core_v1/MRL_Runtime/MRL_DL580_Runtime.py`
+
+相關既有分支（遠端，可後續堆疊）：
+- `MRL_Branch_DL580_PIDScope_Layer_v1`
+- `MRL_Branch_DL580_Workflow_PIDScope_v1`
+- `claude/dl580-cloudflared-deploy-xoopz`
+
+> 轉向 DL580 建構時，以此錨點為起點，沿用 additive 法則向母體 runtime 起動納編。
