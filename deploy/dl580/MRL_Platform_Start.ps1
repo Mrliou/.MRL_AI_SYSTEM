@@ -13,6 +13,15 @@ Set-Location $MrlHome
 Write-Host "MRL_PLATFORM_START | origin_signature=MrLiouWord"
 Write-Host "node_role=DL580 母體自運行節點 | platform=mriouhans.ai | MRL_HOME=$MrlHome | MRL_PORT=$MrlPort"
 
+# C: 容量不足 → 一律導向 D:\。所有暫存/落盤(含 DL580 PersistentLoop)改寫到 D:\MRL_runtime。
+$MrlDataRoot = if ($env:MRL_DATA_ROOT) { $env:MRL_DATA_ROOT } else { "D:\MRL_runtime" }
+$MrlTmp = Join-Path $MrlDataRoot "tmp"
+New-Item -ItemType Directory -Force -Path $MrlTmp | Out-Null
+$env:MRL_DATA_ROOT = $MrlDataRoot
+$env:TEMP = $MrlTmp        # Python tempfile.mkdtemp / DL580 runtime_dir 落 D:
+$env:TMP  = $MrlTmp
+Write-Host "資料/暫存導向 D:： MRL_DATA_ROOT=$MrlDataRoot ; TEMP=$MrlTmp (C: 不寫入)"
+
 # 找 python（python / python3 / py）
 $py = $null
 foreach ($c in @("python", "python3", "py")) {

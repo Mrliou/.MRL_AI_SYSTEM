@@ -10,8 +10,12 @@ origin_signature: MrLiouWord
 
 ## 前置（一次）
 
+> ⚠ **C: 容量不足 → 一律裝 D:\**（DL580 慣例）。以下全部落 D:。
+
 - 安裝 **Python 3.10+**（平台零依賴，無需 pip install）。
-- 取得本 repo 到 DL580（git clone 或下載），記 `MRL_HOME` 為 repo 根目錄。
+- 取得本 repo 到 **`D:\`**（例如 `D:\MRL_AI_SYSTEM`），即 `MRL_HOME`。
+- 暫存/落盤：`MRL_Platform_Start.ps1` 會自動把 `TEMP`/`TMP` 導到 **`D:\MRL_runtime\tmp`**（含 DL580 PersistentLoop 落盤），C: 不寫入。要改用 `setx MRL_DATA_ROOT "D:\其他路徑"`。
+- cloudflared：腳本預設 **`D:\cloudflared`**（已 D: 化，免動）。
 - 有 Cloudflare 帳號，且 `mriouhans.ai` 在該帳號的 DNS 區。
 
 ---
