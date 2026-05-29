@@ -117,3 +117,36 @@ DL580 運行時錨點已吸收定位：
 - 母體 → DL580 全管線：`MRL_RUNTIME_ACCEPTANCE_PASS` 6/6
 - 文明驗收套件：接受度 6/6 + 命名驗證 9/9，exit 0
 - 既有不變更：版本常數由測試以 import 比對，未破壞 `test_mother_assembly.py`
+
+---
+
+## 5. RuntimeOS 企業級執行平台吸收（v1.4.0，additive，318 檔）
+
+來源：使用者上傳套件 `MRL_RuntimeOS_EnterpriseRuntimePlatform_CoreExecutable_v1_4_0.zip`
+吸收位置：repo 根層同名目錄（main 上原不存在 → 零覆蓋零刪除，318 檔）。
+上傳之 5 個獨立檔（report / RuntimeGraph json / AIModelGateway js / service unit）皆與包內 byte-identical，隨包一併吸收，無重複放置。
+
+### 5.1 正式產品子服務定位（依報告命名規則）
+
+| 子服務 | 位置 |
+|---|---|
+| `MRL_RuntimeOS_AIModelGateway_Service_v1` | `MRL_Services/MRL_RuntimeOS_AIModelGateway_Service_v1.js` |
+| `MRL_RuntimeOS_SkillModule_Service_v1` | `MRL_Services/MRL_RuntimeOS_SkillModule_Service_v1.js` |
+| `MRL_RuntimeOS_ArtifactTransfer_Service_v1` | `MRL_Services/MRL_RuntimeOS_ArtifactTransfer_Service_v1.js` |
+| `MRL_RuntimeOS_3DModelBridge_Service_v1` | `MRL_BlenderBridge/MRL_RuntimeOS_3DModelBridge_Service_v1/` |
+| Core / LanguageAdapters / Runtime / API / Mesh / Node / Security / Enterprise / OpenAPI / Deploy / Docs | 同名子目錄，全部給位置 |
+
+### 5.2 沙盒實跑驗收結果（嚴守「不可誤標」）
+
+| 項目 | 真實狀態 |
+|---|---|
+| Node RuntimeOS 多語言管線驗收（`MRL_Acceptance_TestSuite.js`） | **PASS**（8 語言 `verification_pass: true`，exit 0，沙盒） |
+| DL580 smoke（`MRL_Smoke_Dl580.js`，server 起於 :8788） | **PASS**（health/execute/verify，沙盒 runtime 路徑，**非真實 AI 模型**） |
+| AIModelGateway | 真 connector（Ollama / OpenAI-compatible）；**模型可用性需實機 `OLLAMA_HOST` / OpenAI endpoint 後驗收** |
+| 3DModelBridge / Blender | source integrated；**Blender runtime（`bpy`）待實機** |
+| SkillModule | 可列出 / 執行 / 持久化技能執行紀錄 |
+
+### 5.3 不可誤標（沿用報告約束）
+
+> 不得寫成 DL580 已上線、Blender 已跑通、Ollama 真模型已存在。
+> 沙盒僅驗證 runtime 管線與 HTTP 路徑；真實模型／Blender 須實機配置後才可升格。
