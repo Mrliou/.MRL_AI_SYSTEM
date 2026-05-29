@@ -93,7 +93,7 @@ from typing import Any, Dict, List, Optional
 
 ORIGIN_SIGNATURE = "MrLiouWord"
 PRODUCT_NAME = "MRL_AI_SYSTEM"
-ASSEMBLY_VERSION = "2.0"
+ASSEMBLY_VERSION = "2.3"
 
 _REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -236,6 +236,8 @@ class MotherAssembly:
         self.metrics: Any = None
         # Host identity (v2.2)
         self.host_guard_role: str = "MATERIAL"  # "MOTHER" | "MATERIAL"
+        # DL580 self-running runtime node (v2.3) — 母體自運行節點
+        self.dl580: Any = None
         self._boot_log: List[Dict[str, Any]] = []
 
     # ── Boot ──────────────────────────────────────────────────────────────────
@@ -301,6 +303,9 @@ class MotherAssembly:
 
         # 15 ── HostGuard (v2.2)
         report["subsystems"]["host_guard"] = self._boot_host_guard()
+
+        # 16 ── DL580 Runtime (v2.3) — 母體自運行節點 (canonical runtime pipeline)
+        report["subsystems"]["dl580_runtime"] = self._boot_dl580()
 
         self._booted = True
         self._seal_event("boot", report)
@@ -480,6 +485,47 @@ class MotherAssembly:
         except Exception as exc:  # noqa: BLE001
             return f"error: {exc}"
 
+    def _boot_dl580(self) -> str:
+        # The DL580 runtime lives in the repo-root package
+        # MRL_UniversalRuntimeLanguage_Core_v1; ensure the root is importable.
+        root = str(_REPO_ROOT)
+        if root not in sys.path:
+            sys.path.insert(0, root)
+        MRL_DL580_Runtime = _try_import(
+            "MRL_UniversalRuntimeLanguage_Core_v1.MRL_Runtime.MRL_DL580_Runtime",
+            "MRL_DL580_Runtime",
+        )
+        if MRL_DL580_Runtime is None:
+            return "unavailable"
+        try:
+            self.dl580 = MRL_DL580_Runtime()
+            return "ok"
+        except Exception as exc:  # noqa: BLE001
+            return f"error: {exc}"
+
+    # ── DL580 runtime (v2.3) ────────────────────────────────────────────────────
+
+    def run_dl580(self, source: str, lang: str = "text", loop_id: str = "run") -> Dict[str, Any]:
+        """
+        Execute the DL580 canonical runtime pipeline through the mother node.
+
+        Input → Parse → MrLiouIR → Observe → ParticleIR → RuntimeStructureField
+              → Replay → Restore → WorldRuntime → PersistentLoop → Verification
+
+        No Prompt→LLM→Output path. The full RuntimeResult is sealed in the
+        canonical MerkleChain when available, then returned.
+        """
+        if self.dl580 is None:
+            raise RuntimeError("DL580 runtime unavailable; boot() it first")
+        result = self.dl580.run(source, lang=lang, loop_id=loop_id)
+        self._seal_event("dl580_run", {
+            "lang": lang,
+            "loop_id": loop_id,
+            "acceptance": result.get("verification", {}).get("acceptance"),
+            "token": result.get("verification", {}).get("token"),
+        })
+        return result
+
     # ── Built-in tools ────────────────────────────────────────────────────────
 
     def _register_builtin_tools(self) -> None:
@@ -524,6 +570,15 @@ class MotherAssembly:
             vec = [float(x) for x in query_csv.split(",")]
             hits = self.vector_store.query(vec, top_k=top_k)
             return [{"id": h[0], "score": h[1], "meta": h[2]} for h in hits]
+
+        @self.tool_registry.register(
+            description="Run the DL580 canonical runtime pipeline (no LLM path).",
+            parameters={"source": str, "lang": str, "loop_id": str},
+        )
+        def dl580_run(source: str, lang: str = "text", loop_id: str = "run") -> Dict[str, Any]:
+            if self.dl580 is None:
+                return {"error": "dl580_runtime unavailable"}
+            return self.run_dl580(source, lang=lang, loop_id=loop_id)
 
     # ── Built-in templates ────────────────────────────────────────────────────
 
@@ -837,6 +892,8 @@ class MotherAssembly:
                 "metrics":              self.metrics is not None,
                 # v2.2
                 "host_guard":           self.host_guard_role != "MATERIAL" or True,  # always present
+                # v2.3
+                "dl580_runtime":        self.dl580 is not None,
             },
             # v2.1 enriched fields
             "llm_backend":      llm_backend,

@@ -100,3 +100,20 @@ DL580 運行時錨點已吸收定位：
 - `claude/dl580-cloudflared-deploy-xoopz`
 
 > 轉向 DL580 建構時，以此錨點為起點，沿用 additive 法則向母體 runtime 起動納編。
+
+### 4.1 DL580 已起動納編母體 crown（v2.3，additive）
+
+`09_workflow/MRL_mother_assembly.py`（MotherAssembly，早期母體 crown）已 additive 接入 DL580：
+
+- `__init__`：新增 `self.dl580`（母體自運行節點）
+- `boot()`：新增第 16 子系統 `dl580_runtime`（`_boot_dl580()`，沿用 `_try_import` 優雅降級）
+- `run_dl580(source, lang, loop_id)`：母體驅動 DL580 canonical 管線，結果封入 MerkleChain，**無 Prompt→LLM→Output 路徑**
+- 內建工具 `dl580_run` 已註冊進 ToolRegistry
+- `status()`：新增 `dl580_runtime` 健康欄位
+- `ASSEMBLY_VERSION`：`2.0 → 2.3`
+
+**本機驗收（offline）：**
+- MotherAssembly boot → `dl580_runtime: ok`，`status.dl580_runtime: True`
+- 母體 → DL580 全管線：`MRL_RUNTIME_ACCEPTANCE_PASS` 6/6
+- 文明驗收套件：接受度 6/6 + 命名驗證 9/9，exit 0
+- 既有不變更：版本常數由測試以 import 比對，未破壞 `test_mother_assembly.py`
