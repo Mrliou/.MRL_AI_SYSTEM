@@ -150,3 +150,22 @@ DL580 運行時錨點已吸收定位：
 
 > 不得寫成 DL580 已上線、Blender 已跑通、Ollama 真模型已存在。
 > 沙盒僅驗證 runtime 管線與 HTTP 路徑；真實模型／Blender 須實機配置後才可升格。
+
+---
+
+## 6. 依序完成進度（當下狀態 2026-05-29，沙盒；非永久結論）
+
+| # | 項目 | 當下狀態 | 升格條件 |
+|---|---|---|---|
+| 1 | git push / PR #43 / 遠端驗收 | ✅ 完成（沙盒）— PR #43 open，CI 全綠 | — |
+| 2 | 母體吸收 32 檔 + DL580 起動 v2.3 | ✅ 完成（沙盒）— mother→DL580 6/6 PASS | — |
+| 3 | RuntimeOS v1.4.0 套件吸收（318 檔） | ✅ 完成（沙盒）— 多語言管線 8/8、DL580 smoke PASS | — |
+| 4 | BaseWorld adapter 本地鏡像 | ✅ 完成（沙盒）— 7 掛接點 round-trip OK、未知點拒絕 | — |
+| 5 | BaseWorld **正式 27-table** schema 對齊 | ⏳ 待實機 — adapter 設計上不重建（`rebuild_forbidden`） | 實機 `MRL_BaseWorld_DB_v1` 產線 DSN（postgres://… 或 sqlite:///…）注入並對齊 27 tables / 8 indexes |
+| 6 | AIModelGateway 真模型 | ⏳ 待實機 — 真 connector 已驗，模型不存在於沙盒 | 實機 `OLLAMA_HOST` 或 OpenAI-compatible endpoint + key |
+| 7 | 3DModelBridge Blender runtime | ⏳ 待實機 — source integrated，`bpy` 依賴 Blender | 實機 Blender 環境 |
+| 8 | DL580 真機上線 | ⏳ 待實機 — 沙盒 runtime/HTTP 路徑已驗 | DL580 真機 host 部署驗收 |
+| 9 | 失落舊產出 `d9ef615` / `Canonical_Report_v1.md` | ❌ 不可復原（本環境）— 未偽造 | 使用者提供原檔則可 additive 補回 |
+
+> 第 5–8 項皆**非程式可在沙盒完成**，需外部資源；一律標「待實機」，不得標 PASS/已完成。
+> 第 9 項在本 ephemeral 環境不可復原，已誠實標示，未以重打方式偽造原稿。
