@@ -161,7 +161,7 @@ DL580 運行時錨點已吸收定位：
 | 2 | 母體吸收 32 檔 + DL580 起動 v2.3 | ✅ 完成（沙盒）— mother→DL580 6/6 PASS | — |
 | 3 | RuntimeOS v1.4.0 套件吸收（318 檔） | ✅ 完成（沙盒）— 多語言管線 8/8、DL580 smoke PASS | — |
 | 4 | BaseWorld adapter 本地鏡像 | ✅ 完成（沙盒）— 7 掛接點 round-trip OK、未知點拒絕 | — |
-| 5 | BaseWorld **正式 27-table** schema 對齊 | ⏳ 待實機 — adapter 設計上不重建（`rebuild_forbidden`） | 實機 `MRL_BaseWorld_DB_v1` 產線 DSN（postgres://… 或 sqlite:///…）注入並對齊 27 tables / 8 indexes |
+| 5 | BaseWorld **正式 27-table** schema 對齊 | 🟡 部分（沙盒）— schema 已入 repo、沙盒 Postgres 實建 27 表 PASS；**但發現兩套分歧 schema，canonical 歸屬待裁決**；live DL580 待實機 | 擁有者裁決 canonical schema + 實機 `MRL_BaseWorld_DB_v1` DSN |
 | 6 | AIModelGateway 真模型 | ⏳ 待實機 — 真 connector 已驗，模型不存在於沙盒 | 實機 `OLLAMA_HOST` 或 OpenAI-compatible endpoint + key |
 | 7 | 3DModelBridge Blender runtime | ⏳ 待實機 — source integrated，`bpy` 依賴 Blender | 實機 Blender 環境 |
 | 8 | DL580 真機上線 | ⏳ 待實機 — 沙盒 runtime/HTTP 路徑已驗 | DL580 真機 host 部署驗收 |
