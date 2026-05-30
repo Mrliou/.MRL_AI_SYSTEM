@@ -93,7 +93,7 @@ def api_dl580_run(body):
     m = _mother()
     if m is None or getattr(m, "dl580", None) is None:
         return {"ok": False, "reason": _MA_ERR or "dl580 unavailable"}
-    src = (body or {}).get("source") or "mriouhans.ai 平台 DL580 觸發"
+    src = (body or {}).get("source") or f"{PLATFORM_DOMAIN} 平台 DL580 觸發"
     try:
         r = m.run_dl580(src, lang=(body or {}).get("lang", "text"), loop_id="platform")
         v = r.get("verification", {})
@@ -255,7 +255,7 @@ class Handler(BaseHTTPRequestHandler):
 def main():
     port = int(os.environ.get("MRL_PORT", "8790"))
     srv = ThreadingHTTPServer(("0.0.0.0", port), Handler)
-    print(f"MRL Platform (mriouhans.ai) running on :{port} — origin_signature={ORIGIN_SIGNATURE}")
+    print(f"MRL Platform ({PLATFORM_DOMAIN}) running on :{port} — origin_signature={ORIGIN_SIGNATURE}")
     srv.serve_forever()
 
 
