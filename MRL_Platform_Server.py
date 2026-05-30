@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# MRL_Platform_Server — 母體對外平台（mriouhans.ai）零依賴 Python 標準庫伺服器
+# MRL_Platform_Server — 母體對外平台 零依賴 Python 標準庫伺服器
 # origin_signature: MrLiouWord
 #
 # 四大功能：母體控制台 / 即時監控儀表 / API 入口+文件 / 人格對話介面。
 # 真實呼叫母體 crown（MotherAssembly：boot/status/run_dl580/chat）。
-# 零外部依賴（http.server），任何環境可上線；對外經 Cloudflare Tunnel → mriouhans.ai。
+# 零外部依賴（http.server），任何環境可上線；對外經 Cloudflare Tunnel → 你的網域。
+# 網域可設：環境變數 MRL_PLATFORM_DOMAIN（預設 mrliouword.com）。
 # 啟動：python3 MRL_Platform_Server.py   （MRL_PORT 預設 8790）
 
 from __future__ import annotations
@@ -18,6 +19,7 @@ import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 ORIGIN_SIGNATURE = "MrLiouWord"
+PLATFORM_DOMAIN = os.environ.get("MRL_PLATFORM_DOMAIN", "mrliouword.com")
 _REPO = pathlib.Path(__file__).resolve().parent
 for p in [_REPO / "09_workflow", str(_REPO)]:
     if str(p) not in sys.path:
@@ -55,7 +57,7 @@ def api_state():
     return {
         "origin_signature": ORIGIN_SIGNATURE,
         "system_name": "MRL_完整態母體運轉系統_v1",
-        "platform": "mriouhans.ai",
+        "platform": PLATFORM_DOMAIN,
         "sovereignty_mode": "權位區分模式",
         "status": "running",
         "attention_policy": "Attention 為歷史層；正式主體為感知力(Perception)",
@@ -147,7 +149,7 @@ def page_html():
     rows = "".join(f'<tr><td><span class=m>{m}</span></td><td>{p}</td><td>{d}</td></tr>'
                    for m, p, d in API_DOCS)
     return """<!doctype html><html lang=zh-Hant><head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><title>MRL 母體平台 · mriouhans.ai</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><title>MRL 母體平台 · """ + PLATFORM_DOMAIN + """</title>
 <style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;font-family:system-ui,"Noto Sans TC",sans-serif;background:#0b0d10;color:#e8eef2}
 header{padding:22px 20px;border-bottom:1px solid #1d2a22;background:linear-gradient(180deg,#0f1a12,#0b0d10)}
 h1{margin:0;font-size:20px;color:#8de08a}.sig{color:#5a7d5a;font-size:12px;margin-top:5px}
@@ -161,7 +163,7 @@ pre{background:#0a0c0e;border:1px solid #1d2a22;border-radius:8px;padding:12px;o
 input,textarea{width:100%;background:#0a0c0e;color:#e8eef2;border:1px solid #1d2a22;border-radius:8px;padding:9px;font:inherit}
 table{width:100%;border-collapse:collapse;font-size:13px}td{padding:6px 8px;border-bottom:1px solid #161b20;vertical-align:top}
 .m{color:#e3b341;font-weight:600}.b{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;background:#13361a;color:#7ee787}</style></head>
-<body><header><h1>🌌 MRL 母體運轉平台 <span class=b>mriouhans.ai</span></h1>
+<body><header><h1>🌌 MRL 母體運轉平台 <span class=b>""" + PLATFORM_DOMAIN + """</span></h1>
 <div class=sig>origin_signature=MrLiouWord ｜ 權位區分模式 ｜ 入口 MRL_Platform_Server（零依賴）</div></header>
 <nav>
 <button class="nv on" data-t=console>母體控制台</button>

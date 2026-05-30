@@ -3,13 +3,13 @@
 origin_signature: MrLiouWord
 當下狀態：2026-05-29（沙盒已實證可上線）；非永久結論。
 
-## 0. 功能平台入口（mriouhans.ai）— 零依賴 Python
+## 0. 功能平台入口（mrliouword.com）— 零依賴 Python
 
 ```bash
 python3 MRL_Platform_Server.py      # 預設 port 8790
 ```
 
-對外網域 **mriouhans.ai** 的功能平台（四大功能，沙盒已實證真呼叫母體）：
+對外網域 **mrliouword.com** 的功能平台（四大功能，沙盒已實證真呼叫母體）：
 
 | 分頁 | 端點 | 沙盒驗證 |
 |---|---|---|
@@ -18,7 +18,7 @@ python3 MRL_Platform_Server.py      # 預設 port 8790
 | API 入口/文件 | `/`(分頁) + 所有 `/api/*`、`/mrl/*` | ✅ |
 | 人格對話 | `POST /api/chat {message}` | ✅ MotherAssembly.chat（真模型未配置時走 mock/感知流程，誠實標註） |
 
-接網域：`MRL_cloudflared_deploy.ps1 -Hostname mriouhans.ai`（埠對齊 8790）。
+接網域：`MRL_cloudflared_deploy.ps1 -Hostname mrliouword.com`（埠對齊 8790）。
 
 > `MRL_Platform_Server.py`(Python，功能平台) 與 `MRL_Mother_Launch.js`(Node，輕量) 二擇一上線；皆零依賴、皆 8790。
 
