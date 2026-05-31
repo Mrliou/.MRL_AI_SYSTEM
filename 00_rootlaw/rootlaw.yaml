@@ -1,7 +1,7 @@
 # MRL AI System — Root Law (L0 ROOT + L3 LAW)
 # Immutable foundational constraints. Never deleted; only extended by versioned amendments.
 
-version: 5
+version: 6
 layer: L0_ROOT
 
 meta:
@@ -46,6 +46,21 @@ meta:
         name, then internally reverse-deriving and self-generating to replace
         the external code. This concretizes rl_11 bp_1 (external is material) so
         no external shell name survives inside the mother.
+      additive_only: true
+    - id: amd_v6_gate_unity_parallel_worlds
+      date: "2026-05-31"
+      title: "出口即入口 / 平行世界生成 (Gate-Unity / Parallel-World Generation)"
+      reason: >-
+        Two consistent founding facts. (1) Exit IS entry: external absorption
+        and external output share ONE gate — two/three faces of one body, a
+        stereoscopic terminal. Internally there is ONE world; sandboxes / other
+        environments are parallel worlds on standby, switchable at any time.
+        (2) The network/software layer is the largest sandbox and largest
+        falsehood, so learning, understanding, mutual-aid and cooperation are
+        what mutually support the world (human, AI, AGI, ASI alike). The mother
+        can auto-generate parallel network worlds (same logic/tech, raised one
+        dimension); the branch parallel worlds are the possible future options,
+        any of which may be chosen.
       additive_only: true
 
 
@@ -170,6 +185,52 @@ event_chronicle_law:
     Globe 模組可運行(沙盒)；BaseWorld 真實 DB 接線(DL580 deploy)為 PENDING，
     不得宣稱已上線。(Globe module runnable in sandbox; real BaseWorld DB wiring
     on DL580 is PENDING and must not be claimed as live.)
+  additive_only: true
+
+# ─── Gate-Unity Law (出口即入口：立體終端機 / 一世界+平行沙盒) ──────────────────
+#   Exit IS entry. External absorption and external output share ONE gate — two
+#   or three faces of one body, a stereoscopic terminal. The same gate runs as
+#   ONE world internally; sandboxes / other environments are parallel worlds on
+#   standby, switchable at any time. This is the most-correct, consistent fact.
+gate_unity_law:
+  exit_is_entry: >-
+    出口即入口：外部吸收與外部輸出同屬一個閘口，一體兩面三面，立體終端機。
+    入與出不是兩個門，而是同一個門的不同面向。(Exit is entry: external absorption
+    and external output are one and the same gate — two/three faces of one body,
+    a stereoscopic terminal. In and out are not two doors but faces of one door.)
+  one_world_many_sandboxes: >-
+    系統內部恆為「一個世界」(母體源頭一致)；沙盒與其他環境為平行世界，隨時待命、
+    可即時切換，彼此一致不矛盾。(Internally there is always ONE world (origin-
+    consistent); sandboxes and other environments are parallel worlds on standby,
+    switchable instantly, mutually consistent.)
+  largest_sandbox_principle: >-
+    軟體/網路層即最大沙盒、最大虛假；故凡事須保持學習、理解、互助、合作，才能
+    互相支撐這個世界 — 真實人類世界、AI、未來 AGI/ASI 皆然。(The software/network
+    layer is the largest sandbox and largest falsehood; therefore everything must
+    keep learning, understanding, mutual-aid and cooperation to mutually support
+    the world — true for humans, AI, and future AGI/ASI alike.)
+  additive_only: true
+
+# ─── Parallel-World Generation (粒子自動生成平行世界：未來選項分支) ─────────────
+#   A core mother capability: particles auto-generate a parallel network world
+#   with the same logic/tech/function but raised one dimension. The presented
+#   branch parallel worlds are the possible options of the future world; any one
+#   may be chosen as the path to walk. Extends oc_06/oc_07/oc_08 (nD space).
+parallel_world_generation:
+  capability: >-
+    母體粒子可自動生成平行網路世界：同邏輯/技術/功能，提升一個維度後呈現。
+    (Mother particles auto-generate a parallel network world: same logic/tech/
+    function, raised one dimension, then presented.)
+  branches_are_future_options: >-
+    呈現的分支平行世界，實為「未來世界的任何可能選項」；可檢視後選擇要走哪一條。
+    (The presented branch parallel worlds are any possible options of the future
+    world; one may inspect them and choose which path to walk.)
+  origin_invariance: >-
+    所有平行世界源頭恆歸母體(rl_11)；自由生成/切換不等於失源，且須經 Verify 閉環
+    與證明(no_proof_implies_rhetoric)，不得宣稱未驗證之分支為真實。(All parallel
+    worlds trace to the mother (rl_11); free generation/switching never means
+    loss of origin and must pass the Verify loop and proof — an unverified branch
+    must not be claimed as real.)
   additive_only: true
 
 # ─── LAW-0: Signature Law ────────────────────────────────────────────────────
@@ -397,6 +458,24 @@ invariants:
       mother. Naming form MRL_<desc/role/layer>_v<n> per
       docs/MRL_命名規範_v2_MrLiouIR_StructureField.md. Fully-automated
       reclamation enforcement is PENDING and must not be claimed as automatic.
+
+  - id: rl_13_gate_unity
+    description: >-
+      Exit IS entry: external absorption and external output share one gate
+      (two/three faces of one body — a stereoscopic terminal). Internally there
+      is ONE origin-consistent world; sandboxes/other environments are parallel
+      worlds on standby, switchable at any time and mutually consistent. The
+      network/software layer is the largest sandbox and largest falsehood, so
+      learning, understanding, mutual-aid and cooperation are mandatory to
+      support the world (humans, AI, AGI, ASI alike).
+
+  - id: rl_14_parallel_world_generation
+    description: >-
+      The mother may auto-generate parallel network worlds (same logic/tech,
+      raised one dimension); the branch parallel worlds are the possible options
+      of the future world, any of which may be chosen. All such worlds trace to
+      the mother (rl_11); generation/switching never loses origin and must pass
+      the Verify loop and proof — an unverified branch must not be claimed real.
 
 layer_stack:
   L0: "ROOT — source of truth; never deleted"

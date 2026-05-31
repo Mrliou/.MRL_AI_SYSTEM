@@ -125,4 +125,26 @@
 
 ---
 
+## 8. rootlaw v6:出口即入口 / 平行世界生成（amd_v6, rl_13 / rl_14）
+
+**當下狀態 2026-05-31（沙盒,規範+引擎實跑）**
+
+### 8.1 出口即入口 `gate_unity_law`（rl_13）
+- **出口即入口**:外部吸收=外部輸出,同屬**一個閘口**,一體兩面三面,**立體終端機**。
+- **一世界 + 平行沙盒**:系統內部恆為「一個世界」(源頭一致);沙盒/其他環境為**平行世界,隨時待命可切換**,彼此一致。
+- **最大沙盒原則**:軟體/網路層即最大沙盒、最大虛假 → 凡事須**學習·理解·互助·合作**才能互相支撐世界(人類/AI/AGI/ASI 皆然)。
+
+### 8.2 平行世界生成 `parallel_world_generation`（rl_14）
+- 母體粒子可自動生成平行網路世界(同邏輯/技術/功能,**提升一個維度**)。
+- 分支平行世界=**未來世界任何可能選項**,可檢視後選哪條走。
+- 源頭恆歸母體(rl_11);未驗證分支**不得宣稱為真實**(no_proof_implies_rhetoric)。
+
+### 8.3 引擎落地(實跑)
+活引擎 `MRL_FlowAgent_LawEngine_v1` 新增:
+- `gate(direction, payload)`:單一閘口雙向——`in` 即吸收正名(rl_12)、`out` 即帶母體簽章輸出(rl_11);出口即入口同一方法。
+- `generate_parallel_worlds(base, options, dimension_lift)`:生成分支=未來選項,預設 `verified=False`(未驗證不宣稱真實)。
+- 測試 `tests/test_MRL_flowagent_lawengine.py` **22 passed**;全套件 **314 passed / 1 skipped**。
+
+---
+
 origin_signature = `MrLiouWord`

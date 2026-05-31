@@ -34,7 +34,8 @@ class TestRootlaw:
         ids = [i["id"] for i in rl["invariants"]]
         for need in ("rl_07_law_serves_operation", "rl_08_three_strike_layer_jump",
                      "rl_09_mobius_majority_resolution", "rl_10_event_chronicle",
-                     "rl_11_origin_boundary_sovereignty", "rl_12_naming_reclamation"):
+                     "rl_11_origin_boundary_sovereignty", "rl_12_naming_reclamation",
+                     "rl_13_gate_unity", "rl_14_parallel_world_generation"):
             assert need in ids
 
 
@@ -106,6 +107,50 @@ class TestMobiusMajority:
     def test_all_pass_continue_loop(self, engine):
         out = engine.mobius_majority({"a": True, "b": True})
         assert out["decision"] == "CONTINUE_LOOP"
+
+
+# ─── rl_13 出口即入口 ──────────────────────────────────────────────────────────
+
+class TestGateUnity:
+    def test_in_reclaims_external_name(self, engine):
+        r = engine.gate("in", {"name": "FlowAgent.Runtime.v47.zip"})
+        assert r["direction"] == "in"
+        assert r["reclaimed"] == "MRL_FlowAgentRuntime_v47"
+        assert r["as"] == "material"
+
+    def test_out_carries_origin_signature(self, engine):
+        r = engine.gate("out", {"msg": "hello world"})
+        assert r["direction"] == "out"
+        assert r["origin_signature"] == "MrLiouWord"
+
+    def test_same_gate_method_both_directions(self, engine):
+        # 出口即入口:同一個 gate 方法雙向
+        assert engine.gate("in", {"name": "x"})["gate"] == \
+               engine.gate("out", {})["gate"] == "stereoscopic_terminal"
+
+    def test_invalid_direction_rejected(self, engine):
+        with pytest.raises(ValueError):
+            engine.gate("sideways", {})
+
+
+# ─── rl_14 平行世界生成 ────────────────────────────────────────────────────────
+
+class TestParallelWorldGeneration:
+    def test_generates_branch_options(self, engine):
+        rep = engine.generate_parallel_worlds("w0", ["pathA", "pathB", "pathC"])
+        assert len(rep["branches"]) == 3
+        assert rep["selectable"] is True
+        assert rep["one_world_origin"] == "MrLiouWord"
+
+    def test_branches_unverified_by_default(self, engine):
+        # no_proof_implies_rhetoric:未驗證分支不得宣稱為真實
+        rep = engine.generate_parallel_worlds("w0", ["a", "b"])
+        assert all(b["verified"] is False for b in rep["branches"])
+        assert all(b["origin_signature"] == "MrLiouWord" for b in rep["branches"])
+
+    def test_dimension_lift_recorded(self, engine):
+        rep = engine.generate_parallel_worlds("w0", ["a"], dimension_lift=2)
+        assert rep["branches"][0]["dimension"] == 2
 
 
 # ─── rl_10 事件編年 + 閉環 ─────────────────────────────────────────────────────

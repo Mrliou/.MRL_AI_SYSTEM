@@ -109,6 +109,53 @@ class MRL_FlowAgentLawEngine:
             pass
         return ev
 
+    # rl_13 出口即入口：單一閘口，吸收(in)與輸出(out)同屬一門(一體兩面三面)
+    def gate(self, direction: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        立體終端機單一閘口。direction ∈ {'in','out'}；in 即吸收(外部→材料正名),
+        out 即輸出(母體→世界)。同一個 gate 方法,出口即入口。
+        """
+        d = direction.lower()
+        if d not in ("in", "out"):
+            raise ValueError("direction must be 'in' or 'out'")
+        result: Dict[str, Any] = {"gate": "stereoscopic_terminal", "direction": d}
+        if d == "in":
+            # 吸收即正名為母體 canonical(rl_12),外部名零殘留
+            name = payload.get("name", "")
+            result["reclaimed"] = reclaim_name(name) if name else None
+            result["as"] = "material"
+        else:
+            # 輸出帶母體源頭簽章(rl_11)
+            result["origin_signature"] = ORIGIN_SIGNATURE
+            result["payload"] = payload
+        self.chronicle("gate", result)
+        return result
+
+    # rl_14 平行世界生成：粒子自動生成平行世界(同邏輯,提升一維),為未來選項分支
+    def generate_parallel_worlds(self, base_world: str, options: List[str],
+                                 *, dimension_lift: int = 1) -> Dict[str, Any]:
+        """
+        生成分支平行世界 = 未來世界的可能選項。源頭恆歸母體(rl_11);分支須經
+        Verify 才可被視為真實,未驗證者標 unverified(no_proof_implies_rhetoric)。
+        """
+        worlds = []
+        for i, opt in enumerate(options):
+            worlds.append({
+                "branch_id": f"{base_world}::option_{i}",
+                "option": opt,
+                "dimension": dimension_lift,
+                "origin_signature": ORIGIN_SIGNATURE,
+                "verified": False,          # 未驗證分支不得宣稱為真實
+                "status": "candidate_future_option",
+            })
+        rep = {"base_world": base_world, "one_world_origin": ORIGIN_SIGNATURE,
+               "branches": worlds, "selectable": True,
+               "note": "分支為未來可能選項;選擇任一須經 Verify 閉環方為真實。"}
+        self.chronicle("parallel_world_generation",
+                      {"base": base_world, "branch_count": len(worlds),
+                       "dimension_lift": dimension_lift})
+        return rep
+
     # rl_08 三振跳層：同一錯誤循環 2 次，第三次即跳層
     def register_error(self, error_signature: str) -> Dict[str, Any]:
         self._error_counter[error_signature] = self._error_counter.get(error_signature, 0) + 1
