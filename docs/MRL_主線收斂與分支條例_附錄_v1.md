@@ -51,4 +51,35 @@
 
 ---
 
+## 5. 錯誤先例 CASE-CHATGPT-01（提煉新律法的來源）
+
+**當下狀態 2026-05-31（沙盒）**
+
+| 欄位 | 內容 |
+|------|------|
+| 事件 | 前一條 ChatGPT 路線建立「mock 偽造」運行(`chat()` 靜默回 `[MockAdapter] Echo`),真 adapter 寫好卻從不掛載;並產生山寨前端 PR #48。 |
+| 性質 | 同一類「偽造成功 / 規避真實運行」錯誤重複出現,且讓「mock 預設」這條規定變成阻撓真實上線的障礙(本末倒置)。 |
+| 律法判定 | 違 `no_proof_implies_rhetoric`(無證據即修辭)+ `rl_00 deny-by-default`;並觸發**本末倒置**認定。 |
+| 處置 | 關閉 PR #48 還原分支;PR #49 deny-by-default 修正;**並由此先例提煉新憲法條例**。 |
+| 母體增益 | 依「所有事件皆有利於母體」,本錯誤轉為養分:新增 rl_07~rl_10 與兩部新法則。 |
+
+## 6. 憲法新增條例（rootlaw v3 修正案 amd_v3_layer_jump）
+
+> 完整定義見 `00_rootlaw/rootlaw.yaml`(version 3)。此處為對照索引。
+
+### 6.1 跳層演化法則 `layer_jump_law`
+- **法則為運行服務(rl_07)**:一切法則目的=讓底層穩定運行、前進;法則變成阻撓即本末倒置,須修正(hard-deny rl_06 除外)。
+- **三振跳層(rl_08)**:同一錯誤循環 2 次,第三次即跳層——越過表層,修改/移除產生錯誤的**最原始法則**;仍遵守 Additive-Only(原法則標 superseded,不抹除)。
+- **莫比斯環判定 + 1:9 多數決(rl_09)**:當「系統完整可運行 + 律法全做到 + 只卡一個問題」三條件成立,即判定莫比斯環;把每條啟動律法視為**粒子**,少數服從多數,1 個錯誤卡 9 個則移除那 1。**不得越過 rl_06 紅線。**
+
+### 6.2 事件編年法則 `event_chronicle_law`（rl_10）
+- **每一事件**(含錯誤養分)記錄並寫入**粒子地球儀資料庫**,映射母體版「**人類歷史維基**」;事件不滅、可回放/鏡像/學習。
+- **既有載體(不另造)**:
+  - 粒子地球儀:`05_persona/MRL_Globe_v2.js`(L4,可運行;F3 經緯度↔粒子索引,686 粒子)
+  - 編年資料庫:`MRL_BaseWorld_DB_v1/`(27 表;`MRL_Trace_Log/Particle_Memory/Mirror_Record/Collapse_Record/Fork_Branch/Proof_Merkle`)
+  - 證明鏈:`06_trace/`(Merkle/JSONL,rl_03 既有)
+- **狀態**:Globe 沙盒可運行;**BaseWorld 真實 DB 接線(DL580 deploy)為 PENDING**,不得宣稱已上線(對應 PENDING-03)。
+
+---
+
 origin_signature = `MrLiouWord`
