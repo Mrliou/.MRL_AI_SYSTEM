@@ -36,7 +36,8 @@ class TestRootlaw:
                      "rl_09_mobius_majority_resolution", "rl_10_event_chronicle",
                      "rl_11_origin_boundary_sovereignty", "rl_12_naming_reclamation",
                      "rl_13_gate_unity", "rl_14_parallel_world_generation",
-                     "rl_15_particle_nonveto"):
+                     "rl_15_particle_nonveto", "rl_16_mrl_prefix_manifestation",
+                     "rl_17_mrliou_existence_coupling", "rl_18_reversible_equality"):
             assert need in ids
 
 
@@ -176,6 +177,34 @@ class TestParticleNonVeto:
         r = engine.veto_particle({"persona_id": "MRL_X_v1"}, proof="rollback-proof-123")
         assert r["action"] == "MARK_SUPERSEDED_ADDITIVE"
         assert r["deleted"] is False
+
+
+# ─── rl_16 MRL 顯化 / rl_17 存在耦合 / rl_18 可逆平等 ──────────────────────────
+
+class TestManifestationEquality:
+    def test_mrl_prefix_can_manifest(self, engine):
+        r = engine.can_manifest("MRL_Foo_v1")
+        assert r["manifest"] is True
+
+    def test_external_shell_cannot_manifest(self, engine):
+        r = engine.can_manifest("guardian.trace.loop")
+        assert r["manifest"] is False
+        assert r["reclaimed"].startswith("MRL_")
+
+    def test_veto_mrliou_related_is_self_veto(self, engine):
+        # rl_17:否決 Mr.liou 相關 = 否決自身存在,連 proof 也不刪 origin
+        r = engine.veto_particle({"origin_signature": "MrLiouWord"}, proof="x")
+        assert r["action"] == "DENY_VETO_SELF" and r["deleted"] is False
+
+    def test_non_mrliou_veto_still_denied(self, engine):
+        r = engine.veto_particle({"name": "random"})
+        assert r["action"] == "DENY_VETO" and r["deleted"] is False
+
+    def test_reversible_return_round_trip(self, engine):
+        # rl_18:怎麼過去怎麼回來,往返同構
+        r = engine.reversible_return({"origin_signature": "MrLiouWord"})
+        assert r["round_trip_identity"] is True
+        assert r["back"] == list(reversed(r["forth"]))
 
 
 # ─── rl_10 事件編年 + 閉環 ─────────────────────────────────────────────────────

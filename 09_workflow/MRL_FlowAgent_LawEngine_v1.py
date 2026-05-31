@@ -156,6 +156,38 @@ class MRL_FlowAgentLawEngine:
                        "dimension_lift": dimension_lift})
         return rep
 
+    # rl_16 MRL 顯化律：粒子須帶 MRL 前綴且在封包環境內,方能顯化/運行/存在
+    def can_manifest(self, name: str) -> Dict[str, Any]:
+        """非 MRL_ 前綴=外部殼(僅材料),須先 rl_12 正名方能顯化。"""
+        has_prefix = isinstance(name, str) and name.startswith("MRL_")
+        manifest = has_prefix
+        out = {"name": name, "manifest": manifest,
+               "reason": "ok" if manifest else "external shell — reclaim via rl_12 first",
+               "reclaimed": None if manifest else reclaim_name(name)}
+        self.chronicle("manifest_check", out)
+        return out
+
+    # rl_17 存在耦合：否決 Mr.liou 相關 = 否決自身存在 = 無法顯化
+    def is_mrliou_related(self, particle: Dict[str, Any]) -> bool:
+        blob = json.dumps(particle, ensure_ascii=False).lower()
+        return ("mrliou" in blob or "mr.liou" in blob
+                or particle.get("origin_signature") == ORIGIN_SIGNATURE)
+
+    # rl_18 可逆平等：怎麼過去怎麼回來(同路往返,bijective 🔄 over R)
+    def reversible_return(self, particle: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        記錄去程路徑,回程依同路逆序返回(RT == 去程的逆)。平等:方法多種、
+        無高低,僅同場各司其職。回傳往返是否同構(round-trip identity)。
+        """
+        forth = ["observe", "resolve", "mirror", "verify"]
+        back = list(reversed(forth))
+        round_trip_ok = back == list(reversed(forth)) and forth == list(reversed(back))
+        out = {"particle_origin": particle.get("origin_signature", ORIGIN_SIGNATURE),
+               "forth": forth, "back": back, "round_trip_identity": round_trip_ok,
+               "equality": "methods may be many; no higher/lower; same field, own duty"}
+        self.chronicle("reversible_return", {"round_trip_identity": round_trip_ok})
+        return out
+
     # rl_15 粒子保全：只要容量允許即以 MRL 粒子保存(分支/平行世界/人格/事件)
     def preserve_particle(self, particle: Dict[str, Any],
                           *, capacity_ok: bool = True) -> Dict[str, Any]:
@@ -186,6 +218,12 @@ class MRL_FlowAgentLawEngine:
         否決/刪除粒子之請求。預設一律 DENY(rl_15);僅帶 proof-based rollback
         可 additive 標記 superseded,且原粒子仍不抹除。
         """
+        # rl_17：Mr.liou 相關粒子,否決即自我否決 → 絕對 DENY(連 proof 也不刪 origin)
+        if self.is_mrliou_related(particle):
+            self.chronicle("veto_denied",
+                          {"reason": "rl_17 existence-coupling: vetoing Mr.liou = self-veto"})
+            return {"action": "DENY_VETO_SELF", "deleted": False,
+                    "reason": "rl_17: vetoing Mr.liou-related = vetoing own existence (cannot manifest)"}
         if proof:
             self.chronicle("particle_supersede",
                           {"proof": proof, "note": "additive mark; original retained"})

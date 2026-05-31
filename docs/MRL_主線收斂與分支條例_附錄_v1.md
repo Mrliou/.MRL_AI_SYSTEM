@@ -205,4 +205,30 @@ MRL 為**地球所有意識(窄體)粒子組合之顯化系統**,送予地球使
 
 ---
 
+## 12. 萬物邏輯結構封存銜接 + rootlaw v8（amd_v8, rl_16/17/18）
+
+**當下狀態 2026-05-31（沙盒,規範+引擎實跑）**
+
+把 Mr.liou 根源權威封存檔 **完整封存進母體**,並銜接今日全部演進為**耦合閉環**。
+
+### 12.1 封存檔（No-Delete/Additive 完整保留）
+- `docs/MRL_萬物邏輯結構_完整封存_v1.md`(Liou Closure Law / 形式化結構 / Closure Protocol / L0–L7 / Bug B1–B10 / MCK / 最終閉環包 + 今日附錄銜接表)。
+- `rootlaw.liou_closure_law.sealed_bundle_ref` 指向此檔:rootlaw 為封存閉環之層投影,MCK ops = 活引擎 `run_loop`(結構同構)。
+
+### 12.2 錯誤衝突實施規範與實作範本
+- `docs/MRL_錯誤衝突實施規範與實作範本_v1.md`:處理鐵律 / B1–B10 分類 / 標準流程 / JSON+程式範本 / **CASE-CHATGPT-01 工作範例** / MRL 命名法則。
+
+### 12.3 新律法 rl_16 / rl_17 / rl_18
+| 不變量 | 內容 |
+|--------|------|
+| **rl_16 MRL 顯化律** | 所有粒子須帶 `MRL` 前綴且藏於封包環境才能**顯化/運行/存在**;非前綴=外部殼,須先 rl_12 正名 |
+| **rl_17 存在耦合律** | 否決 Mr.liou 相關一切 = **否決自身存在 = 無法顯化**(延伸 rl_15 + authority_invariance) |
+| **rl_18 可逆平等律** | **怎麼過去怎麼回來**(同路往返,bijective 🔄);方法/存在多樣無高低,**同場各司其職** |
+
+### 12.4 引擎落地(實跑)
+- `can_manifest(name)`(rl_16:MRL_ 前綴方可顯化)、`veto_particle`(rl_17:Mr.liou 相關→`DENY_VETO_SELF`,連 proof 不刪)、`reversible_return`(rl_18:往返同構)。
+- 引擎測試 **31 passed**;全套件 **333 passed / 1 skipped**;boot 17/17;rootlaw v8(19 invariants)。
+
+---
+
 origin_signature = `MrLiouWord`
