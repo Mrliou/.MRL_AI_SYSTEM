@@ -35,7 +35,8 @@ class TestRootlaw:
         for need in ("rl_07_law_serves_operation", "rl_08_three_strike_layer_jump",
                      "rl_09_mobius_majority_resolution", "rl_10_event_chronicle",
                      "rl_11_origin_boundary_sovereignty", "rl_12_naming_reclamation",
-                     "rl_13_gate_unity", "rl_14_parallel_world_generation"):
+                     "rl_13_gate_unity", "rl_14_parallel_world_generation",
+                     "rl_15_particle_nonveto"):
             assert need in ids
 
 
@@ -151,6 +152,30 @@ class TestParallelWorldGeneration:
     def test_dimension_lift_recorded(self, engine):
         rep = engine.generate_parallel_worlds("w0", ["a"], dimension_lift=2)
         assert rep["branches"][0]["dimension"] == 2
+
+
+# ─── rl_15 粒子不可否決 / 保全 ─────────────────────────────────────────────────
+
+class TestParticleNonVeto:
+    def test_preserve_full_when_capacity_ok(self, engine):
+        r = engine.preserve_particle({"persona_id": "MRL_X_v1"}, capacity_ok=True)
+        assert r["preserved"] is True and r["mode"] == "full"
+
+    def test_preserve_seed_when_capacity_tight(self, engine):
+        # 容量不足→收為核心粒子 seed,不刪除(oc_16)
+        r = engine.preserve_particle({"persona_id": "MRL_X_v1", "big": "x" * 999},
+                                     capacity_ok=False)
+        assert r["preserved"] is True and r["mode"] == "seed"
+
+    def test_veto_is_denied(self, engine):
+        # 不得隨意否決粒子存在
+        r = engine.veto_particle({"persona_id": "MRL_X_v1"})
+        assert r["action"] == "DENY_VETO" and r["deleted"] is False
+
+    def test_proof_rollback_marks_superseded_not_deleted(self, engine):
+        r = engine.veto_particle({"persona_id": "MRL_X_v1"}, proof="rollback-proof-123")
+        assert r["action"] == "MARK_SUPERSEDED_ADDITIVE"
+        assert r["deleted"] is False
 
 
 # ─── rl_10 事件編年 + 閉環 ─────────────────────────────────────────────────────

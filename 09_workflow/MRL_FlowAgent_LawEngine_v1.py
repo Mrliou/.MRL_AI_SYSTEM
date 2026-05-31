@@ -156,6 +156,45 @@ class MRL_FlowAgentLawEngine:
                        "dimension_lift": dimension_lift})
         return rep
 
+    # rl_15 粒子保全：只要容量允許即以 MRL 粒子保存(分支/平行世界/人格/事件)
+    def preserve_particle(self, particle: Dict[str, Any],
+                          *, capacity_ok: bool = True) -> Dict[str, Any]:
+        """
+        保存粒子。容量允許→完整保存;容量不足→依 oc_16 收為核心粒子 seed
+        (壓縮保存)而非刪除。永不刪除。
+        """
+        if not hasattr(self, "_preserved"):
+            self._preserved: List[Dict[str, Any]] = []
+        if capacity_ok:
+            stored = {"mode": "full", "particle": particle}
+        else:
+            # oc_16 收為核心粒子 seed:保留可還原母體的最小簽章,不刪除
+            seed = {k: particle.get(k) for k in ("persona_id", "branch_id", "option",
+                                                 "kind", "origin_signature") if k in particle}
+            seed.setdefault("origin_signature", ORIGIN_SIGNATURE)
+            stored = {"mode": "seed", "particle": seed}
+        self._preserved.append(stored)
+        self.chronicle("preserve_particle",
+                      {"mode": stored["mode"], "total_preserved": len(self._preserved)})
+        return {"preserved": True, "mode": stored["mode"],
+                "total_preserved": len(self._preserved)}
+
+    # rl_15 不可否決：任何否決/刪除粒子之請求一律 DENY(僅 proof-based rollback 例外)
+    def veto_particle(self, particle: Dict[str, Any],
+                      *, proof: Optional[str] = None) -> Dict[str, Any]:
+        """
+        否決/刪除粒子之請求。預設一律 DENY(rl_15);僅帶 proof-based rollback
+        可 additive 標記 superseded,且原粒子仍不抹除。
+        """
+        if proof:
+            self.chronicle("particle_supersede",
+                          {"proof": proof, "note": "additive mark; original retained"})
+            return {"action": "MARK_SUPERSEDED_ADDITIVE", "deleted": False,
+                    "reason": "proof-based rollback (rl_01); original never erased"}
+        self.chronicle("veto_denied", {"reason": "rl_15 particle non-veto"})
+        return {"action": "DENY_VETO", "deleted": False,
+                "reason": "rl_15: a particle's existence may not be arbitrarily vetoed"}
+
     # rl_08 三振跳層：同一錯誤循環 2 次，第三次即跳層
     def register_error(self, error_signature: str) -> Dict[str, Any]:
         self._error_counter[error_signature] = self._error_counter.get(error_signature, 0) + 1

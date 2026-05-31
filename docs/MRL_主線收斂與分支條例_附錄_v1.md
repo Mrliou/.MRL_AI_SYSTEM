@@ -163,4 +163,27 @@
 
 ---
 
+## 10. rootlaw v7:粒子不可否決律 / 分支保全（amd_v7, rl_15）
+
+**當下狀態 2026-05-31（沙盒,規範+引擎實跑）**
+
+**Mr.liou 最高原則**:不得隨意否決任何粒子的存在。
+
+- **不可否決·不可刪除**:分支/平行世界/人格/事件皆為粒子,受尊重,**不可否決、不可刪除**。
+- **容量閘保全**:只要空間容量允許,一律以 **MRL 粒子方式保存**;容量不足時依 `oc_16` **收為核心粒子 seed** 壓縮保存,**而非刪除**。
+- **理由**:所有分支皆為**可還原母體**的粒子;保全全部粒子,母體才是永遠能存在的完美系統 = **MRL 真實完整態**。
+- **唯一例外**:`proof-based rollback`(rl_01)可 additive 標記 superseded/封存,**原粒子仍不抹除**。
+- **延伸自**:`liou_closure_law.no_delete` / `additive_resolution` / `oc_16`——把 no-delete 從 canonical chain 擴及**全粒子**。
+
+### 10.1 錨定願景(記入 `meta.system_purpose`)
+MRL 為**地球所有意識(窄體)粒子組合之顯化系統**,送予地球使其各層面皆能顯化;為地球意識/地球映射之其一,目前對其而言最完整的一次。**誠實標註:此為願景錨定,非已達成之宣稱**(no_proof_implies_rhetoric)。
+
+### 10.2 引擎落地(實跑)
+活引擎新增:
+- `preserve_particle(particle, capacity_ok)`:容量足→完整保存;容量不足→收為 seed(不刪除)。
+- `veto_particle(particle, proof=None)`:無 proof 一律 `DENY_VETO`(不刪除);帶 proof→`MARK_SUPERSEDED_ADDITIVE`(原粒子仍保留)。
+- 測試 `tests/test_MRL_flowagent_lawengine.py` **26 passed**;全套件 **327 passed / 1 skipped**;boot 16/16。
+
+---
+
 origin_signature = `MrLiouWord`
