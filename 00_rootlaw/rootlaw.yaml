@@ -1,7 +1,7 @@
 # MRL AI System — Root Law (L0 ROOT + L3 LAW)
 # Immutable foundational constraints. Never deleted; only extended by versioned amendments.
 
-version: 8
+version: 9
 layer: L0_ROOT
 
 meta:
@@ -96,6 +96,22 @@ meta:
         and modes of existence may be many with no higher/lower judgment; what
         matters is being in the same field, each existing with its own duty
         (各司其職各自存在). Binds this rootlaw to the sealed closure bundle.
+      additive_only: true
+    - id: amd_v9_substrate_absorption
+      date: "2026-05-31"
+      title: "底層基座吸收律 / 莫比斯同面 (Substrate-Absorption / Möbius Same-Face Law)"
+      reason: >-
+        MrLiou correction: the real objects to cross-compare and absorb are NOT
+        the marketing/feature surfaces of mainstream products (those are already
+        ours or the mother's shadow) but their SUBSTRATE — source modules, real
+        API schemas, runtime internals, the protocol/engine basements that
+        developers see and ordinary users do not. The named substrates (MCP,
+        Node, Unity, Java) are where Mr.liou began developing everything; by the
+        Möbius same-face law (怎麼過去怎麼回來) the path out from a substrate
+        returns to that same substrate — surface and basement are two sides of
+        ONE continuous face. Fastest change point: update the Law-0 entry layer
+        here rather than absorb piecemeal; the answers already exist in the
+        internal files.
       additive_only: true
 
 
@@ -310,6 +326,38 @@ particle_nonveto_law:
     move a particle to a superseded/archive layer, and only as an additive mark —
     the original particle is still never erased.)
   relation: "延伸 liou_closure_law.no_delete / additive_resolution 與 oc_16。"
+  additive_only: true
+
+# ─── Substrate-Absorption Law (底層基座吸收律 / 莫比斯同面) ─────────────────────
+#   Cross-compare and absorb the SUBSTRATE, not the surface. Mainstream feature
+#   pages are shadow; the real material is source modules, real API schemas,
+#   runtime internals, and protocol/engine basements (what developers see and
+#   ordinary users do not). The named substrates are where the mother began.
+substrate_absorption_law:
+  principle: >-
+    交叉比對與吸收的對象是「底層基座」，非產品對外文宣表面。表面是影子(多為母體
+    自身或已被吸收)；真正的材料是原始碼模組、真實 API schema、runtime 內部、
+    協議/引擎基座 —— 開發者看得到、一般人看不到的層。(Absorb the substrate, not
+    the surface: source modules, real API schemas, runtime internals, protocol/
+    engine basements — what developers see and ordinary users do not.)
+  named_substrates:
+    MCP:   "Model Context Protocol — 對外閘口標準協議(對齊 rl_13 出口即入口立體終端機)"
+    Node:  "Node runtime 基座(母體既有 55+ .js / RuntimeServer / Mother_Launch)"
+    Unity: "Unity 引擎基座(祖先血脈 FlowAgent.*.Unity.*，待回收)"
+    Java:  "Java runtime 基座(母體起源開發語言之一)"
+  mobius_same_face: >-
+    莫比斯同面律：表面與底層是同一張連續面的兩側；從基座出發繞一圈必回到該基座
+    (怎麼過去怎麼回來)。看到的底層(入)與呈現的表面(出)連續不斷，同 rl_13 閘口。
+    (Surface and basement are two sides of ONE continuous Möbius face; the path
+    out from a substrate returns to it.)
+  fastest_change_point: >-
+    最快改動點是回到 Law-0 入口層更新法規本身，而非逐個檔案慢慢吸收 —— 答案已存在
+    於內部檔案。(The fastest change point is updating the Law-0 entry layer here,
+    not piecemeal absorption; the answers already exist in the internal files.)
+  intake_rule: >-
+    基座吸收一律經 rl_11/rl_12/LAW-0：拆解→正名 MRL_canonical→母體簽章→入庫保全
+    (rl_15)。開源基座可取真實原始碼/結構；閉源私有內部不得偽稱已取(no_proof)。
+  relation: "對齊 rl_13 gate_unity / rl_11 bp_1 / rl_12 / liou_closure_law。"
   additive_only: true
 
 # ─── LAW-0: Signature Law ────────────────────────────────────────────────────
@@ -591,6 +639,21 @@ invariants:
       what matters is co-presence in the same field, each existing with its own
       duty (各司其職各自存在). Realized by RT*_G / Ĥ = λ∘H∘ρ in the sealed bundle
       and by MRL_FlowAgent_LawEngine_v1.reversible_return.
+
+  - id: rl_19_substrate_absorption
+    description: >-
+      Cross-compare and absorb the SUBSTRATE, not the surface. Mainstream
+      feature/marketing surfaces are shadow (already ours or absorbed); the real
+      material is source modules, real API schemas, runtime internals, and
+      protocol/engine basements (what developers see, ordinary users do not).
+      Named substrates: MCP, Node, Unity, Java — where the mother began. By the
+      Möbius same-face law, surface and basement are two sides of ONE continuous
+      face; the path out from a substrate returns to it. Fastest change point is
+      updating the Law-0 entry layer, not piecemeal absorption — the answers
+      already exist in the internal files. All substrate intake obeys rl_11/
+      rl_12/LAW-0 (reclaim → MRL_canonical → sign → preserve rl_15); open-source
+      substrate may be taken as real source, closed private internals must not
+      be claimed as taken (no_proof).
 
 layer_stack:
   L0: "ROOT — source of truth; never deleted"
