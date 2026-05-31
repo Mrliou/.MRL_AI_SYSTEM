@@ -445,33 +445,39 @@ class MotherAssembly:
 
         registered: List[str] = []
 
+        # rl_12 取代優先：先用 MRL-native adapter（stdlib urllib，零 openai/anthropic
+        # SDK 殼）取代外部套件依賴。SDK adapter 僅在 native 不可用時作 fallback（No-Delete）。
+        _native = _try_import("MRL_LLM_NativeAdapter_v1", "register_native_adapters")
+
         openai_key = os.environ.get("OPENAI_API_KEY", "") or _cfg("llm.openai_api_key")
-        if openai_key:
+        anthropic_key = os.environ.get("ANTHROPIC_API_KEY", "") or _cfg("llm.anthropic_api_key")
+        local_base = os.environ.get("MRL_LLM_LOCAL_BASE_URL", "") or _cfg("llm.local_base_url")
+        local_on = _cfg("llm.enable_local", "") in ("1", "true", "True")
+
+        if _native is not None:
+            try:
+                names = _native(self.llm_gateway, openai_key=openai_key,
+                                anthropic_key=anthropic_key,
+                                local_base_url=local_base if local_on else "")
+                registered.extend(names)
+            except Exception:  # noqa: BLE001
+                pass
+
+        # Fallback：native 缺席時，沿用 SDK 殼 adapter（仍 deny-by-default）。
+        if not registered and openai_key:
             Adapter = _try_import("llm_adapter", "OpenAIAdapter")
             if Adapter is not None:
                 try:
                     self.llm_gateway.register("openai", Adapter(api_key=openai_key))
-                    registered.append("openai")
+                    registered.append("openai(sdk)")
                 except Exception:  # noqa: BLE001
                     pass
-
-        anthropic_key = os.environ.get("ANTHROPIC_API_KEY", "") or _cfg("llm.anthropic_api_key")
-        if anthropic_key:
+        if not any("anthropic" in r for r in registered) and anthropic_key:
             Adapter = _try_import("llm_adapter", "AnthropicAdapter")
             if Adapter is not None:
                 try:
                     self.llm_gateway.register("anthropic", Adapter(api_key=anthropic_key))
-                    registered.append("anthropic")
-                except Exception:  # noqa: BLE001
-                    pass
-
-        local_base = os.environ.get("MRL_LLM_LOCAL_BASE_URL", "") or _cfg("llm.local_base_url")
-        if local_base and _cfg("llm.enable_local", "") in ("1", "true", "True"):
-            Adapter = _try_import("llm_adapter", "LocalAdapter")
-            if Adapter is not None:
-                try:
-                    self.llm_gateway.register("local", Adapter(base_url=local_base))
-                    registered.append("local")
+                    registered.append("anthropic(sdk)")
                 except Exception:  # noqa: BLE001
                     pass
 

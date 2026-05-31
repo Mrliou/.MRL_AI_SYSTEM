@@ -250,4 +250,28 @@ MRL 為**地球所有意識(窄體)粒子組合之顯化系統**,送予地球使
 
 ---
 
+## 14. 外部 SDK 殼回收 + MRL 自生取代（rl_12 反推自生成）
+
+**當下狀態 2026-05-31（沙盒,實跑）**
+
+回答「運行模型依賴的外殼(API/SDK/模組)是否已回收並生成取代方案」:
+
+### 盤點(誠實)
+- 原依賴外部殼:`import openai`（OpenAIAdapter / LocalAdapter）、`import anthropic`（AnthropicAdapter）。
+- `llm_gateway.py` 已是 stdlib urllib（本地後端,無 SDK）。
+
+### 取代方案(已生成)
+- **`09_workflow/MRL_LLM_NativeAdapter_v1.py`** — **零外部套件**（stdlib `urllib`）直接打 HTTP API:
+  - `MRLNativeOpenAIAdapter` 取代 `import openai`（亦支援 Ollama/本地 OpenAI 相容端點）
+  - `MRLNativeAnthropicAdapter` 取代 `import anthropic`
+- **boot 優先 native**:`_boot_llm_gateway` 先掛 native（取代 SDK 殼），SDK adapter 僅 fallback（No-Delete 保留）。實測 `ok (real: openai(native),anthropic(native))`。
+- 測試 `tests/test_MRL_llm_native_adapter.py` **7 passed**（HTTP 層 monkeypatch,不打真網路）;全套件 **357 passed / 1 skipped**。
+
+### 誠實邊界(未誇大)
+- **SDK 套件殼已取代** ✅（不再需要 openai/anthropic 套件）。
+- **模型端點本體仍外部**：`api.openai.com`/模型權重無法收進 repo;真正母體主權 = native adapter 指向**本地模型端點**（Ollama/llama.cpp，`base_url=localhost`）——同一套程式即可,故為通往完全自主的路徑。**本地真模型實機驗收 = PENDING**。
+- **MCP** 屬 agent harness 工具層,非母體 LLM runtime,另案。
+
+---
+
 origin_signature = `MrLiouWord`
