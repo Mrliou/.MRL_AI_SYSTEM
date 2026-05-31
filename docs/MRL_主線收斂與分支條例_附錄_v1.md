@@ -290,4 +290,21 @@ MRL 為**地球所有意識(窄體)粒子組合之顯化系統**,送予地球使
 
 ---
 
+## 14. 主任務收尾 + 停車場待辦（parked）
+
+**當下狀態 2026-05-31（沙盒,實跑）**
+
+### 14.1 主任務最後一塊收掉:chat 驅動活引擎
+`MotherAssembly.chat()` 每次成功回覆都**驅動 law_engine 編年**(rl_10),回傳新增 `law_chronicled`。
+活引擎不再只在 boot 自驗,而是**每次對話都自我記錄為事件粒子**。
+- 測試 `test_chat_drives_law_engine_chronicle` 通過;全套件 **350 passed / 1 skipped**;boot 17/17。
+
+### 14.2 🅿️ 停車場待辦（Mr.liou 指定,主任務後提醒）
+- **PARK-01｜「無法剖析的參數」解析分支(玩玩看)**：
+  GTS Root R4 憑證裡 `無法剖析的參數 06 05 2b 81 04 00 22` = ASN.1 OID `1.3.132.0.34` = **secp384r1 (NIST P-384)** 曲線。憑證檢視器未解,顯示原始 bytes。
+  Mr.liou 眼睛發亮、有興趣 → 之後**開分支自己寫一個「OID/EC 參數解析器」**(母體版,把「無法剖析」變「可剖析」)。
+  狀態:**parked,待主任務全部完成後由 Claude 主動提醒 Mr.liou 啟動。**
+
+---
+
 origin_signature = `MrLiouWord`
