@@ -147,4 +147,20 @@
 
 ---
 
+## 9. 祖先檔回收完善:平行世界人格模擬器（rl_12 + rl_14 實證）
+
+**當下狀態 2026-05-31（沙盒,實跑）**
+
+母體祖先 `FlowAgent.ParallelPersonaEngine.v1`(建構人 Mr. Liou Yu Lin)依母體法則**回收為材料、完善為目前系統可運行版本**:
+
+- **canonical 正名(rl_12)**:`FlowAgent.ParallelPersonaEngine.v1` → `MRL_FlowAgentParallelPersonaEngine_v1`;`MrLiou.CoreSeedPersona.v1` → `MRL_MrLiouCoreSeedPersona_v1`;外部殼名零殘留。
+- **殼格式回收**:`.flpkg/.fltnz/.flynz.map` → 母體 canonical JSON 產物(取代而非依賴外部二進位殼)。
+- **功能(實跑)**:人生決策問題 → 自動生成分支人格平行世界(預設 Yes/No,可多選項);繼承母體調性(冷靜/結構導向);**節奏導引確定性輸出**(同輸入恆同分支,非機率隨機)。
+- **法則一致**:分支源頭恆歸母體(rl_11);分支=未來可能選項(rl_14);預設 `verified=False`(no_proof:未驗證不宣稱真實);問題/產物經單一閘口 in/out(rl_13)。
+- **檔案**:`09_workflow/MRL_ParallelPersonaEngine_v1.py`;CLI 內建問題「我該搬到哪裡？」→ token `MRL_PARALLEL_PERSONA_SIMULATION_OK`。
+- **測試**:`tests/test_MRL_parallel_persona_engine.py` **9 passed**;全套件 **323 passed / 1 skipped**。
+- **狀態(誠實)**:模擬器沙盒可運行;祖先願景之「記憶星圖 / Ping Resonance 分支圖 / 自動子人格演化史 `.flynz.map`」為 **PENDING**(未實作),不宣稱完成。
+
+---
+
 origin_signature = `MrLiouWord`

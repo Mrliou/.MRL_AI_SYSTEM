@@ -233,3 +233,6 @@ data/conversations.json
 
 # rl_10 事件編年:執行期產物,不入庫(保留目錄)
 06_trace/chronicle/*.jsonl
+
+# 平行世界人格模擬器執行期產物
+parallel_output/
