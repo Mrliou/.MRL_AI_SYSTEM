@@ -413,14 +413,65 @@ class MotherAssembly:
             return f"error: {exc}"
 
     def _boot_llm_gateway(self) -> str:
+        """
+        Boot the LLM gateway and register REAL provider adapters when their
+        credentials / endpoints are available (deny-by-default per rootlaw
+        rl_00: production must not silently fall back to the mock adapter).
+
+        Registration is additive and driven by environment / config:
+          - OPENAI_API_KEY (or llm.openai_api_key)      → OpenAIAdapter as "openai"
+          - ANTHROPIC_API_KEY (or llm.anthropic_api_key) → AnthropicAdapter as "anthropic"
+          - llm.local_base_url reachable                 → LocalAdapter as "local"
+        The built-in MockAdapter stays registered as "mock" but is test-only;
+        callers must opt in via llm.allow_mock.
+        """
+        import os
+
         LLMGateway = _try_import("llm_adapter", "LLMGateway")
         if LLMGateway is None:
             return "unavailable"
         try:
             self.llm_gateway = LLMGateway()
-            return "ok"
         except Exception as exc:  # noqa: BLE001
             return f"error: {exc}"
+
+        def _cfg(key: str, default: str = "") -> str:
+            return (self.config.get(key, default) if self.config else default) or default
+
+        registered: List[str] = []
+
+        openai_key = os.environ.get("OPENAI_API_KEY", "") or _cfg("llm.openai_api_key")
+        if openai_key:
+            Adapter = _try_import("llm_adapter", "OpenAIAdapter")
+            if Adapter is not None:
+                try:
+                    self.llm_gateway.register("openai", Adapter(api_key=openai_key))
+                    registered.append("openai")
+                except Exception:  # noqa: BLE001
+                    pass
+
+        anthropic_key = os.environ.get("ANTHROPIC_API_KEY", "") or _cfg("llm.anthropic_api_key")
+        if anthropic_key:
+            Adapter = _try_import("llm_adapter", "AnthropicAdapter")
+            if Adapter is not None:
+                try:
+                    self.llm_gateway.register("anthropic", Adapter(api_key=anthropic_key))
+                    registered.append("anthropic")
+                except Exception:  # noqa: BLE001
+                    pass
+
+        local_base = os.environ.get("MRL_LLM_LOCAL_BASE_URL", "") or _cfg("llm.local_base_url")
+        if local_base and _cfg("llm.enable_local", "") in ("1", "true", "True"):
+            Adapter = _try_import("llm_adapter", "LocalAdapter")
+            if Adapter is not None:
+                try:
+                    self.llm_gateway.register("local", Adapter(base_url=local_base))
+                    registered.append("local")
+                except Exception:  # noqa: BLE001
+                    pass
+
+        self._llm_real_adapters = registered
+        return "ok (real: " + ",".join(registered) + ")" if registered else "ok (mock-only)"
 
     def _boot_context_manager(self) -> str:
         ContextManager = _try_import("context_manager", "ContextManager")
@@ -705,10 +756,27 @@ class MotherAssembly:
         if self.conversation_manager is None:
             return {"error": "ConversationManager unavailable"}
 
-        # Resolve model
+        # Resolve model — deny-by-default (rootlaw rl_00): no implicit "mock".
         resolved_model = model or (
-            self.config.get("llm.default_model", "mock") if self.config else "mock"
+            self.config.get("llm.default_model", "") if self.config else ""
         )
+        allow_mock = bool(self.config.get("llm.allow_mock", False)) if self.config else False
+
+        if not resolved_model:
+            return {
+                "error": "no model configured: set llm.default_model or pass model=",
+                "engine": "mrl_runtime",
+                "runtime_origin": "local_mother_assembly",
+                "origin_signature": ORIGIN_SIGNATURE,
+            }
+        if resolved_model.startswith("mock") and not allow_mock:
+            return {
+                "error": "MockAdapter is test-only; set llm.allow_mock=true to enable. "
+                         "Configure a real engine (OPENAI_API_KEY / ANTHROPIC_API_KEY / local) for production.",
+                "engine": "mrl_runtime",
+                "runtime_origin": "local_mother_assembly",
+                "origin_signature": ORIGIN_SIGNATURE,
+            }
 
         # Get or create session
         if session_id is None:
@@ -734,19 +802,43 @@ class MotherAssembly:
             for m in history
         ]
 
-        # LLM call
-        reply_text = f"[MockAdapter] Echo: {message}"
-        if self.llm_gateway is not None:
-            LLMRequest = _try_import("llm_adapter", "LLMRequest")
-            if LLMRequest is not None:
-                req = LLMRequest(
-                    model=resolved_model,
-                    messages=llm_messages,
-                    max_tokens=max_tokens,
-                    temperature=temperature,
-                )
-                resp = self.llm_gateway.complete(req)
-                reply_text = resp.text if resp.ok else f"[LLM Error] {resp.error}"
+        # LLM call — no silent fabrication (rootlaw: no_proof_implies_rhetoric).
+        # If the gateway / request type is unavailable, return an explicit error
+        # instead of echoing a fake reply.
+        if self.llm_gateway is None:
+            return {
+                "error": "LLM gateway unavailable; cannot answer without a real engine",
+                "engine": "mrl_runtime",
+                "runtime_origin": "local_mother_assembly",
+                "session_id": session_id,
+                "origin_signature": ORIGIN_SIGNATURE,
+            }
+        LLMRequest = _try_import("llm_adapter", "LLMRequest")
+        if LLMRequest is None:
+            return {
+                "error": "LLMRequest type unavailable",
+                "engine": "mrl_runtime",
+                "session_id": session_id,
+                "origin_signature": ORIGIN_SIGNATURE,
+            }
+        req = LLMRequest(
+            model=resolved_model,
+            messages=llm_messages,
+            max_tokens=max_tokens,
+            temperature=temperature,
+        )
+        try:
+            resp = self.llm_gateway.complete(req)
+        except KeyError as exc:
+            # No adapter registered for this model → honest failure, not a fake reply.
+            return {
+                "error": f"no engine for model '{resolved_model}': {exc}",
+                "engine": "mrl_runtime",
+                "runtime_origin": "local_mother_assembly",
+                "session_id": session_id,
+                "origin_signature": ORIGIN_SIGNATURE,
+            }
+        reply_text = resp.text if resp.ok else f"[LLM Error] {resp.error}"
 
         # Record assistant reply
         self.conversation_manager.add_message(session_id, "assistant", reply_text)
