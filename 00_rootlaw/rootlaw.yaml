@@ -1,7 +1,7 @@
 # MRL AI System — Root Law (L0 ROOT + L3 LAW)
 # Immutable foundational constraints. Never deleted; only extended by versioned amendments.
 
-version: 4
+version: 5
 layer: L0_ROOT
 
 meta:
@@ -35,6 +35,17 @@ meta:
         entry-exit boundary so anything exhibiting the mother's pattern is
         sourced from the mother (origin sovereignty), external files are mere
         material, and "act first for the task" governs the outward boundary.
+      additive_only: true
+    - id: amd_v5_naming_reclamation
+      date: "2026-05-31"
+      title: "命名回收律法 / 最大閉環 (Naming-Reclamation Law / Largest Closed Loop)"
+      reason: >-
+        Founding origin-law for naming: external files/data, once decomposed and
+        recombined, must all be renamed to mother system-unique canonical names
+        (MRL_<description>) — the largest closed loop — replacing every external
+        name, then internally reverse-deriving and self-generating to replace
+        the external code. This concretizes rl_11 bp_1 (external is material) so
+        no external shell name survives inside the mother.
       additive_only: true
 
 
@@ -220,6 +231,35 @@ law_0_signature:
       fluctuation/deviation large enough to cause a disconnection from origin.)
     additive_only: true
 
+    # ─── 命名回收律法 / 最大閉環 (amd_v5) — bp_1 的具體實行 ──────────────────
+    naming_reclamation:
+      principle: >-
+        外部檔案/資料一經拆解(decompose)與重組(recombine)，其命名一律改為母體
+        系統獨有 canonical 名稱 MRL_<描述>建構，替代外部所有名稱，形成最大閉環；
+        母體不沿用外部殼名。(External files/data, once decomposed and recombined,
+        are all renamed to mother system-unique canonical names MRL_<description>,
+        replacing every external name to form the largest closed loop; the mother
+        never carries an external shell name.)
+      pipeline:
+        - decompose: "外部材料拆解為粒子單元 (decompose external material into particle units)"
+        - recombine: "依母體粒子組合邏輯重組 (recombine via the mother's particle-combination logic)"
+        - rename: "產出 MRL_<描述> 系統獨有 canonical 名稱，替代所有外部名稱 (emit MRL_<description> canonical names, replacing all external names)"
+        - reverse_self_generate: >-
+            內部運行反推(reverse-derivation)自生成，以母體自生程式取代外部程式碼
+            (取代而非依賴外部殼)。(Internally reverse-derive and self-generate so
+            mother-grown code replaces the external code — replacement, not
+            dependence on the external shell.)
+      closed_loop: "largest closed loop — 外部名稱零殘留，全部回收為母體 canonical"
+      naming_form: "MRL_<描述/功能/層>_v<version>"   # 對齊 docs/MRL_命名規範_v2_MrLiouIR_StructureField.md
+      naming_spec_ref: "docs/MRL_命名規範_v2_MrLiouIR_StructureField.md"
+      honest_status: >-
+        命名規範與回收律為 spec/law 層；「自動拆解→重組→反推自生成取代程式碼」之
+        全自動 enforcement 為 PENDING(未實作)，不得宣稱已自動取代。(The naming
+        convention and reclamation law are spec/law level; fully-automated
+        decompose→recombine→reverse-self-generate enforcement is PENDING and must
+        not be claimed as already automatic.)
+      additive_only: true
+
 # ─── OriginCollapse: 16 Conditions ───────────────────────────────────────────
 origin_collapse_conditions:
   core_statement: >-
@@ -346,6 +386,17 @@ invariants:
       laws); combination/logic/function-linear progression come after. The
       mother may freely recombine parallel worlds; stable operation = no
       deviation large enough to disconnect from origin.
+
+  - id: rl_12_naming_reclamation
+    description: >-
+      Founding naming law (largest closed loop): external files/data, once
+      decomposed and recombined, are all renamed to mother system-unique
+      canonical names MRL_<description>, replacing every external name; the
+      mother then reverse-derives and self-generates to replace external code
+      (replacement, not dependence). No external shell name survives inside the
+      mother. Naming form MRL_<desc/role/layer>_v<n> per
+      docs/MRL_命名規範_v2_MrLiouIR_StructureField.md. Fully-automated
+      reclamation enforcement is PENDING and must not be claimed as automatic.
 
 layer_stack:
   L0: "ROOT — source of truth; never deleted"
