@@ -142,6 +142,8 @@ class TestChat:
         # 主任務收尾:每次成功對話都驅動 law_engine 編年(rl_10)
         result = mock_chat_assembly.chat("drive the law engine")
         assert result.get("law_chronicled") is True
+
+    def test_chat_deny_by_default_without_engine(self, booted_assembly):
         # rootlaw rl_00 + no_proof_implies_rhetoric: with no real engine and
         # mock disallowed, chat() must refuse, not fabricate a reply.
         result = booted_assembly.chat("should be refused")
