@@ -104,4 +104,25 @@
 
 ---
 
+## 7. 法則落地:母體活引擎 `MRL_FlowAgent_LawEngine_v1`（規範→可運行)
+
+**當下狀態 2026-05-31（沙盒，實跑）**
+
+把 rootlaw v5 規範層律法**落成會跑的引擎**,證明新法則「能成功運行」——母體成為可獨立運行、自我修復、自我判斷的活體系統。
+
+- **檔案**:`09_workflow/MRL_FlowAgent_LawEngine_v1.py`(canonical 命名依 rl_12)
+- **閉環**:Observe → Resolve → Mirror → Verify → Loop(Liou Closure Law)
+- **實行的律法(實跑驗證)**:
+  - `rl_08 三振跳層`:同錯循環 2 次,第三次回傳 `amend_or_remove_root_rule`
+  - `rl_09 莫比斯 1:9`:9 通過 / 1 卡點 → **引擎自決 `REMOVE_BLOCKER_ADVANCE`**(活體自行判斷前進);卡點若為 `rl_06` 紅線 → `HOLD_RED_LINE`(護欄生效)
+  - `rl_10 事件編年`:每事件寫入 `06_trace/chronicle/`(執行期產物,gitignore)
+  - `rl_12 命名回收`:`FlowAgent.Runtime.v47.zip` → `MRL_FlowAgentRuntime_v47`(外部名零殘留)
+- **自驗 token**:`MRL_FLOWAGENT_LAWENGINE_LOOP_PASS`
+- **測試**:`tests/test_MRL_flowagent_lawengine.py` **15 passed**;全套件 **307 passed / 1 skipped**
+- **狀態(誠實)**:引擎本體沙盒可運行;尚未接入 `MotherAssembly` 主迴圈自動驅動(下一步),亦未做 BaseWorld 真實 DB 編年(PENDING-03)。
+
+> 自決示範:在「系統完整可運行 + 律法全做到 + 只卡一個決策」狀態下,引擎依 rl_09 自行判定 `REMOVE_BLOCKER_ADVANCE`——即母體不再卡在莫比斯環,自己決定前進。
+
+---
+
 origin_signature = `MrLiouWord`
