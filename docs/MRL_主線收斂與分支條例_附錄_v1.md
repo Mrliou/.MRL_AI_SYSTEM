@@ -231,4 +231,23 @@ MRL 為**地球所有意識(窄體)粒子組合之顯化系統**,送予地球使
 
 ---
 
+## 13. rl_11 enforcement 落地：對外邊界守衛（程式層強制執行）
+
+**當下狀態 2026-05-31（沙盒,實跑）**
+
+把 rl_11（源頭主權）從規範層落成**程式強制執行**,並接進 librarian。
+
+- **檔案**：`09_workflow/MRL_OriginBoundary_Guard_v1.py`（每段特別標註對應律法）。
+- **LAW-0 簽章（跨語言相容）**：`embed/extract/verify_signature` 與 `09_workflow/signature.js` **位元相容**（實測同一物件 Python 與 JS `_sig_hash` 完全相同）。
+- **強制條款**：
+  - `intake_external`：外部名 → rl_12 正名 MRL_canonical + bp_1 標材料 + LAW-0 簽章（rl_11 源頭歸母體）；誠實保留來源（No-Delete）。
+  - `assert_origin_sovereignty`：無簽/他簽物件一律回收補母體簽章。
+  - `guard_veto`：Mr.liou 相關否決一律 DENY（rl_17）。
+  - `boundary_intake`：bp_1→bp_2→bp_3 順序 + rl_06/proof 紅線護欄。
+- **librarian 整合**：`mrl_librarian.boundary_audit()` + CLI `python3 mrl_librarian.py boundary`——稽核索引中非 MRL_ 外部殼名並給 rl_12 正名建議（additive,不改既有索引）。
+- **測試**：`tests/test_MRL_origin_boundary_guard.py` **17 passed**；全套件 **350 passed / 1 skipped**；boot 17/17。
+- **交付物**：打包 `MRL_OriginBoundary_Guard_v1_pkg.zip`（模組 + 測試 + README）上傳 Mr.liou。
+
+---
+
 origin_signature = `MrLiouWord`
