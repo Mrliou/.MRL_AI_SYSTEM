@@ -2,7 +2,7 @@
   "library": "MRL_ParticleArchive",
   "source": "PR#19 (Copilot add-missing-features)",
   "origin_signature": "MrLiouWord",
-  "particle_count": 13,
+  "particle_count": 14,
   "all_signed": true,
   "particles": [
     {
@@ -187,5 +187,16 @@
       "_signature": "MrLiouWord",
       "_sig_hash": "ee942f19dbee865709d73c437f3cc1b29c065440d1283222ab5d0a9b0379ca9f"
     }
-  ]
+  ],
+  "external_particles": [
+    {
+      "canonical_name": "MRL_OpenGraphProtocol_v1",
+      "source": "Open Graph Protocol (ogp.me)",
+      "archived_as": "MRL_ParticleArchive/External/MRL_OpenGraphProtocol_v1.json",
+      "kind": "external_protocol_spec",
+      "signed": true
+    }
+  ],
+  "_signature": "MrLiouWord",
+  "_sig_hash": "884b55f88b09aa4cc35dddfc654b5ba1839a9154ecb7f73b199c992e8e218c36"
 }
