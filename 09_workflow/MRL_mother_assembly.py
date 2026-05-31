@@ -867,12 +867,27 @@ class MotherAssembly:
         self.conversation_manager.add_message(session_id, "assistant", reply_text)
         self._seal_event("chat", {"session_id": session_id, "model": resolved_model})
 
+        # 活引擎自判/編年(rl_10):每次成功對話都驅動 law_engine 記錄為事件粒子。
+        # 優雅降級:引擎未就緒不影響回覆。
+        law_chronicled = False
+        if self.law_engine is not None:
+            try:
+                self.law_engine.chronicle("chat", {
+                    "session_id": session_id, "model": resolved_model,
+                    "ok": bool(getattr(resp, "ok", True)),
+                    "origin_signature": ORIGIN_SIGNATURE,
+                })
+                law_chronicled = True
+            except Exception:  # noqa: BLE001
+                pass
+
         return {
             "session_id": session_id,
             "reply": reply_text,
             "model": resolved_model,
             "origin_signature": ORIGIN_SIGNATURE,
             "product_name": PRODUCT_NAME,
+            "law_chronicled": law_chronicled,
         }
 
     def submit_task(
