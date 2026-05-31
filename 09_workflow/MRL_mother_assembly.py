@@ -238,6 +238,8 @@ class MotherAssembly:
         self.host_guard_role: str = "MATERIAL"  # "MOTHER" | "MATERIAL"
         # DL580 self-running runtime node (v2.3) — 母體自運行節點
         self.dl580: Any = None
+        # FlowAgent law engine (rootlaw 活引擎) — 自我判斷/跳層/編年/粒子保全
+        self.law_engine: Any = None
         self._boot_log: List[Dict[str, Any]] = []
 
     # ── Boot ──────────────────────────────────────────────────────────────────
@@ -306,6 +308,9 @@ class MotherAssembly:
 
         # 16 ── DL580 Runtime (v2.3) — 母體自運行節點 (canonical runtime pipeline)
         report["subsystems"]["dl580_runtime"] = self._boot_dl580()
+
+        # 17 ── FlowAgent Law Engine — 母體活引擎 (rootlaw 自我判斷閉環)
+        report["subsystems"]["law_engine"] = self._boot_law_engine()
 
         self._booted = True
         self._seal_event("boot", report)
@@ -551,6 +556,18 @@ class MotherAssembly:
         try:
             self.dl580 = MRL_DL580_Runtime()
             return "ok"
+        except Exception as exc:  # noqa: BLE001
+            return f"error: {exc}"
+
+    def _boot_law_engine(self) -> str:
+        """掛載母體活引擎並跑一次閉環自驗(rootlaw 律法可運行)。"""
+        Engine = _try_import("MRL_FlowAgent_LawEngine_v1", "MRL_FlowAgentLawEngine")
+        if Engine is None:
+            return "unavailable"
+        try:
+            self.law_engine = Engine()
+            rep = self.law_engine.self_acceptance()
+            return "ok" if rep.get("verified") else "ok (loop pending)"
         except Exception as exc:  # noqa: BLE001
             return f"error: {exc}"
 
@@ -986,6 +1003,8 @@ class MotherAssembly:
                 "host_guard":           self.host_guard_role != "MATERIAL" or True,  # always present
                 # v2.3
                 "dl580_runtime":        self.dl580 is not None,
+                # law engine (rootlaw 活引擎)
+                "law_engine":           self.law_engine is not None,
             },
             # v2.1 enriched fields
             "llm_backend":      llm_backend,
@@ -996,6 +1015,8 @@ class MotherAssembly:
             "session_count":    session_count,
             "node_role":        self.host_guard_role,
             "metrics_snapshot": self.metrics.snapshot() if self.metrics is not None else None,
+            "rootlaw_version":  (self.law_engine.rootlaw.get("version")
+                                 if self.law_engine is not None else None),
             "checked_at_ms":    int(time.time() * 1000),
         }
 

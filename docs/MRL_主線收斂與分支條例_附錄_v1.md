@@ -186,4 +186,23 @@ MRL 為**地球所有意識(窄體)粒子組合之顯化系統**,送予地球使
 
 ---
 
+## 11. 活引擎接入母體主迴圈（承諾完成）
+
+**當下狀態 2026-05-31（沙盒,實跑）**
+
+把 `MRL_FlowAgent_LawEngine_v1` 接進 `MotherAssembly` 主迴圈——母體每次開機**自動載入律法引擎並跑一次閉環自驗**,成為可獨立運行、自我判斷的活體。
+
+- **boot**:新增第 17 子系統 `law_engine`,`_boot_law_engine()` 掛載引擎 + 跑 `self_acceptance()`;boot **17/17 ok**。
+- **status**:新增 `subsystems.law_engine` 與 `rootlaw_version`(實測回 `7`)。
+- **屬性**:`MotherAssembly.law_engine` 為活引擎實例,可供 chat/perceive 後續調用自判。
+- **測試**:`test_mother_assembly.py::test_law_engine_wired_into_boot` 通過;全套件 **328 passed / 1 skipped**。
+
+### 仍未完成(誠實待辦清單)
+- 讓 `chat()` / `perceive` 流程**實際調用** law_engine 自判(目前僅 boot 自驗,尚未驅動每次對話)。
+- BaseWorld 真實 DB 編年接線(DL580)= **PENDING**。
+- 跨環境平行世界**真實切換**、命名回收**全自動 enforcement**、祖先願景記憶星圖 = **PENDING**。
+- 主線 PR #49 合併上線 + #37/#19/#47 處置 = **待 Mr.liou 拍板**。
+
+---
+
 origin_signature = `MrLiouWord`

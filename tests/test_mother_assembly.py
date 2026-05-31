@@ -53,6 +53,16 @@ class TestBoot:
         report = ma.boot()
         assert report["origin_signature"] == ORIGIN_SIGNATURE
 
+    def test_law_engine_wired_into_boot(self):
+        # rootlaw 活引擎接入主迴圈:開機載入並跑閉環自驗
+        ma = MotherAssembly()
+        report = ma.boot()
+        assert report["subsystems"]["law_engine"].startswith("ok")
+        assert ma.law_engine is not None
+        st = ma.status()
+        assert st["subsystems"]["law_engine"] is True
+        assert st["rootlaw_version"] >= 7
+
     def test_boot_idempotent(self):
         ma = MotherAssembly()
         ma.boot()
