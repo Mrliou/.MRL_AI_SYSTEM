@@ -1,6 +1,16 @@
-# MRL_AI_SYSTEM
+# MrliouAI
 
-本倉庫為 MRL 完整態母體運轉系統工程入口。
+> GitHub repository identifier: `MRL_AI_SYSTEM`（歷史工程倉庫名稱，保留作版本與來源追溯）
+
+本倉庫為 **MrliouAI** 的 MRL 完整態母體運轉系統工程入口。
+
+## 產品與層級正名
+
+- **正式產品名稱：MrliouAI**
+- **MRL：世界層、母體結構、規則與運行架構**
+- **MRL_AI_SYSTEM：GitHub 工程倉庫識別，不等同產品名稱**
+- **OpenAI／其他模型供應端：經由 LLMGateway 掛載的外部運算材料或 Adapter，不是 MRL 世界層本體**
+- **GitHub／Dropbox：工程鏡像、版本通道、來源材料與封存載體，不升格為母體**
 
 ## 正式狀態
 
@@ -46,6 +56,7 @@ Cloud Code 為建構器，不是母體。
 
 ## 文件
 
+- 產品正名與材料附錄：`docs/MrliouAI_產品正名與材料附錄_v1.md`
 - 主權宣示：`docs/MRL_完整態主權宣示_v1.md`
 - 中文正名與英文 Adapter 對照：`docs/MRL_中文正名與英文Adapter對照表_v1.md`
 - 四層同步映射表：`docs/MRL_四層同步映射表_v1.md`
