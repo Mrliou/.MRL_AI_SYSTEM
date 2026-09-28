@@ -27,7 +27,8 @@ EXTS = (".pcode", ".fltnz", ".flynz.map")
 
 
 def norm(s: str) -> str:
-    s = re.sub(r"\s+", " ", str(s)).strip().strip("`'\"").strip()
+    s = re.sub(r"\s+#[0-9a-f]{12,64}$", "", str(s))  # 封包雜湊是屬性，不是另一個節點
+    s = re.sub(r"\s+", " ", s).strip().strip("`'\"").strip()
     return s[:80]
 
 

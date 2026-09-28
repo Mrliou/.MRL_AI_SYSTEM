@@ -30,6 +30,7 @@ REPO = os.path.dirname(SEED)
 MANIFEST_DIR = os.path.join(SEED, "03_Memory")
 RECEIPTS = os.path.join(SEED, "05_Agent", "receipts")
 DIALECT = os.path.join(REPO, "MRL_WorldModel", "MRL_Dialect_v0")
+RHYTHM_TEST = os.path.join(REPO, "MRL_WorldModel", "MRL_FlowRhythm_v0", "tests", "test_rhythm.py")
 CORPUS_EXTS = (".pcode", ".fltnz", ".flynz.map")
 SKIP_DIRS = {"$recycle.bin", "system volume information", "windows", "program files",
              "program files (x86)", "programdata", "node_modules", ".git", "appdata", "hf_cache"}
@@ -142,6 +143,24 @@ def dialect_roundtrip(corpus):
             "roundtrip_fail": len(fail), "failed": fail[:50]}
 
 
+def rhythm_check():
+    """4. 語場節奏：EchoPersona 等母體種子跑 Jump → Collapse → Trace → Replay（本體）。"""
+    import subprocess
+    if not os.path.exists(RHYTHM_TEST):
+        return {"status": "待找回：MRL_FlowRhythm_v0 不在此副本"}
+    env = dict(os.environ, PYTHONIOENCODING="utf-8")
+    p = subprocess.run([sys.executable, RHYTHM_TEST], capture_output=True, text=True, encoding="utf-8", env=env)
+    out = p.stdout
+    i = out.rfind("\n{")
+    try:
+        res = json.loads(out[i + 1:] if i >= 0 else out[out.index("{"):])
+    except Exception:
+        return {"status": "FAIL", "stdout_tail": out[-2000:], "stderr_tail": p.stderr[-2000:]}
+    res["status"] = "PASS" if p.returncode == 0 else "FAIL"
+    res["seeds"] = [l.strip() for l in out.splitlines() if "Replay" in l and "粒子" in l]
+    return res
+
+
 def main(argv):
     roots = argv or (["D:\\"] if os.name == "nt" else [os.getcwd()])
     host = socket.gethostname()
@@ -151,11 +170,12 @@ def main(argv):
     s1 = seed_selfcheck(); print("1 種子自檢：", {k: s1[k] for k in ("checked", "ok")}, "異常", len(s1["mismatch_or_missing"]))
     s2, corpus = replay(roots); print("2 Replay 對回原檔：", {k: s2[k] for k in ("manifest_files", "matched", "pending_recovery", "files_scanned")})
     s3 = dialect_roundtrip(corpus); print("3 語場可逆：", {k: v for k, v in s3.items() if k != "failed"})
+    s4 = rhythm_check(); print("4 語場節奏：", s4.get("status"), {k: s4[k] for k in ("E_seed_count", "E_all_seeds_replay", "F_visible_before", "F_visible_after") if k in s4})
     receipt = {
         "origin_signature": "MrLiouWord", "kind": "MRL_Wake_Receipt",
         "timestamp": now.isoformat(timespec="seconds"), "host": host, "platform": platform.platform(),
         "python": platform.python_version(), "environment": env, "roots": roots,
-        "seed_selfcheck": s1, "replay": s2, "dialect_roundtrip": s3,
+        "seed_selfcheck": s1, "replay": s2, "dialect_roundtrip": s3, "flow_rhythm": s4,
         "note": "當下狀態。matched = 已對上原始檔；pending = 待找回（此根目錄這次未接上線，不代表不存在）。",
     }
     os.makedirs(RECEIPTS, exist_ok=True)
@@ -164,7 +184,7 @@ def main(argv):
     with open(path, "x", encoding="utf-8") as f:  # "x"：已存在就失敗，絕不覆蓋
         json.dump(receipt, f, ensure_ascii=False, indent=1)
     print("收據：", path)
-    passed = not s1["mismatch_or_missing"] and s3.get("roundtrip_fail", 0) == 0
+    passed = not s1["mismatch_or_missing"] and s3.get("roundtrip_fail", 0) == 0 and s4.get("status") == "PASS"
     print("結論：", "PASS（" + env + "，當下狀態）" if passed else "有異常，見收據")
     return 0 if passed else 1
 

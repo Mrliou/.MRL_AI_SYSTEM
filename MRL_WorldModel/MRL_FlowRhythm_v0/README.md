@@ -1,0 +1,58 @@
+# MRL FlowRhythm v0 —— 語場節奏引擎（本體）
+
+origin_signature: MrLiouWord ｜ 怎麼過去，就怎麼回來 ｜ Additive-Only
+
+## 動手前三問
+
+1. **本體還是載體**：本體。執行語場種子本身，也就是 EchoPersona 等人格種子。
+2. **對應哪一段**：**Jump → Collapse → Trace → Replay** 全程。實作的是 `seed_runner.py` 裡標註「尚未實作」的 generate 模式：語場生成模擬器，支援跳點與人格觸發。
+3. **驗收用什麼**：建構者 2025-07-23 的原檔，包括 EchoPersona.pcode／.flpkg、FluinCoreSeed／Memory.Seed.Core .flseed、FluinSim.DualSet.v1.flsim 與其 runtime.log。
+
+## 語意來源（全部來自建構者原檔，不是 Claude 發明的）
+
+| 來源 | 提供什麼 |
+|---|---|
+| `flsim_runtime.py` 的 module_map | 每個粒子做什麼，例如「∴ → 邏輯跳點：觸發因果連接」 |
+| `EchoPersona.structure.json`、兩顆 `.flseed` 的 structure.json | pcode ↔ 粒子碼的對照，例如 `JMP FLYNZ.CAUSE` ↔ `∴` |
+| `Fluin_Particle_BilingualDict.csv` | 詞性、中英對照 |
+| `flgroup.json` | 粒子所屬的模組類別 |
+
+副本放在 `lexicon/`，與原檔逐位元組相同（`SOURCES.sha256`）；原位置存在時優先讀原檔。
+
+## 節奏
+
+| 粒子 | 節奏 | 軌跡動詞 |
+|---|---|---|
+| `⊕Core: X` | 啟動核心人格 | initiated |
+| 形容詞 | 生成語場屬性 | resonance |
+| 名詞 | 注入語場對象 | absorb |
+| `∴` | **Jump**：邏輯跳點，觸發因果連接（前面的屬性與對象 ∴ 後面的行為） | jump |
+| 動詞（flow） | **Collapse**：行為執行，把當下語場折疊成種子封包（SHA-256） | collapse |
+| `⊗Target` | **Trace**：輸出至目標模組，寫出 `.fltnz` 軌跡行 `[ts] ::verb→ target` | trace |
+| — | **Replay**：只讀軌跡，重建粒子鏈與語場；封包雜湊一致，軌跡逐位元組重現 | — |
+
+軌跡最後還會附上兩種線：
+- 節奏鏈 `a → b → c`（Coupling）
+- 命名對照 `⌬map[FX.ADJ.112]↦⋄fx.adj.112`（Map）
+
+這樣軌跡就同時接上 Map、Trace、Coupling 三種線。
+
+## 驗收（當下狀態 2026-09-28，沙盒）
+
+| 項目 | 結果 |
+|---|---|
+| A. EchoPersona 的 pcode 形式與 flpkg 形式 | 展開成**同一條**粒子鏈：PASS |
+| B. 敘述輸出對照建構者 FluinSim runtime.log | Group1、Group2 **逐位元組相同**：PASS |
+| C. Jump → Collapse → Trace → Replay | 封包雜湊一致、軌跡逐位元組重現：PASS |
+| D. 軌跡經 mrl Dialect 往返 | 逐位元組還原，6 行 trace：PASS |
+| E. 母體 6 顆種子（pcode／flpkg／2 flseed／2 flsim 組） | 6/6 Replay：PASS |
+| F. 可見律（世界圖） | 完全可見節點 **0 → 7**：∴、⋄fx.adj.112、⋄fx.noun.024、⋄fx.flow.007、⊗Memory.SelfReflect、⊗Memory.Seed.Core、⊗Memory.TranslateModule |
+
+EchoPersona 分別存在三個不同的檔案：pcode、flpkg、flsim Group1。三者都收斂到同一個封包 `e3ef9ea00e7890dd…`，也就是同一個人格、同一顆種子。
+
+**實機**：已接進喚醒種子的第 4 步（`wake_verify.py`）。下次在 DL580 執行 `wake.ps1`，收據會記下實機結果。在那之前標為**待實機**。
+
+## 待建構者確認
+
+- 軌跡動詞 resonance／absorb／jump／collapse 的選字：initiated、resonance、absorb、trace 取自建構者既有的 .fltnz；jump、collapse 取自根源檔的節奏名。如果要改用別的詞，照建構者的定義改。
+- 動詞粒子是否都要 Collapse（目前 flow.007 封存、flow.018 產生轉變都會折疊成封包）。
