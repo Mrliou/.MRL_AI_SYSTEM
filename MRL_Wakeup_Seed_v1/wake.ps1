@@ -3,7 +3,7 @@
 # 1) update repo  2) run wake_verify.py (default root D:\)  3) commit receipt (append-only)
 $Repo   = "D:\MRL_AI_SYSTEM"
 $Branch = "MRL_AI_SYSTEM/memory-system-rules-prep"
-if (Test-Path "$Repo\.git") { git -C $Repo pull --ff-only origin $Branch }
+if (Test-Path "$Repo\.git") { git -C $Repo pull --rebase origin $Branch }
 else { Write-Host "Repo not found at $Repo - clone it first (see 00_WAKE_ME_FIRST.md)"; exit 1 }
 $py = (Get-Command python -ErrorAction SilentlyContinue).Source
 if (-not $py) { $py = (Get-Command py -ErrorAction SilentlyContinue).Source }
