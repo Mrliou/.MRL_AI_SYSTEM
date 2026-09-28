@@ -1,4 +1,4 @@
-"""
+r"""
 MRL 喚醒驗證（Wake Verify）—— 在母體 DL580 本地執行
 origin_signature: MrLiouWord ｜ 怎麼過去，就怎麼回來
 
@@ -49,18 +49,27 @@ def sha256_file(p, bufsize=1 << 20):
 
 def seed_selfcheck():
     sums = os.path.join(SEED, "SEED_SHA256SUMS")
-    ok, bad = 0, []
+    ok, bad, eol_only = 0, [], []
     for line in open(sums, encoding="utf-8"):
         line = line.rstrip("\n")
         if not line:
             continue
         digest, rel = line.split("  ", 1)
         p = os.path.join(SEED, *rel.split("/"))
-        if os.path.exists(p) and sha256_file(p) == digest:
+        if not os.path.exists(p):
+            bad.append(rel)
+            continue
+        if sha256_file(p) == digest:
             ok += 1
+            continue
+        # Windows git 可能把 LF 換成 CRLF（內容不變、雜湊會變）→ 還原成 LF 再比一次
+        b = open(p, "rb").read().replace(b"\r\n", b"\n")
+        if hashlib.sha256(b).hexdigest() == digest:
+            ok += 1
+            eol_only.append(rel)
         else:
             bad.append(rel)
-    return {"checked": ok + len(bad), "ok": ok, "mismatch_or_missing": bad}
+    return {"checked": ok + len(bad), "ok": ok, "ok_after_crlf_normalize": eol_only, "mismatch_or_missing": bad}
 
 
 def load_manifests():
