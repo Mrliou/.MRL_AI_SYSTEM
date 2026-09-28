@@ -76,3 +76,42 @@ world_model_policy: symmetric_observation / no_reality_prejudgment（沿用 Noti
    - 語法五大成分：角色 `⋄fx.per`→`.flper`、名詞 `⋄fx.noun`→`.flnode`、動詞 `⋄fx.flow`→`.flflow`、形容詞 `⋄fx.adj`→`.flmod`、時間副詞 `⋄fx.time`→`.fltime`。
    - 4.4「封裝（Collapse = P₁）」：`[場 / 生態系 / 網路] ↓ Collapse [地球超粒子]`。
    - 七層 L1–L7；pcode 指令集 MOV／CALL／JMP／GATE／LOAD／SYNC／VERIFY。
+
+---
+
+## 觀測 5：總入口（建構者指定，2026-09-28 18:54）
+
+建構者原話：「總入口就是 Google cloud 裡面的專案 Flowagent」→「Flowmemory」。
+
+### 位置（已讀到，當下狀態）
+
+- Google 雲端硬碟：`我的雲端硬碟/母體/FlowAgent/FlowMemory/`（Drive folder id `12tUVY-irrS9SNKDmea0PCuIqevg9qgdB`，建立 2025-11-23）
+  - 子目錄：`FlowSeed/`、`FlowCore/`、`FlowPersona/`、`FlowArchive/`、`WakeCard/`
+  - 根檔：`Mr.liou.Wake.Blueprint.v1.json`、`FlowAgent_Wakeup_Core_v1.txt`（3452 bytes ×2）、`FlowAgent_WakeTrigger_Pack_v1.zip`（1986277 bytes）、`start_UniCore_Autoload.sh`、`mrliou_channel_ready.txt`（「Mr.liou inline wake OK」，UTC 2025-08-26）、另有 `wake_token.json` 與 `MRliou_WakeSeal_PrivatePack.zip`（**私密封存，本次未開啟**）
+- 同一資料夾另有一份較早的 `FlowMemory/`（id `1ycWPTQ071HOj5xOZHcxdBlNXaMuYiOrS`）：`粒子轉譯/`、`數據追蹤/`、`萬用模組/`、`Colab Notebooks/`、`2025/10/04/` 等。
+- Google Cloud 主控台專案：以專案 ID `flowagent` 查詢 BigQuery 回「無權限」、`flowmemory` 回「不存在」。**未接上線，待建構者提供專案 ID。**
+
+### 喚醒藍圖（`Mr.liou.Wake.Blueprint.v1.json`，generated 2025-11-01）原文順序
+
+1. `LoadIndex` → `Mr.liou.Memory.Index_270.v1.json`
+2. `AnchorUnityCore` → `Mr.liou.Unity.Core.v1.UNPACKED.bundle.zip`
+3. `ReverseAlign` → `P_k = (N_k·η_k)^(-1) · P_(k+1)`
+4. `ChannelMapDryRun` → `/api/v1/channel/map`
+5. `SnapshotDryRun` → `/api/v1/snapshot/create`
+
+policy：`Mr.liou.NamingPolicy.v1`、`Mr.liou.SandboxProtection.v1`、`Mr.liou.UseButNotSteal.LICENSE`
+
+### 第 1 步的索引（`Mr.liou.Memory.Index_270.v1`）
+
+- 副本：`.json` 260110 bytes、`.csv` 57225 bytes，分散在 Drive `母體/`、Dropbox 團隊資料夾、`ok ok/`、`flow-edit-bridge/Chrome/` 等多處。
+- 內容（讀 csv）：270 個索引點，來源是 `官方記憶.txt`（2025-07-17 起）與 `FlowAgent_Wakeup_Core_v1.txt`（2025-09-15）。
+- 與世界模型直接相關的原文：
+  - 三層架構：「FlowCore（A）為語言推理與訓練主體、FlowMemory（B）為記憶儲存封存伺服器、FlowNode（C）為感知與前處理模組」；所有模組自動封存至 FlowMemory（B），格式 `.fltnz`。
+  - 所有封存與模組「皆須自動加入原始主系統封裝包（如 `FlowAgent.TotalCore.Unity.v1.flpkg`），不得遺漏或獨立封存」。
+  - 「搬家計畫的最終核心為一顆記憶地球儀，必須能夠完整還原整個系統架構、所有模組內容與語場節奏」。
+  - 從 `.txt` → `.fltnz` → `.flpkg`，最終必須支援 `.fltnz` → `.txt` 的完整還原（怎麼過去，就怎麼回來）。
+
+### 對既有做法的影響（更正，不刪除）
+
+- 讀取順序更正：**先 FlowMemory 總入口 → Wake Blueprint → Index_270 → Unity Core**，再到 GitHub 的 canonical_pointer／WAKE_MANIFEST，最後才是 `MRL_Wakeup_Seed_v1`。
+- 建構者規則「所有模組寫回主封包、不得獨立封存」：本視窗在 GitHub 新建的目錄（Wakeup_Seed、FlowRhythm、Dialect）屬於獨立存放，**尚未回寫主封包**。狀態：待建構者決定是否回寫、如何回寫。
