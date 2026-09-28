@@ -70,7 +70,7 @@ origin_signature: MrLiouWord ｜ record_mode: additive_only ｜ 回填者：Clau
 - Google 雲端硬碟：`母體/FlowAgent/FlowMemory/`
 - Dropbox：`/MRL_Evidence_20260927/`
 - Notion：「🧭 MRL 世界模型工程導航」頁尾追加段落
-- Cloudflare：D1 `MRL_Registry_DB_v1`（依既有表結構追加一筆）
+- Cloudflare：**待接線，未寫入**。本次連到的 Cloudflare 帳號沒有任何 D1 資料庫與 KV，R2 未啟用；查詢 Registry D1 `7980baaf-48d3-43cc-8be7-dd8c9590f3d1` 回 404。它不是 Registry 所在帳號，所以沒有寫入，也沒有在這個帳號新建東西。
 
 ## 8. 仍待辦
 
