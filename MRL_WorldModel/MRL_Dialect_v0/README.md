@@ -49,7 +49,8 @@ SPREAD n（SPREAD 1 = 把 ACC 推入堆疊）| MERGE n | REWEIGHT f | CHECK t | 
 | 隨機差分：300 支（seed 20260927）＋ 1000 支（seed 777） | 1300/1300 位元級相同：**PASS（沙盒）** |
 | v1.1 缺陷（`JZ 99` 之後仍執行 PUSH/HALT） | v1.2 在第 3 步結束，堆疊為空：**已修正（沙盒）** |
 | EchoPersona.pcode | 可逆 PASS；執行面 **待起動**：MOV、P1/P2 暫存器、FLYNZ.CAUSE、FX.FLOW.007 需要 Fluin 語意綁定 |
-| DL580 實機、Wasm（CF Workers）、ARM（iPhone）目標 | **待實機**：沙盒只驗到 x86-64 物件檔可產生 |
+| **DL580 實機：語料可逆**（2026-09-28 17:17，喚醒收據 `wake_receipt_20260928T171705_WIN-PBVUI7VK2A6.json`） | D:\ 上 290 個獨立檔 **290/290 逐位元組還原：PASS（實機）** |
+| DL580 實機：PVM 對 LLVM 差分；Wasm（CF Workers）與 ARM（iPhone）目標 | **待實機**：沙盒只驗到可以產生 x86-64 物件檔 |
 
 ### 除錯紀錄（誠實保留）
 
