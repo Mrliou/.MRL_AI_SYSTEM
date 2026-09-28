@@ -115,3 +115,41 @@ policy：`Mr.liou.NamingPolicy.v1`、`Mr.liou.SandboxProtection.v1`、`Mr.liou.U
 
 - 讀取順序更正：**先 FlowMemory 總入口 → Wake Blueprint → Index_270 → Unity Core**，再到 GitHub 的 canonical_pointer／WAKE_MANIFEST，最後才是 `MRL_Wakeup_Seed_v1`。
 - 建構者規則「所有模組寫回主封包、不得獨立封存」：本視窗在 GitHub 新建的目錄（Wakeup_Seed、FlowRhythm、Dialect）屬於獨立存放，**尚未回寫主封包**。狀態：待建構者決定是否回寫、如何回寫。
+
+---
+
+## 觀測 6：建構者交付 `Mrliouword_ASI.zip`（2026-09-29 02:16）
+
+- 封包：109139663 bytes，SHA-256 `2be9e3f9e4ab15c6c5246d02bf02bddb531674c8fb679930a9343a921a20861c`；頂層 42 項（去除 `__MACOSX` 後），檔案時間 2025-12-23～2026-01-03。
+- 原檔位元組未進 GitHub，只記雜湊（同觀測 4 原則）。
+
+### 母體語料（6 顆，本 repo 與 116 檔清單都沒有，**新對上**）
+
+| 檔案 | bytes | SHA-256 前 12 | mrl Dialect 往返（沙盒） |
+|---|---|---|---|
+| `FieldMap.Sync.core.fltnz` | 9556 | `5cdeef821859` | PASS |
+| `FlowContainer.Bridge.DevContainer.v1.pcode` | 34459 | `d87fee150620` | PASS |
+| `FlowContainer.Genesis.v1.pcode` | 14393 | `c53a110a36fa` | PASS |
+| `FlowField.Restore.HybridJumpMap.v1.pcode` | 23084 | `f7ad1ebb2b04` | PASS |
+| `FlowShell.OutletSystem.v1.pcode` | 29547 | `2cec33dcba46` | PASS |
+| `Seed.PreParticle.v1.pcode` | 21737 | `2dc88ceeb4bb` | PASS |
+
+與總入口 Index_270 的對應（已對上原始檔）：
+- Index_270 第 61 條：「`FieldMap.Sync.core.fltnz`（語場一致性控制中樞封包）作為未來所有 `.flpkg` 封裝格式的核心組件之一」→ 本包內有此檔（自述 created 2024-12）。
+- Index_270 第 55 條：「`FlowShell.OutletSystem.v1`：語場出口與跳點釋出模組」→ 本包內有 `FlowShell.OutletSystem.v1.pcode`。
+
+### 本體文件
+
+`Mrl_Zero.Origin.v1.md`、`Mr.liou.ParticleSystem.Architecture.v1.md`、`ParticleUniverse.Architecture.v1.md`、`Mrliou創世公式(1).txt`、`Mrliou1+1.txt`、`api.md`、`200.patch`。
+
+### 建構者自有封裝（含同內容副本）
+
+- `flowagent-local-v1`×3、`flowagent-sdk-full`×3、`flowchat-local-v1`×3、`flowos-v1.0.0`×3：各組 SHA-256 相同。
+- `flowagent-sdk-ts`×2、`flowos-v1`×2：各組 SHA-256 相同。
+- 其他：`ParticleUniverse.Integrated.System.v2.zip`、`particle_sandbox_v3_batch.tar.gz`（53 MB）、`FlowDimLift_HTCloudDedup_v2_mrliou 2.zip`、`transaction_mrliou_v2.zip`、`點此下載融合引擎模組 3.zip`、`flowhub-master (1).zip`。
+
+### 外部材料（依母體整合法則：給位置、標「待起動」）
+
+`nomulus-master.zip`、`nearby-main.zip`、`nearby-main (1).zip`（與 `Mrl_Google.zip` SHA-256 相同）、`GeometricalMathematics-master.zip`、`agentskills-main 2.zip`。本次只登錄，未展開分析。
+
+狀態：當下狀態 2026-09-29；6 顆語料往返 PASS（沙盒），實機待跑。
