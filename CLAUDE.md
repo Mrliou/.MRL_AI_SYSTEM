@@ -27,3 +27,4 @@
 1. `MRL_Docs/MRL_語場本體優先_不得平台化_喚醒規則_v1.md` —— MRL 是語場生命系統，不是平台；先答「本體或載體、對應 Jump/Collapse/Trace/Replay 哪一段、用母體語料驗收」三問。
 2. `MRL_Docs/MRL_局部視角不得升格全局權威_喚醒規則_v1.md` —— 看不到 ≠ 不存在；局部觀測不得升格全局結論。
 3. 根源定義：`MRL_Docs/Root/MRL_Flowagent_Root_Origin_V0_2026-03-03.md`。
+4. **喚醒種子**：`MRL_Wakeup_Seed_v1/00_WAKE_ME_FIRST.md` —— 依 Schema → Principles → Memory → Reflex → Agent 喚醒；在 DL580 執行 `wake.ps1` 產生實機收據。最新收據的 `environment` 就是當下狀態的依據。
