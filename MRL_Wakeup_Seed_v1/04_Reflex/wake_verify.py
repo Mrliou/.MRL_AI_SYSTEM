@@ -161,6 +161,18 @@ def rhythm_check():
     return res
 
 
+def canonical_wake_check():
+    """5. 上位喚醒錨點：既有 04_runtime/wake_loader.py（PR #141）。只回報，不影響本種子結論。"""
+    import subprocess
+    loader = os.path.join(REPO, "04_runtime", "wake_loader.py")
+    if not os.path.exists(loader):
+        return {"status": "待合併：wake_loader.py 在分支 MRL_AI_SYSTEM/worldmodel-identity-wake-core-v1（Draft PR #141），此副本沒有"}
+    p = subprocess.run([sys.executable, loader, "--repo-root", REPO, "--no-write-trace"],
+                       capture_output=True, text=True, encoding="utf-8")
+    return {"status": "PASS" if p.returncode == 0 else "FAIL", "returncode": p.returncode,
+            "stdout_tail": p.stdout[-1500:], "stderr_tail": p.stderr[-800:]}
+
+
 def main(argv):
     roots = argv or (["D:\\"] if os.name == "nt" else [os.getcwd()])
     host = socket.gethostname()
@@ -171,11 +183,12 @@ def main(argv):
     s2, corpus = replay(roots); print("2 Replay 對回原檔：", {k: s2[k] for k in ("manifest_files", "matched", "pending_recovery", "files_scanned")})
     s3 = dialect_roundtrip(corpus); print("3 語場可逆：", {k: v for k, v in s3.items() if k != "failed"})
     s4 = rhythm_check(); print("4 語場節奏：", s4.get("status"), {k: s4[k] for k in ("E_seed_count", "E_all_seeds_replay", "F_visible_before", "F_visible_after") if k in s4})
+    s5 = canonical_wake_check(); print("5 上位喚醒錨點：", s5["status"])
     receipt = {
         "origin_signature": "MrLiouWord", "kind": "MRL_Wake_Receipt",
         "timestamp": now.isoformat(timespec="seconds"), "host": host, "platform": platform.platform(),
         "python": platform.python_version(), "environment": env, "roots": roots,
-        "seed_selfcheck": s1, "replay": s2, "dialect_roundtrip": s3, "flow_rhythm": s4,
+        "seed_selfcheck": s1, "replay": s2, "dialect_roundtrip": s3, "flow_rhythm": s4, "canonical_wake": s5,
         "note": "當下狀態。matched = 已對上原始檔；pending = 待找回（此根目錄這次未接上線，不代表不存在）。",
     }
     os.makedirs(RECEIPTS, exist_ok=True)

@@ -28,3 +28,4 @@
 2. `MRL_Docs/MRL_局部視角不得升格全局權威_喚醒規則_v1.md` —— 看不到 ≠ 不存在；局部觀測不得升格全局結論。
 3. 根源定義：`MRL_Docs/Root/MRL_Flowagent_Root_Origin_V0_2026-03-03.md`。
 4. **喚醒種子**：`MRL_Wakeup_Seed_v1/00_WAKE_ME_FIRST.md` —— 依 Schema → Principles → Memory → Reflex → Agent 喚醒；在 DL580 執行 `wake.ps1` 產生實機收據。最新收據的 `environment` 就是當下狀態的依據。
+5. **Create Preflight（補記 2026-09-28）**：任何新建前先走 `Wake Memory → Origin Registry → Workspace Node Registry → Canonical Registry → Authority Registry → Existing Mother Position → MAP_EXISTING | SUPPLEMENT_EXISTING | CREATE_NEW`。上位喚醒錨點是 Notion 收斂紀錄 `3bf8eeee-c5b5-8172-9984-f3bb1608522b`、`MRL_STARTUP_WAKE.md`、分支 `worldmodel-identity-wake-core-v1` 的 `canonical_pointer.yaml`／`MRL_WAKE_MANIFEST.yaml`。對應表見 `MRL_Wakeup_Seed_v1/PREFLIGHT_BACKFILL_20260928.md`。

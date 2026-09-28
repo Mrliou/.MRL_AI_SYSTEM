@@ -77,3 +77,42 @@ origin_signature: MrLiouWord ｜ 查證日：2026-09-28 ｜ 只列檔案寫了�
 | 每個 Flow 之後都 Collapse | 已對上原始檔（JumpPointGraph 循環、CollapseTrace「每次」） |
 | ⊗Target 對應 Archive 階段 | 原檔有 Archive 階段；實作用字不同 → 待對齊 |
 | ParticleIR_Engine 的 jump／collapse（文字層） | 已對上原始檔；與語場節奏層並存，不互相取代 |
+
+---
+
+## 補查 2026-09-28（第二輪）：Dropbox ＋ Notion
+
+查證範圍追加：Dropbox 全文搜尋（`MRL_STARTUP_WAKE`、DesignPlan、Root_Origin）、Notion 搜尋與逐頁讀取、Google Drive 追加搜尋（`fx.jump`、`fx.collapse`、`STARTUP_WAKE`）。只列原檔寫了什麼。
+
+### 新找到的原檔
+
+| 原檔 | 位置 | 寫了什麼（與兩個待確認點相關的部分） |
+|---|---|---|
+| MRLiou.OriginCollapse.FullStack.v1 | Notion `3298eeee-c5b5-81e8-af01-fcc82087b272`（2026-03-20 歸檔，2026-05-12 補錄）；Google Drive `萬用運算宇宙結構律法種子模組.md`（原檔修改時間 2026-03-01）、`Mr.liou量子計算 2.md` | 粒子語法 `logic: [⋄fx.jump.A → ⋄fx.rhythm.B → ⋄fx.collapse.C]`；五層 `define → mark → transform → generate_persona → store_memory`；`round_trip_rule: input → define → mark → transform → persona → memory → restore/input_check` |
+| Collapse Engine（坍縮引擎） | Notion `33b0df79-19fc-4664-9cd7-d24afdcc8723`（MRL_維基百科，2026-03-21，已發布） | Collapse 與 Expand 成對，可逆；列出「遊戲 Replay 系統（LAW-2）」 |
+| Language Field Rhythm 語場節奏 | Notion `2c48eeee-c5b5-815c-a7ea-de98ea0015d5`（2025-12，unverified） | Fluin 符號節奏表：`⊕` 加法節奏、`✦` 共振節奏、`∞` 循環節奏、`◇` 跳躍節奏、`⌀` 零點節奏 |
+| FlowLLM CoreBlueprint v1 | Google Drive `粒子`（2026-07） | `TraceRecorder`：每一次推理、ping、人格切換轉為 trace，可回放 |
+
+### 對兩個待確認點的影響
+
+1. **`jump`／`collapse` 這兩個字**：原檔有 `⋄fx.jump`、`⋄fx.collapse`，是建構者自己的**粒子名**（fx 層）。所以這兩個字不是 Claude 發明的詞。
+   但它們在原檔中的角色是「粒子／節奏階段」，**仍未見到用作 `[ts] ::verb→ target` 的軌跡動詞**。狀態更新為：「字出自原檔（⋄fx.jump／⋄fx.collapse）；用作軌跡動詞的寫法仍是 Claude 暫用，待建構者確認」。
+2. **形容詞→resonance、名詞→absorb**：這一輪仍沒有找到逐條寫明的原檔。`✦ 共振節奏`（Language Field Rhythm）是另一套符號表，與 2025-07 module_map 的 `⊕Core／adj／noun／∴／flow／⊗` 不是同一組，不拿來互相推論。**維持「Claude 推論」**。
+3. **∴ 與 flow 的軌跡動詞**：這一輪沒有找到。`◇ 跳躍節奏` 與 module_map 的 `∴ 邏輯跳點` 符號不同，不合併。**維持待確認**。
+4. **Archive**：OriginCollapse 的最後一層 `store_memory(P)`（對應 MemoryVault／.fltnz），加上 JumpPointGraph 的 `Collapse → Archive`，都把「封存」放在最後一段。這支持 `⊗Memory.SelfReflect` 落在封存位置，但**仍沒有任何原檔寫明「⊗ = Archive」**。**維持待對齊，不改名**。
+5. **兩層 collapse 並存**：Collapse Engine 的 collapse⇄expand 與 ParticleIR_Engine 文字層一致；節奏層的 Collapse 階段另有其位。兩者並存的判斷不變。
+
+### 更正：本模組建立時缺了 Create Preflight
+
+見 `MRL_Wakeup_Seed_v1/PREFLIGHT_BACKFILL_20260928.md`。FlowRhythm v0 對應既有 OPEN 項「Core Schema Convergence」，決定為 SUPPLEMENT_EXISTING，不是新 Mother。
+
+### 狀態總表（追加，舊表保留）
+
+| 項目 | 狀態（當下 2026-09-28） |
+|---|---|
+| jump／collapse 這兩個字 | 已對上原始檔（⋄fx.jump／⋄fx.collapse 粒子名） |
+| jump／collapse 當軌跡動詞 | 原檔未見 → Claude 暫用，待建構者確認 |
+| 形容詞→resonance、名詞→absorb | Claude 推論（Drive／Dropbox／Notion 皆未找到明文） |
+| ∴、flow 的軌跡動詞 | 待確認（三處皆未找到） |
+| ⊗Target ＝ Archive | 有旁證（store_memory、Collapse→Archive），無明文 → 待對齊 |
+| OneDrive | 未查（Microsoft 365 連接尚未完成） |
