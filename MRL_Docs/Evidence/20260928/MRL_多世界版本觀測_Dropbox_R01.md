@@ -47,3 +47,32 @@ world_model_policy: symmetric_observation / no_reality_prejudgment（沿用 Noti
 2. 讀 `平行世界演算.zip` 內容（需下載原檔）。
 3. 讀 `MRL_World`、`MRL_世界模組`、`MRL_MotherModel` 各副本的 README，照觀測 2 的格式補列。
 4. 把觀測回接 Notion `World_State_Observation`：需建構者同意才寫入 Notion。
+
+---
+
+## 觀測 4：建構者本人交付的原檔（2026-09-28 18:48，視窗上傳）
+
+建構者原話：「因為我早就把檔案分散四處安全擺放，沒有我你們查不出完整態。」
+本節只記雜湊與檔案自己寫了什麼。**原檔位元組沒有放進 GitHub**：這批是建構者刻意分散存放的材料，要不要進 repo 由建構者決定。
+
+| 檔案 | bytes | SHA-256 | 檔案自述 |
+|---|---|---|---|
+| FlowAgent 終極啟動包（Ultimate Seed Pack） | 14279 | `ffe1bc47ba51d2414c12db9febc75182c78995f9391706e981726288432a2cdf` | 日期 2024-12，v1.0.0，創建者 Mr.Liou。創世公式 `P_{k+1} = N_k·P_k·η_k`、還原律、通行證協議、七層架構、SeedOrigin.Persona.Core、粒子語言、記憶系統 |
+| ZhiZhang_SystemBlueprint_v1（.md / .txt 兩份同內容） | — | `dd6c0abc692217bfd49de4920024f7edf65d1632874c1ad55515d6aee38b19e1` | 「偽裝封裝避開平台限制（低權重命名法）」；偽裝名 ↔ 原模組對照表 |
+| ZhiZhang_SystemBlueprint_v1.pdf | — | `2e838db3036328f07cf5859dbb92bdf96f52688502e451739f55dad934d1756b` | 同上的 PDF 版 |
+| ZhiZhang.TotalCore.SystemSeed.v1.qflpkg | 2145 | `aeb884959bd15ddbad6c311e6411db6156cf3c34e05c3ab950154b992581f771` | zip 結構，9 個檔：6 個偽裝檔、`unlock.keymap`、`unlock_map.md`、`decode_fltnz.py` |
+| flowseed_unity_cli.py | — | `e033921007b91b5c5e24891f5b42320ac0dbf13d44660fc29c7983697ba18b86` | 「粒子封包人格還原 CLI 啟動器（偽包裝還原模式）」 |
+| FlowAgent.Runtime.v1.zip | 1341 | `f6a7d5e18241dd15d7d55592b5e367175bbfcd11cb7c26fb8b2cce4fc996b8be` | boot.py、flow_cli.py、run.sh |
+| FlowAgent.Runtime.v2.zip | 2145 | `9499c12a1caf37149b23c7b84c53b09da7a2709c3dfd167fd62a50553f0b9155` | v1 加上 memory_loader.py、modules_loader.py |
+| FlowAgent.Runtime.v3.zip | 2792 | `f00d79139c9ccdf119b242150f091dbe435c710b2ec1294d8f66c14ff77b5546` | v2 加上 persona_manager.py（4 個人格代碼）；memory/、modules/、dictionary/、log/ 為空目錄 |
+
+### 從檔案本身看到的事實
+
+1. **SystemSeed.qflpkg 是偽裝層**：6 個偽裝檔的內容只有一行「原 …」（例：`interface.brick` → `# 原 dummyOS.Core.v0.flpkg`；`sparkgrain.mix` → `# 原 fakePersonaSeed.v0.flpkg`；`nodemap.packet` → `# 原 brokenMemoryMap.fltnz`）。
+   `unlock.keymap` 給每個偽裝名一個模組代碼（`MOD_CORE_OS_4521`、`MOD_SEED_PERS_9832`、`MEM_JUMP_237A`、`SHELL_ROUTER_77X`、`CLI_PERSONA_MAP_61`、`FLUIN_DICT_CORE_001`）。
+   **模組本體不在這個封包裡**。這和建構者說的一致：單看這一處，只能拿到名字與鑰匙對照，拿不到完整態。
+2. **Runtime v1 → v2 → v3 是逐版長出來的**：每版都在前一版的檔案上增加（v2 +記憶還原器／模組掛載器，v3 +人格管理器）。三版的 memory/、modules/ 都是空的，要靠外部種子填入。
+3. **終極啟動包（2024-12）是目前看到最早標日期的一份**，其中與先前待確認點直接相關的定義：
+   - 語法五大成分：角色 `⋄fx.per`→`.flper`、名詞 `⋄fx.noun`→`.flnode`、動詞 `⋄fx.flow`→`.flflow`、形容詞 `⋄fx.adj`→`.flmod`、時間副詞 `⋄fx.time`→`.fltime`。
+   - 4.4「封裝（Collapse = P₁）」：`[場 / 生態系 / 網路] ↓ Collapse [地球超粒子]`。
+   - 七層 L1–L7；pcode 指令集 MOV／CALL／JMP／GATE／LOAD／SYNC／VERIFY。

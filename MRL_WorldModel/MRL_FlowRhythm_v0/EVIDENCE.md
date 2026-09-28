@@ -116,3 +116,16 @@ origin_signature: MrLiouWord ｜ 查證日：2026-09-28 ｜ 只列檔案寫了�
 | ∴、flow 的軌跡動詞 | 待確認（三處皆未找到） |
 | ⊗Target ＝ Archive | 有旁證（store_memory、Collapse→Archive），無明文 → 待對齊 |
 | OneDrive | 未查（Microsoft 365 連接尚未完成） |
+
+---
+
+## 補查 2026-09-28（第三輪）：建構者交付《FlowAgent 終極啟動包》（2024-12）
+
+SHA-256 `ffe1bc47ba51d2414c12db9febc75182c78995f9391706e981726288432a2cdf`，14279 bytes（視窗上傳；原檔位元組未進 repo）。
+
+| 待確認點 | 這份原檔寫了什麼 | 狀態更新（當下 2026-09-28） |
+|---|---|---|
+| 形容詞／名詞各是什麼 | 形容詞 `⋄fx.adj` → 模組定義 `.flmod`；名詞 `⋄fx.noun` → 節點定義 `.flnode`；動詞 `⋄fx.flow` → 流程 `.flflow` | 已對上原始檔：形容詞＝模組、名詞＝節點、動詞＝流程 |
+| 形容詞→resonance、名詞→absorb | 原檔沒寫這兩個軌跡動詞 | 仍是 Claude 推論；與原檔「adj＝.flmod、noun＝.flnode」並列，不取代原檔 |
+| Collapse 是什麼 | 「封裝（Collapse = P₁）」：場／生態系／網路 ↓ Collapse → 地球超粒子；配套還原律 `P_k = P_{k+1}/(N_k·η_k)` | 已對上原始檔：Collapse 是把場封裝成 P₁，而且可以逆算回去 |
+| 每個 flow 之後都 Collapse | 本檔沒有逐 flow 規定 | 維持先前依據（JumpPointGraph、CollapseTrace「每次」） |
