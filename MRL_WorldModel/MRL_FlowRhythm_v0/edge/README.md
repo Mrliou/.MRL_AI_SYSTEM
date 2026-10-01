@@ -32,3 +32,15 @@ Worker 端點（`src/mrl_worker.js`，POST 純文字）：
 | DL580 實機 | 待實機 |
 
 映射狀態沿用 `../EVIDENCE.md`：除 `core → initiated` 外皆 provisional，本載體不改變任何映射授權。
+
+## 線上驗收（追加，當下狀態 2026-10-02，Cloudflare 線上）
+
+部署：`https://mrl-mother-platform.z814241.workers.dev`（帳號 MRLiou，Version `0d4a5e50-9249-44f4-9d28-36675c15d39d`）。上表「待部署」一列保留為部署前紀錄。
+
+| 項目 | 結果 |
+|---|---|
+| 正典 `/api/rhythm/run`（Group1）→ 拒絕 provisional 映射 | PASS（線上） |
+| 線上 Replay 本體 Python 的 EchoPersona.pcode 軌跡：逐位元組、封包 `0a9f53a15181931d` | PASS（線上） |
+| 線上 run Group1 → 本體 Python Replay 一致 | PASS（線上） |
+| v0.1.0 歷史軌跡 → 判為歷史、拒絕 v0.2.0 Replay | PASS（線上） |
+| DL580 實機 | 待實機 |
