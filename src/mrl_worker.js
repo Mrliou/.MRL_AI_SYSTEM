@@ -10,6 +10,13 @@
 
 const ORIGIN_SIGNATURE = "MrLiouWord";
 
+// FlowRhythm v0 邊緣載體（Jump → Collapse → Trace → Replay），與本體 flow_rhythm.py 逐位元組一致
+// 驗收：node MRL_WorldModel/MRL_FlowRhythm_v0/edge/conformance.mjs
+import * as Rhythm from "../MRL_WorldModel/MRL_FlowRhythm_v0/edge/flow_rhythm.mjs";
+import RHYTHM_LEXICON from "../MRL_WorldModel/MRL_FlowRhythm_v0/edge/lexicon.v0.2.0.json";
+let _lex = null;
+const rhythmLex = () => (_lex ||= Rhythm.prepareLexicon(RHYTHM_LEXICON));
+
 function domain(env) {
   return (env && env.MRL_PLATFORM_DOMAIN) || "mrliouword.com";
 }
@@ -103,6 +110,28 @@ export default {
     if (p === "/health") return J({ ok: true, ...state(env) });
     if (p === "/mrl/state") return J(state(env));
     if (p === "/api/mrl/runtime/convergence") return J(convergence());
+
+    // FlowRhythm：POST 純文字。?sandbox=1 才允許 PROVISIONAL_NOT_CANONICAL 映射（輸出永久標記）
+    if (p === "/api/rhythm/replay" || p === "/api/rhythm/run") {
+      if (request.method !== "POST") return J({ ok: false, error: "POST text/plain" }, 405);
+      const text = await request.text();
+      const allowProvisional = url.searchParams.get("sandbox") === "1";
+      const title = url.searchParams.get("title") || "語場節奏";
+      try {
+        const L = rhythmLex();
+        const r = p.endsWith("/replay")
+          ? await Rhythm.replay(text, L, { title, allowProvisional })
+          : await Rhythm.run(Rhythm.chainFromFltnz(text), L, { title, allowProvisional });
+        return J({ ok: true, carrier: "edge", engine_version: Rhythm.ENGINE_VERSION,
+          semantic_status: r.semantic_status, provisional_mappings: r.provisional_mappings,
+          final_sha256: r.final_sha256, byte_identical: r.byte_identical, trace_ops: r.trace_ops,
+          chain: r.chain, packets: r.field.packets, trace_fltnz: r.trace_fltnz, narration: r.narration,
+          header: Rhythm.traceHeaderInfo(r.trace_fltnz) });
+      } catch (e) {
+        return J({ ok: false, error: e.name, reason: e.message,
+          header: p.endsWith("/replay") ? Rhythm.traceHeaderInfo(text) : undefined }, 422);
+      }
+    }
 
     // 動態端點 → 轉發 DL580 母體後端
     if (PROXY_PATHS.includes(p)) {
