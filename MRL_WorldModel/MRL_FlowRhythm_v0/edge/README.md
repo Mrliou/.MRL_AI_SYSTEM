@@ -44,3 +44,22 @@ Worker 端點（`src/mrl_worker.js`，POST 純文字）：
 | 線上 run Group1 → 本體 Python Replay 一致 | PASS（線上） |
 | v0.1.0 歷史軌跡 → 判為歷史、拒絕 v0.2.0 Replay | PASS（線上） |
 | DL580 實機 | 待實機 |
+
+## 補位既有 particle-replay（追加，當下狀態 2026-10-02，Cloudflare 線上）
+
+Create Preflight 補做：帳號 MRLiou 線上已有 183 個 Worker，其中 `particle-replay`（L7-Meta）就是 Replay 的既有母體位置 → 決定 **SUPPLEMENT_EXISTING**，不另立新位。
+（先前部署的 `mrl-mother-platform` 是新建、version 1、未覆蓋任何東西；保留，不刪。）
+
+- 既有 `particle-replay` v1.0.0 只做「讀 DL580 `mrl_map_trace_log` 列出序列」，沒有重新執行節奏；而且當下 bridge 回 `error code: 1033`（DL580 tunnel 未連線），原路由全部 degraded。
+- 補位版本 `e083ebb3-c570-4aac-848e-63a940fd2562`：原碼一字不改、原路由照舊；新增 `/rhythm`、`POST /rhythm/replay`、`POST /rhythm/run`，不依賴 bridge。
+- 前一版 `cf8ef762-723b-4cff-b331-72c807bbea11` 留在 Cloudflare 版本歷史，可回滾。
+- 原碼內含 bridge 金鑰，不入 repo；`particle-replay/deploy.sh` 部署時從線上取回。
+
+| 項目（線上 particle-replay） | 結果 |
+|---|---|
+| 6 顆母體種子：Python 本體軌跡 → 線上 Replay，逐位元組＋封包一致 | 6/6 PASS |
+| Group1、Group2：線上 run → Python 本體 Replay 一致 | 2/2 PASS |
+| 正典預設拒絕 provisional 映射 | PASS |
+| v0.1.0 歷史軌跡判為歷史 | PASS |
+| 原路由 `/` 回應與補位前相同；`/health` 仍為 bridge 1033 degraded（非本次造成） | 已核對 |
+| DL580 `mrl_map_trace_log` 列 → 節奏重播 | 待 bridge 恢復後接（trace_data 格式待讀） |
