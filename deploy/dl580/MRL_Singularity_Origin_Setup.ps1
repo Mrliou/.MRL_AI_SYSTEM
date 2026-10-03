@@ -24,6 +24,10 @@ param(
   [string]$Nssm = "D:\nssm\nssm-2.24\win64\nssm.exe",
   [string]$Python = "D:\MrlToolchain\python\python.exe",
   [string]$TunnelConfig = "C:\Users\Administrator\.cloudflared\config.yml",
+  # Cloudflare Origin CA 憑證（儀表板 SSL/TLS › Origin Server › Create Certificate，主機名 origin.mrliouword.com）
+  [string]$OriginCertPath = "D:\MRL_Edge\origin.mrliouword.com.pem",
+  [string]$OriginKeyPath  = "D:\MRL_Edge\origin.mrliouword.com.key",
+  [switch]$AllowInternalTls,
   [switch]$AddTunnelPathRule
 )
 $ErrorActionPreference = "Stop"
@@ -47,7 +51,14 @@ if (-not $svc) {
   & $Nssm set MRL_Platform AppStdout "D:\MRL_runtime\logs\MRL_Platform.out.log" | Out-Null
   & $Nssm set MRL_Platform AppStderr "D:\MRL_runtime\logs\MRL_Platform.err.log" | Out-Null
   Note "platform_service" "installed"
-} else { Note "platform_service" "exists:$($svc.Status)" }
+} else {
+  # 既有服務：埠必須與 -PlatformPort 一致，否則中止（避免 Caddy 反代到錯的埠）
+  $envExtra = (& $Nssm get MRL_Platform AppEnvironmentExtra) -join " "
+  $m = [regex]::Match($envExtra, "MRL_PORT=(\d+)")
+  $svcPort = if ($m.Success) { [int]$m.Groups[1].Value } else { 8790 }
+  if ($svcPort -ne $PlatformPort) { throw "既有 MRL_Platform 服務埠為 $svcPort，與 -PlatformPort $PlatformPort 不符；請用 -PlatformPort $svcPort 重跑，或先調整服務設定。" }
+  Note "platform_service" "exists:$($svc.Status):port=$svcPort"
+}
 Start-Service MRL_Platform -ErrorAction SilentlyContinue
 Start-Sleep -Seconds 4
 # 本機防火牆：7960 不對外（只給本機反代／cloudflared）
@@ -59,6 +70,16 @@ if (-not (Get-NetFirewallRule -DisplayName "MRL_Platform_Block_$PlatformPort" -E
 $own = PortOwner $EdgePort
 if ($own -and $own -ne "caddy") { throw "埠 $EdgePort 已被 $own 使用。改用 -EdgePort 8443，並通知雲端把 MRL_DL580_ORIGIN 改為 https://${EdgeHost}:8443" }
 New-Item -ItemType Directory -Force -Path $EdgeHome | Out-Null
+# 憑證：預設要求 Cloudflare Origin CA（配合 Full (strict)）；只有明示 -AllowInternalTls 才用自簽
+if ((Test-Path $OriginCertPath) -and (Test-Path $OriginKeyPath)) {
+  $TlsLine = "tls `"$OriginCertPath`" `"$OriginKeyPath`""
+  Note "tls" "origin_ca"
+} elseif ($AllowInternalTls) {
+  $TlsLine = "tls internal"
+  Note "tls" "WARN: internal（Cloudflare 僅能用 Full，非 strict；請盡快換 Origin CA）"
+} else {
+  throw "找不到 Origin CA 憑證：$OriginCertPath / $OriginKeyPath。請在 Cloudflare 儀表板 SSL/TLS › Origin Server 建立 origin.mrliouword.com 憑證存到上述路徑後重跑（或暫用 -AllowInternalTls）。"
+}
 $caddy = Join-Path $EdgeHome "caddy.exe"
 if (-not (Test-Path $caddy)) {
   curl.exe -L "https://caddyserver.com/api/download?os=windows&arch=amd64" -o $caddy
@@ -69,7 +90,7 @@ if (-not (Test-Path $caddy)) {
   auto_https disable_redirects
 }
 https://${EdgeHost}:$EdgePort {
-  tls internal
+  $TlsLine
   @api path /health /api/mother/status /api/dl580/run /api/chat /api/monitor /mrl/perceive /api/mrl/runtime/convergence /mrl/state
   handle @api {
     reverse_proxy 127.0.0.1:$PlatformPort
@@ -122,7 +143,8 @@ if ($AddTunnelPathRule) {
   if (-not (Test-Path $TunnelConfig)) { Note "tunnel_rule" "SKIP: 找不到 $TunnelConfig" }
   else {
     $txt = Get-Content $TunnelConfig -Raw
-    if ($txt -match "localhost:$PlatformPort") { Note "tunnel_rule" "exists" }
+    $want = '(?ms)^\s*-\s*hostname:\s*dl580\.mrliouword\.com\s*\r?\n\s*path:\s*\^/\(api/\(mother/status\|dl580/run\|chat\|monitor\)\|mrl/perceive\)\$\s*\r?\n\s*service:\s*http://localhost:' + $PlatformPort + '\b'
+    if ($txt -match $want) { Note "tunnel_rule" "exists" }
     else {
       Copy-Item $TunnelConfig ($TunnelConfig + ".bak_" + (Get-Date -Format "yyyyMMdd_HHmmss"))
       $nl = "`r`n"

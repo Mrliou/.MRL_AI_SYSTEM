@@ -11,7 +11,7 @@
 param(
   [string]$ExpectedWanIp = "220.132.58.129",
   [string]$ExpectedLanIp = "192.168.0.162",
-  [int]$MrlPort = $(if ($env:MRL_PORT) { [int]$env:MRL_PORT } else { 8790 }),
+  [int]$MrlPort = $(if ($env:MRL_PORT) { [int]$env:MRL_PORT } else { 7960 }),   # MRL_Platform（:8790 為 RuntimeOS，另於 known_health 探測）
   [string]$OutDir = $(if ($env:MRL_DATA_ROOT) { Join-Path $env:MRL_DATA_ROOT "receipts" } else { "D:\MRL_runtime\receipts" })
 )
 $ErrorActionPreference = "Continue"
@@ -81,7 +81,7 @@ $R.lan = [ordered]@{
 
 # 3. 監聽埠與行程（只列，不改）
 $listen = Get-NetTCPConnection -State Listen -ErrorAction SilentlyContinue |
-  Sort-Object LocalPort -Unique | ForEach-Object {
+  Sort-Object LocalPort, LocalAddress -Unique | ForEach-Object {
     $proc = Get-Process -Id $_.OwningProcess -ErrorAction SilentlyContinue
     [ordered]@{ address = $_.LocalAddress; port = $_.LocalPort; pid = $_.OwningProcess; process = if ($proc) { $proc.ProcessName } else { $null } }
   }

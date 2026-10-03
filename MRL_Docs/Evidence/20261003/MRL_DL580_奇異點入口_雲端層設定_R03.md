@@ -47,3 +47,11 @@ origin_signature: MrLiouWord ｜ Additive-Only ｜ 建構者指定：奇異點 =
 | 防火牆遇既有寬鬆規則只警告 | 改為中止：撤回規則、停 MRL_Edge；設定檔未啟用或預設入站非 Block 也中止 | 語法解析 PASS（沙盒）；待實機 |
 
 正式版本：`ae4cd1b9`（回滾點 `ae2508e0`）。UI v1.7、`/health`、FlowRhythm Replay（EchoPersona `0a9f53a15181931d` 逐位元組）照常。
+
+## 修補 2026-10-03 17:35（CodeRabbit ×6）
+
+- Origin TLS：`MRL_Singularity_Origin_Setup.ps1` 預設要求 Cloudflare Origin CA 憑證（`D:\MRL_Edge\origin.mrliouword.com.pem/.key`），缺少即中止；`-AllowInternalTls` 才退回自簽。**待辦（雲端）**：為 `origin.mrliouword.com` 加 Configuration Rule「SSL = Full (strict)」——目前 API token 無 Config Rules 權限（not authorized），需補權限或在儀表板設定；憑證就位後再開，避免 526。
+- 既有 `MRL_Platform` 服務埠與 `-PlatformPort` 不符 → 中止。
+- Tunnel 規則判定改為 hostname＋path＋service 三者同時吻合才視為已存在（沙盒以兩份樣本 config 驗證）。
+- `MRL_Tunnel_Recover.ps1`：公網入口健康時不重啟執行中的 Tunnel。
+- `MRL_Network_Receipt.ps1`：預設探測 :7960（MRL_Platform）；監聽清單保留同埠不同位址。

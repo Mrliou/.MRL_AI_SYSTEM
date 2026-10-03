@@ -18,12 +18,17 @@ $svcs = @("MRL_Tunnel", "cloudflared") | ForEach-Object { Get-Service -Name $_ -
 Step "services" @($svcs | ForEach-Object { @{ name=$_.Name; status="$($_.Status)"; start="$($_.StartType)" } })
 Step "processes" @(Get-Process cloudflared -ErrorAction SilentlyContinue | ForEach-Object { @{ pid=$_.Id } })
 
-# 3. 只做「啟動／重啟既有服務」
+# 3. 只做「啟動／重啟既有服務」；公網入口健康時不重啟（避免中斷既有 bridge／dl580 連線）
+function PublicOk { try { $r = Invoke-WebRequest -Uri "https://bridge.mrliouword.com/health" -UseBasicParsing -TimeoutSec 15; return ([int]$r.StatusCode -eq 200) } catch { return $false } }
+$publicOk = PublicOk
+Step "public_before" @{ bridge_health_ok=$publicOk }
 foreach ($s in $svcs) {
   if ($s.Status -ne "Running") {
     try { Start-Service -Name $s.Name -ErrorAction Stop; Step "start $($s.Name)" "ok" } catch { Step "start $($s.Name)" $_.Exception.Message }
-  } else {
+  } elseif (-not $publicOk) {
     try { Restart-Service -Name $s.Name -Force -ErrorAction Stop; Step "restart $($s.Name)" "ok" } catch { Step "restart $($s.Name)" $_.Exception.Message }
+  } else {
+    Step "keep $($s.Name)" "running and public entry healthy; not restarted"
   }
 }
 if (-not $svcs) { Step "no_service" "找不到 MRL_Tunnel／cloudflared 服務；未自動建立（避免另開 Tunnel）。請回報此收據。" }
