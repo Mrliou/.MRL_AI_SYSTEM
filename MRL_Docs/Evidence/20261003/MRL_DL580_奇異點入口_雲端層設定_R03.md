@@ -37,3 +37,13 @@ origin_signature: MrLiouWord ｜ Additive-Only ｜ 建構者指定：奇異點 =
 5. 收據：本機 :7960、本機 TLS、出口 IP 對 220.132.58.129
 
 路由器（人工）：PPPoE 用固定 IP 帳號（`*@ip.hinet.net`）；TCP 443 → DL580 LAN IP:443。若 443 已被占用，腳本會中止並提示改 8443，雲端同步把 `MRL_DL580_ORIGIN` 改為 `https://origin.mrliouword.com:8443`。
+
+## 修補 2026-10-03 17:20（Codex P1 ×3，PR #148）
+
+| 問題 | 修補 | 線上驗收 |
+|---|---|---|
+| 任何人經 Worker 即帶 Access token 打 DL580（含 `/api/dl580/run`） | 轉發前須 `x-mrl-edge-token`（或 Bearer）＝ secret `MRL_EDGE_TOKEN`，常數時間比對；未設 secret 一律拒絕 | 匿名 POST → 401 `MRL_EDGE_UNAUTHORIZED`：PASS（線上） |
+| 主入口 524 後把 POST 重送到備援 | 只有確定未到達 DL580 才換入口；520/524 與例外僅 GET/HEAD 換入口 | 帶 token GET → 依序 origin 522、dl580 530：PASS（線上） |
+| 防火牆遇既有寬鬆規則只警告 | 改為中止：撤回規則、停 MRL_Edge；設定檔未啟用或預設入站非 Block 也中止 | 語法解析 PASS（沙盒）；待實機 |
+
+正式版本：`ae4cd1b9`（回滾點 `ae2508e0`）。UI v1.7、`/health`、FlowRhythm Replay（EchoPersona `0a9f53a15181931d` 逐位元組）照常。
