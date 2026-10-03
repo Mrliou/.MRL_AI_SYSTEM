@@ -63,3 +63,12 @@ Create Preflight 補做：帳號 MRLiou 線上已有 183 個 Worker，其中 `pa
 | v0.1.0 歷史軌跡判為歷史 | PASS |
 | 原路由 `/` 回應與補位前相同；`/health` 仍為 bridge 1033 degraded（非本次造成） | 已核對 |
 | DL580 `mrl_map_trace_log` 列 → 節奏重播 | 待 bridge 恢復後接（trace_data 格式待讀） |
+
+## 位置更正（追加，當下狀態 2026-10-03）
+
+建構者提供 Workers Builds 日誌：本 repo 已連到既有 Worker **`mrliousilly`**（CI 以 `mrliousilly` 覆寫 `wrangler.jsonc` 的 `mrl-mother-platform`）。`src/mrl_worker.js` 的既有母體位置是 `mrliousilly`，不是新開的 `mrl-mother-platform`。
+
+- 每次推任何分支，CI 只跑 `wrangler versions upload`，產生**預覽版本**，不動正式流量。`mrliousilly` 的正式版本仍是 2026-07-05 的 `3579c66f-e77f-4be8-9242-513d10557b8a`。
+- 本分支已產生預覽版本 571／572，別名 `flowrhythm-edge-carrier-v0-mrliousilly.z814241.workers.dev`；在該預覽上 `/api/rhythm/replay` 重播 EchoPersona 軌跡結果為 ok（線上預覽）。
+- `mrl-mother-platform` 是重複位置，保留不刪，待建構者裁定。
+- 要讓 `mrliousilly` 正式流量帶上 FlowRhythm：`wrangler versions deploy` 指到本分支版本，待建構者決定。
