@@ -263,19 +263,39 @@ export default {
 
     // 動態端點 → 轉發 DL580 母體後端
     if (PROXY_PATHS.includes(p)) {
-      const origin = env && env.MRL_DL580_ORIGIN;
-      if (!origin) {
+      // 奇異點優先（2026-10-03）：MRL_DL580_ORIGIN = 固定 IP 入口（origin.mrliouword.com → 220.132.58.129），
+      // 失敗時依序試 MRL_DL580_ORIGIN_FALLBACK（逗號分隔，例：Tunnel 入口 https://dl580.mrliouword.com）。
+      // 兩個入口皆由 Cloudflare Access 保護；Worker 以 secret MRL_DL580_ACCESS_ID／SECRET 帶 service token。
+      const origins = [env && env.MRL_DL580_ORIGIN, ...String((env && env.MRL_DL580_ORIGIN_FALLBACK) || "").split(",")]
+        .map((o) => (o || "").trim()).filter(Boolean);
+      if (!origins.length) {
         return J({ ok: false, edge: true,
           reason: "DL580 後端未設定。請在 Cloudflare 變數設 MRL_DL580_ORIGIN=https://<DL580 對外網址>；此端點需母體後端（Python 不在邊緣執行）。" }, 503);
       }
-      const target = origin.replace(/\/$/, "") + p + url.search;
-      const init = { method: request.method, headers: request.headers };
-      if (request.method !== "GET" && request.method !== "HEAD") init.body = await request.text();
-      try {
-        return await fetch(target, init);
-      } catch (e) {
-        return J({ ok: false, edge: true, reason: "轉發 DL580 失敗：" + String(e) }, 502);
+      const headers = new Headers(request.headers);
+      headers.delete("cf-access-client-id"); headers.delete("cf-access-client-secret"); headers.delete("cookie");
+      if (env.MRL_DL580_ACCESS_ID && env.MRL_DL580_ACCESS_SECRET) {
+        headers.set("CF-Access-Client-Id", env.MRL_DL580_ACCESS_ID);
+        headers.set("CF-Access-Client-Secret", env.MRL_DL580_ACCESS_SECRET);
       }
+      const body = (request.method !== "GET" && request.method !== "HEAD") ? await request.text() : undefined;
+      const tried = [];
+      for (const origin of origins) {
+        const host = origin.replace(/^https?:\/\//, "").replace(/\/.*$/, "");
+        try {
+          const r = await fetch(origin.replace(/\/$/, "") + p + url.search, { method: request.method, headers, body, redirect: "manual" });
+          // 52x/530（入口未接通）、Access 擋下（401/403/302）視為此入口不可用，換下一個；其他照實回傳
+          if ([520, 521, 522, 523, 524, 525, 526, 530].includes(r.status) || [301, 302, 401, 403].includes(r.status)) {
+            tried.push({ entry: host, status: r.status }); continue;
+          }
+          const out = new Response(r.body, r);
+          out.headers.set("x-mrl-dl580-entry", host);
+          return out;
+        } catch (e) {
+          tried.push({ entry: host, error: String(e) });
+        }
+      }
+      return J({ ok: false, edge: true, reason: "DL580 各入口皆未接通（不代表 DL580 離線，僅代表這些路徑不通）", tried }, 502);
     }
     return J({ ok: false, error: "MRL_ROUTE_NOT_FOUND", path: p }, 404);
   },
