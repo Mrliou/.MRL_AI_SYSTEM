@@ -7,8 +7,31 @@
 //
 // 靜態端點（邊緣直答）：/、/health、/mrl/state、/api/mrl/runtime/convergence
 // 動態端點（轉發 DL580）：/api/mother/status、/api/dl580/run、/api/chat、/api/monitor、/mrl/perceive
+// 產品遙測端點（邊緣直答）：POST /api/mrl/telemetry/logs — Mrliou 產品前端上報 console/network/ui 事件
+// 語場節奏（邊緣直答）：POST /api/rhythm/run、/api/rhythm/replay — FlowRhythm v0.2.0，?sandbox=1 才允許 provisional
+
+import { APP_HTML } from "./mrl_app_ui.js";
+import { legacyDashboard } from "./mrl_dashboard_legacy.js";
+
+// FlowRhythm v0 邊緣載體（Jump → Collapse → Trace → Replay），與本體 flow_rhythm.py v0.2.0 逐位元組一致
+// 驗收：node MRL_WorldModel/MRL_FlowRhythm_v0/edge/conformance.mjs
+import * as Rhythm from "../MRL_WorldModel/MRL_FlowRhythm_v0/edge/flow_rhythm.mjs";
+import RHYTHM_LEXICON from "../MRL_WorldModel/MRL_FlowRhythm_v0/edge/lexicon.v0.2.0.json";
+let _rhythmLex = null;
+const rhythmLex = () => (_rhythmLex ||= Rhythm.prepareLexicon(RHYTHM_LEXICON));
 
 const ORIGIN_SIGNATURE = "MrLiouWord";
+const PRODUCT_NAME = "MrliouAI";
+const SOURCE_OWNER = "Mrliou";
+
+// CORS：允許產品前端跨域上報（含 POST JSON 前的 preflight 預檢）。
+// x-mrl-origin-signature 為 MRL 母體追蹤標記，蓋在每個 JSON 回應上。
+const CORS_HEADERS = {
+  "access-control-allow-origin": "*",
+  "access-control-allow-methods": "GET, POST, OPTIONS",
+  "access-control-allow-headers": "content-type, x-mrl-origin-signature",
+  "access-control-max-age": "86400",
+};
 
 function domain(env) {
   return (env && env.MRL_PLATFORM_DOMAIN) || "mrliouword.com";
@@ -17,6 +40,8 @@ function domain(env) {
 function state(env) {
   return {
     origin_signature: ORIGIN_SIGNATURE,
+    product: PRODUCT_NAME,
+    source_owner: SOURCE_OWNER,
     system_name: "MRL_完整態母體運轉系統_v1",
     platform: domain(env),
     edge: "Cloudflare Worker (接線/Adapter)",
@@ -37,53 +62,108 @@ function convergence() {
   };
 }
 
+// 產品級入口 (MRL_Product_Entry_UI · Issue #25/#26/#27/#28/#29)。
+// HTML 單一來源 = src/mrl_app.html，由 scripts/MRL_build_ui.js 產生 mrl_app_ui.js。
+// 動態 /api/* 由下方 PROXY_PATHS 轉發 DL580；未設時前端誠實顯示「需母體後端」。
 function dashboard(env) {
-  const d = domain(env);
-  return `<!doctype html><html lang=zh-Hant><head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><title>MRL 母體平台 · ${d}</title>
-<style>:root{color-scheme:dark}body{margin:0;font-family:system-ui,"Noto Sans TC",sans-serif;background:#0b0d10;color:#e8eef2}
-header{padding:22px 20px;border-bottom:1px solid #1d2a22;background:linear-gradient(180deg,#0f1a12,#0b0d10)}
-h1{margin:0;font-size:20px;color:#8de08a}.sig{color:#5a7d5a;font-size:12px;margin-top:5px}
-nav{display:flex;gap:6px;padding:10px 20px;border-bottom:1px solid #1d2a22;flex-wrap:wrap}
-nav button{background:#111418;color:#cfe;border:1px solid #1d2a22;border-radius:8px;padding:8px 12px;cursor:pointer}
-nav button.on{background:#1f6f3f;color:#fff;border-color:#1f6f3f}
-main{max-width:900px;margin:0 auto;padding:18px}.tab{display:none}.tab.on{display:block}
-.card{background:#111418;border:1px solid #1d2a22;border-radius:12px;padding:16px;margin:12px 0}
-h2{margin:0 0 10px;font-size:15px;color:#8de08a}button.act{background:#1f6f3f;color:#fff;border:0;border-radius:8px;padding:9px 14px;cursor:pointer;margin:4px 4px 4px 0}
-pre{background:#0a0c0e;border:1px solid #1d2a22;border-radius:8px;padding:12px;overflow:auto;font-size:12px;white-space:pre-wrap}
-textarea{width:100%;background:#0a0c0e;color:#e8eef2;border:1px solid #1d2a22;border-radius:8px;padding:9px;font:inherit}
-table{width:100%;border-collapse:collapse;font-size:13px}td{padding:6px 8px;border-bottom:1px solid #161b20}
-.b{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;background:#13361a;color:#7ee787}</style></head>
-<body><header><h1>🌌 MRL 母體運轉平台 <span class=b>${d}</span></h1>
-<div class=sig>origin_signature=MrLiouWord ｜ 權位區分模式 ｜ 邊緣 Cloudflare Worker</div></header>
-<nav><button class="nv on" data-t=console>母體控制台</button><button class=nv data-t=monitor>即時監控</button>
-<button class=nv data-t=api>API 入口/文件</button><button class=nv data-t=chat>人格對話</button></nav>
-<main>
-<section class="tab on" id=console><div class=card><h2>母體控制台</h2>
-<button class=act onclick=mstatus()>母體狀態</button><button class=act onclick=dl580()>跑 DL580 管線</button>
-<pre id=consoleOut>動態功能需 DL580 後端（在 Cloudflare 設 MRL_DL580_ORIGIN）。</pre></div></section>
-<section class=tab id=monitor><div class=card><h2>即時監控</h2><button class=act onclick=mon()>刷新</button><pre id=monOut>—</pre></div></section>
-<section class=tab id=api><div class=card><h2>API 入口/文件</h2><table>
-<tr><td><b>GET</b></td><td>/health</td><td>存活+狀態（邊緣）</td></tr>
-<tr><td><b>GET</b></td><td>/mrl/state</td><td>母體狀態（邊緣）</td></tr>
-<tr><td><b>GET</b></td><td>/api/mrl/runtime/convergence</td><td>收斂治理視圖（邊緣）</td></tr>
-<tr><td><b>POST</b></td><td>/api/dl580/run</td><td>跑管線（轉發 DL580）</td></tr>
-<tr><td><b>POST</b></td><td>/api/chat</td><td>人格對話（轉發 DL580）</td></tr>
-</table></div></section>
-<section class=tab id=chat><div class=card><h2>人格對話</h2><textarea id=msg rows=3 placeholder=對母體說點什麼…></textarea>
-<button class=act onclick=chat()>送出</button><pre id=chatOut></pre></div></section>
-</main>
-<script>
-const $=s=>document.querySelector(s);
-document.querySelectorAll('.nv').forEach(b=>b.onclick=()=>{document.querySelectorAll('.nv').forEach(x=>x.classList.remove('on'));b.classList.add('on');
-document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));$('#'+b.dataset.t).classList.add('on');if(b.dataset.t==='monitor')mon();});
-async function jget(u){return (await fetch(u)).json()}
-async function jpost(u,b){return (await fetch(u,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(b||{})})).json()}
-async function mstatus(){$('#consoleOut').textContent='…';$('#consoleOut').textContent=JSON.stringify(await jget('/api/mother/status'),null,2)}
-async function dl580(){$('#consoleOut').textContent='…';$('#consoleOut').textContent=JSON.stringify(await jpost('/api/dl580/run',{source:'平台觸發'}),null,2)}
-async function mon(){$('#monOut').textContent=JSON.stringify(await jget('/api/monitor'),null,2)}
-async function chat(){$('#chatOut').textContent='…';$('#chatOut').textContent=JSON.stringify(await jpost('/api/chat',{message:$('#msg').value}),null,2)}
-</script></body></html>`;
+  return APP_HTML;
+}
+
+// MRL 結構化封裝：把 Mrliou 產品前端上報的除錯日誌收斂成母體標準封包。
+// 產品、來源主體與 provenance 分欄記錄，禁止把外部平台名稱升格為 canonical 主體。
+function wrapMRLDebugLogs(payload, request) {
+  const safe = (payload && typeof payload === "object") ? payload : {};
+  const asArray = (v) => (Array.isArray(v) ? v : []);
+  const consoleLogs = asArray(safe.consoleLogs);
+  const networkRequests = asArray(safe.networkRequests);
+  const uiEvents = asArray(safe.uiEvents);
+  return {
+    product: PRODUCT_NAME,
+    source_owner: SOURCE_OWNER,
+    origin_signature: ORIGIN_SIGNATURE,
+    mrl_kind: "MRL_DebugLogPacket",
+    trace_id: mrlTraceId(),
+    received_at: new Date().toISOString(),
+    source: {
+      owner: SOURCE_OWNER,
+      product: PRODUCT_NAME,
+      referer: (request && request.headers.get("referer")) || null,
+      user_agent: (request && request.headers.get("user-agent")) || null,
+    },
+    counts: {
+      consoleLogs: consoleLogs.length,
+      networkRequests: networkRequests.length,
+      uiEvents: uiEvents.length,
+    },
+    payload: { consoleLogs, networkRequests, uiEvents },
+  };
+}
+
+// 唯一識別（防碰撞）：時間前綴保留粗略可排序性；crypto.randomUUID() 提供隨機性。
+function mrlTraceId() {
+  const t = Date.now().toString(36);
+  let rand;
+  try {
+    rand = crypto.randomUUID();
+  } catch (e) {
+    rand = t + "-" + Math.random().toString(36).slice(2, 14);
+  }
+  return "MRL-DEBUG-" + t + "-" + rand;
+}
+
+// 上限守則：公開端點須有邊界。
+const MAX_BODY_BYTES = 256 * 1024;
+const MAX_LOG_CHARS = 20000;
+
+// 將 MRL 封包（含 payload）寫入邊緣可觀測性日誌；逾量截斷但保留 counts 與前段內容。
+function emitPacketLog(packet) {
+  let serialized;
+  try {
+    serialized = JSON.stringify(packet);
+  } catch (e) {
+    serialized = JSON.stringify({ trace_id: packet.trace_id, counts: packet.counts, serialize_error: String(e) });
+  }
+  if (serialized.length > MAX_LOG_CHARS) {
+    console.log("MRL_DebugLogPacket", packet.trace_id, "TRUNCATED",
+      JSON.stringify(packet.counts), serialized.slice(0, MAX_LOG_CHARS));
+  } else {
+    console.log("MRL_DebugLogPacket", packet.trace_id, serialized);
+  }
+}
+
+async function readBoundedBody(request) {
+  const reader = request.body?.getReader();
+  const chunks = [];
+  let totalBytes = 0;
+
+  if (reader) {
+    try {
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        totalBytes += value.byteLength;
+        if (totalBytes > MAX_BODY_BYTES) {
+          try {
+            await reader.cancel();
+          } catch (e) {
+            // The request may already have been cancelled by the runtime.
+          }
+          return null;
+        }
+        chunks.push(value);
+      }
+    } finally {
+      reader.releaseLock();
+    }
+  }
+
+  const body = new Uint8Array(totalBytes);
+  let offset = 0;
+  for (const chunk of chunks) {
+    body.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  return body;
 }
 
 const PROXY_PATHS = ["/api/mother/status", "/api/dl580/run", "/api/chat", "/api/monitor", "/mrl/perceive"];
@@ -94,15 +174,92 @@ export default {
     const p = url.pathname;
     const J = (o, s = 200) => new Response(JSON.stringify(o), {
       status: s,
-      headers: { "content-type": "application/json; charset=utf-8", "access-control-allow-origin": "*" },
+      headers: {
+        "content-type": "application/json; charset=utf-8",
+        "x-mrl-origin-signature": ORIGIN_SIGNATURE,
+        ...CORS_HEADERS,
+      },
     });
+
+    // CORS 預檢：邊緣統一處理所有路徑的 OPTIONS preflight（含代理 /api/*）。
+    if (request.method === "OPTIONS") {
+      return new Response(null, { status: 204, headers: CORS_HEADERS });
+    }
+
+    // Mrliou 產品遙測端點：POST /api/mrl/telemetry/logs。
+    if (p === "/api/mrl/telemetry/logs" && request.method === "POST") {
+      const declaredLen = Number(request.headers.get("content-length") || 0);
+      if (Number.isFinite(declaredLen) && declaredLen > MAX_BODY_BYTES) {
+        return J({
+          success: false,
+          product: PRODUCT_NAME,
+          source_owner: SOURCE_OWNER,
+          error: "MRL_PAYLOAD_TOO_LARGE",
+          max_bytes: MAX_BODY_BYTES,
+        }, 413);
+      }
+      let body;
+      try {
+        const bodyBytes = await readBoundedBody(request);
+        if (bodyBytes === null) {
+          return J({
+            success: false,
+            product: PRODUCT_NAME,
+            source_owner: SOURCE_OWNER,
+            error: "MRL_PAYLOAD_TOO_LARGE",
+            max_bytes: MAX_BODY_BYTES,
+          }, 413);
+        }
+        body = JSON.parse(new TextDecoder().decode(bodyBytes));
+      } catch (e) {
+        return J({
+          success: false,
+          product: PRODUCT_NAME,
+          source_owner: SOURCE_OWNER,
+          error: "MRL_INVALID_JSON",
+        }, 400);
+      }
+      const packet = wrapMRLDebugLogs(body, request);
+      emitPacketLog(packet);
+      return J({
+        success: true,
+        product: PRODUCT_NAME,
+        source_owner: SOURCE_OWNER,
+        origin_signature: ORIGIN_SIGNATURE,
+      });
+    }
 
     if (request.method === "GET" && (p === "/" || p === "/index.html")) {
       return new Response(dashboard(env), { headers: { "content-type": "text/html; charset=utf-8" } });
     }
+    if (request.method === "GET" && p === "/console/legacy") {
+      return new Response(legacyDashboard(env), { headers: { "content-type": "text/html; charset=utf-8" } });
+    }
     if (p === "/health") return J({ ok: true, ...state(env) });
     if (p === "/mrl/state") return J(state(env));
     if (p === "/api/mrl/runtime/convergence") return J(convergence());
+
+    // FlowRhythm：POST 純文字。預設正典 fail-closed；?sandbox=1 才允許 PROVISIONAL_NOT_CANONICAL（輸出永久標記）
+    if (p === "/api/rhythm/replay" || p === "/api/rhythm/run") {
+      if (request.method !== "POST") return J({ ok: false, error: "POST text/plain" }, 405);
+      const text = await request.text();
+      const allowProvisional = url.searchParams.get("sandbox") === "1";
+      const title = url.searchParams.get("title") || "語場節奏";
+      try {
+        const L = rhythmLex();
+        const r = p.endsWith("/replay")
+          ? await Rhythm.replay(text, L, { title, allowProvisional })
+          : await Rhythm.run(Rhythm.chainFromFltnz(text), L, { title, allowProvisional });
+        return J({ ok: true, carrier: "edge", engine_version: Rhythm.ENGINE_VERSION,
+          semantic_status: r.semantic_status, provisional_mappings: r.provisional_mappings,
+          final_sha256: r.final_sha256, byte_identical: r.byte_identical, trace_ops: r.trace_ops,
+          chain: r.chain, packets: r.field.packets, trace_fltnz: r.trace_fltnz, narration: r.narration,
+          header: Rhythm.traceHeaderInfo(r.trace_fltnz) });
+      } catch (e) {
+        return J({ ok: false, error: e.name, reason: e.message,
+          header: p.endsWith("/replay") ? Rhythm.traceHeaderInfo(text) : undefined }, 422);
+      }
+    }
 
     // 動態端點 → 轉發 DL580 母體後端
     if (PROXY_PATHS.includes(p)) {
