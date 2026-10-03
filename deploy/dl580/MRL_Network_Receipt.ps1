@@ -88,6 +88,30 @@ $listen = Get-NetTCPConnection -State Listen -ErrorAction SilentlyContinue |
 $R.listening = @($listen)
 $R.listening_note = "address=0.0.0.0／:: 代表所有介面（含 LAN、Tailscale）都可連；127.0.0.1 代表只限本機。"
 
+# 3b. 對照既有服務登錄（flow-tasks config/MRL_PORT_MAP.json，2026-07-10）：實際監聽 vs 登錄
+$known = [ordered]@{
+  "3000"="MRL_AI_Product_Server"; "5432"="MRL_PostgreSQL"; "6379"="mrl_redis"; "7500"="MRL_Inference";
+  "7700"="MRL_ASI_Engine"; "7800"="MRL_Bridge"; "7801"="MRL_DB_Proxy"; "7810"="MRL_Agent_Orchestrator+ReasoningEngine";
+  "7811"="MRL_Toolchain_Engine"; "7812"="MRL_Memory_Engine"; "7900"="MRL_FlowAgent_API"; "7950"="MRL_AI_OS(ControlPanel)";
+  "8787"="MRL_FlowCoreLoop"; "8788"="MRL_ParticleGlobe+RuntimeAdapter"; "8790"="MRL_RuntimeOS_v1.4.0";
+  "8799"="MRL_Write_Guard"; "20241"="MRL_Tunnel(cloudflared metrics)"
+}
+$reg = @()
+foreach ($k in $known.Keys) {
+  $hit = @($listen | Where-Object { "$($_.port)" -eq $k })
+  $reg += [ordered]@{ port=[int]$k; registered=$known[$k]; listening=($hit.Count -gt 0);
+    bind=@($hit | ForEach-Object { $_.address }); process=@($hit | ForEach-Object { $_.process }) }
+}
+$R.registry_vs_listening = $reg
+# 已知健康端點（本機）
+$R.known_health = @(
+  (Probe "http://127.0.0.1:7800/health"),
+  (Probe "http://127.0.0.1:3000/health"),
+  (Probe "http://127.0.0.1:7700/health"),
+  (Probe "http://127.0.0.1:8787/health"),
+  (Probe "http://127.0.0.1:8790/api/mrl/health")
+)
+
 # 4. 各段入口測試：Worker 需要的 API（不只 /health）
 $paths = @(
   @("GET", "/health", $null),
@@ -130,8 +154,11 @@ $R.segments = $segments
 $cf = [ordered]@{}
 $svc = Get-Service -Name cloudflared -ErrorAction SilentlyContinue
 $cf.service = if ($svc) { "$($svc.Status)" } else { "not_installed" }
+$mt = Get-Service -Name MRL_Tunnel -ErrorAction SilentlyContinue
+$cf.mrl_tunnel_service = if ($mt) { "$($mt.Status)" } else { "not_installed" }
+$cf.processes = @(Get-Process cloudflared -ErrorAction SilentlyContinue | ForEach-Object { [ordered]@{ pid=$_.Id; started=$(try { $_.StartTime.ToString("o") } catch { $null }) } })
 $cfHome = if ($env:CLOUDFLARED_HOME) { $env:CLOUDFLARED_HOME } else { "D:\cloudflared" }
-foreach ($cand in @((Join-Path $cfHome "config.yml"), "C:\Windows\System32\config\systemprofile\.cloudflared\config.yml", (Join-Path $env:USERPROFILE ".cloudflared\config.yml"))) {
+foreach ($cand in @("C:\Users\Administrator\.cloudflared\config.yml", (Join-Path $cfHome "config.yml"), "C:\Windows\System32\config\systemprofile\.cloudflared\config.yml", (Join-Path $env:USERPROFILE ".cloudflared\config.yml"))) {
   if (Test-Path $cand) {
     $cf.config_path = $cand
     $cf.config = @(Get-Content $cand | Where-Object { $_ -notmatch '(?i)credentials|token|secret' } | ForEach-Object { Mask $_ })
