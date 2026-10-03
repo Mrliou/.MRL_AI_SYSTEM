@@ -98,9 +98,24 @@ if ($ranges.Count -gt 0) {
   New-NetFirewallRule -DisplayName "MRL_Edge_Cloudflare_$EdgePort" -Direction Inbound -Protocol TCP -LocalPort $EdgePort -Action Allow -RemoteAddress $ranges | Out-Null
   # 不另建 Block 規則（Windows 防火牆 Block 優先於 Allow，會連 Cloudflare 一起擋）；依預設入站封鎖，只放行上列範圍。
   $other = Get-NetFirewallPortFilter -Protocol TCP -ErrorAction SilentlyContinue | Where-Object { $_.LocalPort -eq "$EdgePort" } | Get-NetFirewallRule | Where-Object { $_.Enabled -eq "True" -and $_.Direction -eq "Inbound" -and $_.Action -eq "Allow" -and $_.DisplayName -ne "MRL_Edge_Cloudflare_$EdgePort" }
-  if ($other) { Note "firewall_warn" @{ other_allow_rules_on_port=@($other | ForEach-Object { $_.DisplayName }) } }
+  # Codex P1 修補：既有放行規則或預設入站非封鎖時中止（否則固定 IP 可繞過 Access 直連）
+  $any = Get-NetFirewallRule -Direction Inbound -Action Allow -Enabled True -ErrorAction SilentlyContinue |
+    Where-Object { $_.DisplayName -ne "MRL_Edge_Cloudflare_$EdgePort" } | Where-Object {
+      $pf = $_ | Get-NetFirewallPortFilter -ErrorAction SilentlyContinue
+      $pf -and ($pf.Protocol -in @("TCP", "Any")) -and ($pf.LocalPort -contains "$EdgePort" -or $pf.LocalPort -contains "Any")
+    } | Where-Object { ($_ | Get-NetFirewallApplicationFilter -ErrorAction SilentlyContinue).Program -in @($null, "Any") }
+  $loose = @(Get-NetFirewallProfile | Where-Object { $_.Enabled -ne $true -or $_.DefaultInboundAction -notin @("Block") })
+  if ($any -or $loose.Count -gt 0) {
+    Note "firewall_abort" @{ other_allow_rules=@($any | ForEach-Object { $_.DisplayName }); loose_profiles=@($loose | ForEach-Object { "$($_.Name):enabled=$($_.Enabled),inbound=$($_.DefaultInboundAction)" }) }
+    Get-NetFirewallRule -DisplayName "MRL_Edge_Cloudflare_$EdgePort" -ErrorAction SilentlyContinue | Remove-NetFirewallRule
+    Stop-Service MRL_Edge -ErrorAction SilentlyContinue
+    throw "ABORT：埠 $EdgePort 另有放行規則，或防火牆設定檔未啟用／預設入站非封鎖。已停 MRL_Edge、撤回本腳本規則。請收窄或停用上列規則後重跑；路由器先不要開 $EdgePort 轉發。"
+  }
   Note "firewall" @{ allow_cloudflare_ranges=$ranges.Count }
-} else { Note "firewall" "WARN: 無法取得 Cloudflare IP 清單，未開放 $EdgePort（安全預設）" }
+} else {
+  Stop-Service MRL_Edge -ErrorAction SilentlyContinue
+  Note "firewall" "WARN: 無法取得 Cloudflare IP 清單，未開放 $EdgePort，已停 MRL_Edge（安全預設）"
+}
 
 # 4. Tunnel 備援路徑（只新增）
 if ($AddTunnelPathRule) {
