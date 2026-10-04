@@ -1,0 +1,269 @@
+{
+  "origin_signature": "MrLiouWord",
+  "generated_at": "2026-10-04T04:54:20Z",
+  "snapshot_note": "當下狀態（沙盒，list_repos MCP 工具視窗）；非永久結論",
+  "total": 500,
+  "by_owner": {
+    "Mrliou": 31,
+    "dofaromg": 469
+  },
+  "by_visibility": {
+    "public": 469,
+    "private": 28,
+    "internal": 3
+  },
+  "by_owner_visibility": {
+    "Mrliou": {
+      "public": 21,
+      "private": 7,
+      "internal": 3
+    },
+    "dofaromg": {
+      "private": 21,
+      "public": 448
+    }
+  },
+  "fork_vs_non_fork": {
+    "fork": 457,
+    "non_fork": 43
+  },
+  "fork_vs_non_fork_by_owner": {
+    "Mrliou": {
+      "fork": 19,
+      "non_fork": 12
+    },
+    "dofaromg": {
+      "fork": 438,
+      "non_fork": 31
+    }
+  },
+  "pushed_at_window": {
+    "oldest": "2026-02-28T20:15:26Z",
+    "newest": "2026-10-04T04:32:26Z"
+  },
+  "non_fork_repos_by_owner (MRL-origin candidates)": {
+    "Mrliou": [
+      "Mrliou/Dropbox",
+      "Mrliou/MRL-Autonomous-Evolution-Stack-AES-",
+      "Mrliou/MRL_AI_SYSTEM",
+      "Mrliou/MRL_AI_SYSTEM_fork",
+      "Mrliou/MRL_AI_world",
+      "Mrliou/Mrl_Mother",
+      "Mrliou/Mrl_asi_system",
+      "Mrliou/bookish-waddle",
+      "Mrliou/demo-repository",
+      "Mrliou/flow-tasks",
+      "Mrliou/mrl_ai_os--",
+      "Mrliou/silly"
+    ],
+    "dofaromg": [
+      "dofaromg/-Mr.liouagi",
+      "dofaromg/APFS",
+      "dofaromg/Ai_asicomputer",
+      "dofaromg/Applications",
+      "dofaromg/ChatGPT-Atlas.app",
+      "dofaromg/Dropbox",
+      "dofaromg/MRL-lecrev",
+      "dofaromg/MRL_AI_SYSTEM",
+      "dofaromg/MRL_AI_SYSTEM_02",
+      "dofaromg/Mrl_w01234567",
+      "dofaromg/MrliouAI-box",
+      "dofaromg/Mrliou_AIworld",
+      "dofaromg/Mrliouword-",
+      "dofaromg/_mnt_data",
+      "dofaromg/desktop-tutorial",
+      "dofaromg/fastapi",
+      "dofaromg/flow-tasks",
+      "dofaromg/flow-tasks-01",
+      "dofaromg/growthbook-flags-sdk-example",
+      "dofaromg/model-context-protocol-mcp-with-next-js",
+      "dofaromg/mrl-ai-chatbot",
+      "dofaromg/mrl-family-ai-platform",
+      "dofaromg/mrlioudb",
+      "dofaromg/mrliouword-root",
+      "dofaromg/mrliouword-system",
+      "dofaromg/omniroute-deploy",
+      "dofaromg/particle-file-system",
+      "dofaromg/rox-one-terminal",
+      "dofaromg/tool-silk-",
+      "dofaromg/welcome-to-working-copy",
+      "dofaromg/z814241"
+    ]
+  },
+  "mrl_named_forks": [
+    "Mrliou/.MRL_AI_SYSTEM",
+    "Mrliou/MRL_agent-browser",
+    "Mrliou/Mrl-cargo-xwin",
+    "Mrliou/Mrlcoreutils",
+    "Mrliou/Mrlcristalina-v4",
+    "Mrliou/Mrliouai-mcp",
+    "Mrliou/Mrlopencode",
+    "Mrliou/mrliouairules",
+    "Mrliou/mrliouword-system",
+    "Mrliou/mrlsome",
+    "dofaromg/MRL-FreeCAD",
+    "dofaromg/MRL-Karpathy-llm-wiki-bootstrap-skill",
+    "dofaromg/MRL-NEO",
+    "dofaromg/MRL-agentskills",
+    "dofaromg/MRL-android_device_xiaomi_sm8250-common",
+    "dofaromg/MRL-anonize-ts",
+    "dofaromg/MRL-antigravity-sdk-python",
+    "dofaromg/MRL-anubis",
+    "dofaromg/MRL-awesome-react",
+    "dofaromg/MRL-awesome-singapore-cs1010",
+    "dofaromg/MRL-context-kit",
+    "dofaromg/MRL-custom-agents-template",
+    "dofaromg/MRL-daisyui",
+    "dofaromg/MRL-eslint-plugin-unicorn",
+    "dofaromg/MRL-gitoxide",
+    "dofaromg/MRL-gitpython",
+    "dofaromg/MRL-mcp",
+    "dofaromg/MRL-oauthlib",
+    "dofaromg/MRL-opennlp",
+    "dofaromg/MRL-see-through",
+    "dofaromg/MRL-storm",
+    "dofaromg/MRL-termux-packages",
+    "dofaromg/MRL-texera",
+    "dofaromg/MRL-workers-oauth-provider",
+    "dofaromg/MRLNoteDiscovery",
+    "dofaromg/MRL_JS",
+    "dofaromg/MRL_Unciv",
+    "dofaromg/MRL_c15t",
+    "dofaromg/MRL_metadata-interoperability",
+    "dofaromg/MRL_mrbs-code",
+    "dofaromg/MRL_opentui",
+    "dofaromg/MRL_type-fest",
+    "dofaromg/MRL_wpt",
+    "dofaromg/MRLagent-starter-node",
+    "dofaromg/MRLairi",
+    "dofaromg/MRLerpnext",
+    "dofaromg/MRLonlook",
+    "dofaromg/MRLpiecesjs",
+    "dofaromg/MRLwebrtc",
+    "dofaromg/MRlquickstart-ios",
+    "dofaromg/Mrl-Fast-LeWorldModel",
+    "dofaromg/Mrl-agents-js",
+    "dofaromg/Mrl-hypermail",
+    "dofaromg/Mrl-lDE-CLls",
+    "dofaromg/Mrl-mission-analysis",
+    "dofaromg/Mrl-moshi-skill",
+    "dofaromg/Mrl-nix",
+    "dofaromg/Mrl-sdk-for-net",
+    "dofaromg/Mrl-system_prompts_leaks",
+    "dofaromg/Mrl-ui",
+    "dofaromg/Mrl-vue-core",
+    "dofaromg/MrlElementalTask",
+    "dofaromg/MrlNexus",
+    "dofaromg/Mrl_manifest",
+    "dofaromg/Mrlai-youtube-studio",
+    "dofaromg/Mrlawesome-feature-flags",
+    "dofaromg/Mrlclawd.rip",
+    "dofaromg/Mrlcomposio",
+    "dofaromg/Mrlcristalina-v4",
+    "dofaromg/Mrldismech",
+    "dofaromg/Mrlelectron",
+    "dofaromg/Mrlgajae-code",
+    "dofaromg/MrliouAI-blender-mcp",
+    "dofaromg/MrliouAI-kodiai",
+    "dofaromg/Mrliouai-cloud-go",
+    "dofaromg/Mrliouhan",
+    "dofaromg/Mrllane",
+    "dofaromg/Mrllift",
+    "dofaromg/Mrlmcp",
+    "dofaromg/Mrlnix.dev",
+    "dofaromg/Mrlodysseus",
+    "dofaromg/Mrlpi_agent_rust",
+    "dofaromg/Mrlpodman",
+    "dofaromg/Mrlpodman-desktop",
+    "dofaromg/Mrlpress",
+    "dofaromg/Mrlreact-doctor",
+    "dofaromg/Mrlredis-analytics",
+    "dofaromg/Mrlrox-ui",
+    "dofaromg/Mrlsecond",
+    "dofaromg/Mrlsupermemory",
+    "dofaromg/Mrlworkflow_templates",
+    "dofaromg/mrl-lean4",
+    "dofaromg/mrl-remote-ssh",
+    "dofaromg/mrlAthena",
+    "dofaromg/mrl_3d-draw",
+    "dofaromg/mrl_agentsys",
+    "dofaromg/mrl_ai_os--",
+    "dofaromg/mrl_open-source-mac-os-apps",
+    "dofaromg/mrlcore",
+    "dofaromg/mrliouhan_rl"
+  ],
+  "names_present_in_both_owners": [
+    {
+      "name": "bookish-waddle",
+      "dofaromg": "dofaromg/bookish-waddle",
+      "Mrliou": "Mrliou/bookish-waddle"
+    },
+    {
+      "name": "cfe",
+      "dofaromg": "dofaromg/cfe",
+      "Mrliou": "Mrliou/cfe"
+    },
+    {
+      "name": "claude-cookbooks",
+      "dofaromg": "dofaromg/claude-cookbooks",
+      "Mrliou": "Mrliou/claude-cookbooks"
+    },
+    {
+      "name": "claude-honcho",
+      "dofaromg": "dofaromg/claude-honcho",
+      "Mrliou": "Mrliou/claude-honcho"
+    },
+    {
+      "name": "dropbox",
+      "dofaromg": "dofaromg/Dropbox",
+      "Mrliou": "Mrliou/Dropbox"
+    },
+    {
+      "name": "flow-tasks",
+      "dofaromg": "dofaromg/flow-tasks",
+      "Mrliou": "Mrliou/flow-tasks"
+    },
+    {
+      "name": "mrl_ai_os--",
+      "dofaromg": "dofaromg/mrl_ai_os--",
+      "Mrliou": "Mrliou/mrl_ai_os--"
+    },
+    {
+      "name": "mrl_ai_system",
+      "dofaromg": "dofaromg/MRL_AI_SYSTEM",
+      "Mrliou": "Mrliou/MRL_AI_SYSTEM"
+    },
+    {
+      "name": "mrlcristalina-v4",
+      "dofaromg": "dofaromg/Mrlcristalina-v4",
+      "Mrliou": "Mrliou/Mrlcristalina-v4"
+    },
+    {
+      "name": "mrliouword-system",
+      "dofaromg": "dofaromg/mrliouword-system",
+      "Mrliou": "Mrliou/mrliouword-system"
+    },
+    {
+      "name": "nemori",
+      "dofaromg": "dofaromg/nemori",
+      "Mrliou": "Mrliou/nemori"
+    },
+    {
+      "name": "scylladb",
+      "dofaromg": "dofaromg/scylladb",
+      "Mrliou": "Mrliou/scylladb"
+    },
+    {
+      "name": "unicornstudio-react",
+      "dofaromg": "dofaromg/unicornstudio-react",
+      "Mrliou": "Mrliou/unicornstudio-react"
+    }
+  ],
+  "limits": {
+    "has_more_always_true": true,
+    "window_cap_observed": 500,
+    "note": "list_repos 對任何 query（含空結果、無意義字串）皆回 has_more=true；該旗標反映未過濾的底層視窗，無法再切分。去重後總數恰為 500，且所有查詢最舊 pushed_at 皆止於 2026-02-28：推定工具只回最近推送的 500 筆可存取 repo，再對其做子字串過濾。早於 2026-02-28 推送的 repo 本工具看不到（建構者自述兩帳號約 1,150 repo，故約 650 筆在視窗外）；看不到 ≠ 不存在。",
+    "queries_run": 83,
+    "queries_with_has_more_true_after_split": "all (83/83)"
+  }
+}

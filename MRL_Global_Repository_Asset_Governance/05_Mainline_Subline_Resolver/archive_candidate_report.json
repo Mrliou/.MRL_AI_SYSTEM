@@ -1,0 +1,312 @@
+{
+ "total": 34,
+ "note": "封存候選 ≠ 允許刪除",
+ "items": [
+  {
+   "branch_id": "b85b4eceb2638ca6",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "MRL_explore_codebase_implementation_plan",
+   "head_sha": "4a4db8a29cf732327e406c204fc69d3d07886281",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_MRL_naming_auditor_v2",
+   "confidence": 0.9,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "a41d2546516d24dd",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "claude/add-final-product-checklist",
+   "head_sha": "48ed778b281a597c9823e56b118a0b14951323a2",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_add_final_product_checklist",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "315f9fa41e2bd7a2",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "claude/create-sub-issue-for-issue-11",
+   "head_sha": "e503744ad2974058064e0e25d80d48edfb5ceafc",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_create_sub_issue_for_issue_11",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "40f4f7e68a8e734b",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "claude/dl580-cloudflared-deploy-xoopz",
+   "head_sha": "776536bddda43891a692491f5fe69c85f213c401",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_dl580_cloudflared_deploy_xoopz",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "e26810f540e736b7",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "claude/fix-multi-naming-error",
+   "head_sha": "df42da5d11b9f060c43926b5b60d691f1db9ed0d",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_fix_multi_naming_error",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "659ee76a6f9b00cb",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "claude/mrl-cloudflare-logs-route-7vz3nf",
+   "head_sha": "df8baba8469df1afe20a94fef630c94c6f179fb6",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@copilot/update-documentation-for-api",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "892819983b0243ab",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "claude/mrl-mother-runtime-v1-krte6",
+   "head_sha": "f744bab77634aba5eb85d4502997e00c8e5cd808",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_mrl_mother_runtime_v1_krte6",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "e4bf123bb0acbbcc",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "codex/complete-unfinished-tasks",
+   "head_sha": "d48d498f32bec8f8d8d3d0f7ee644521733ec371",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_complete_unfinished_tasks",
+   "confidence": 0.9,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "6cb32c6dd4c575d8",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "codex/discussion-with-partner",
+   "head_sha": "5c3ee9e329d0f77298d8ccc13dc055a5ebe2a6a6",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_discussion_with_partner",
+   "confidence": 0.9,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "e133ae3152440067",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/52-rspack-nextjs-integration-tests",
+   "head_sha": "016e22c26b58f74ee9bb4c365b67ffa2901565bb",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@copilot/claudepr77-merge-resolution",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "8f8ad9bd39c239af",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/5dbeff653a6ec62f3b09ac107c6bdf20cac30f45",
+   "head_sha": "1f11777ff3c377b0330589bcadda1f872c23c7d0",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@claude/memory-system-rules-prep-EuBXH",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "2a2ae6b9ca779fb4",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/add-ai-computer-runtime",
+   "head_sha": "aec422e05990b19082c67c97f7b7e396bfcde461",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_add_ai_computer_runtime",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "1f8b17f769ad926b",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/add-flow-tasks-feature",
+   "head_sha": "8dbcc105a88a36ca4e73ae1961e43b22b7b9980b",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_母體系統_完整版_v1",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "3d1c4f28b0e71708",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/add-geographic-mapping-feature",
+   "head_sha": "3e5fd1ee35fa212753869dae32bf912bb6db2cab",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_add_geographic_mapping_feature",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "6f350dbebf5a2f56",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/add-missing-features-to-mrl-agi",
+   "head_sha": "073ec1027f055c1f446113ba38e63f71112ecdb2",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_add_missing_features_to_mrl_agi",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "7019dd062792462c",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/add-missing-world-definition-components",
+   "head_sha": "68ff275d94efc3f3aab2d07b6ea98f4ecc2b29a7",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@claude/pull-133",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "f3a5949f11e50a7c",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/add-mrl-agi-missing-features",
+   "head_sha": "a8a1c431da987459f1d43b3ba53530f25fdf0df7",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_add_mrl_agi_missing_features",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "e6e05f45483799ba",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/analyze-test-coverage",
+   "head_sha": "e9440bfa78865c83431959494627c146e3f97bef",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_analyze_test_coverage",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "9e63c7c81c3e8dbc",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/assist-pull-merge-comment",
+   "head_sha": "66db124f393fceeafe3a5456b9610202109dc217",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_assist_pull_merge_comment",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "c047de05e92fc992",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/create-directory-structure",
+   "head_sha": "351e73707272ad84b518e8b41156afa18161e5fd",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_create_directory_structure",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "74d621594547d8f8",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/create-directory-structure-again",
+   "head_sha": "29a192e8e0695df5a0efc2dab167cb5e54ef283f",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_create_directory_structure_again",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "8a2d74a2c2f2b4d6",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/develop-system-features",
+   "head_sha": "6f3c9a3a56ea57dbdd791a7483e41c8da5d5ad80",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_develop_system_features",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "1f1ebaef7736a199",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/develop-system-interface-interaction",
+   "head_sha": "1f68e42ecd8687f003fbdab3cb18d37724b0e740",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_develop_system_interface_interaction",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "283db6e8284367aa",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/explore-codebase-implementation-plan",
+   "head_sha": "4a4db8a29cf732327e406c204fc69d3d07886281",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_MRL_naming_auditor_v2",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "7c02446a0f01d914",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/final-integration-overview-v1-3",
+   "head_sha": "9b78805615c734a99dcdf50a7699f5ea07cfbdbe",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_final_integration_overview_v1_3",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "ad1b744e067e8e22",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/fix-coding-issues",
+   "head_sha": "8dbcc105a88a36ca4e73ae1961e43b22b7b9980b",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_母體系統_完整版_v1",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "871c6bf44befbb66",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/investigate-deployment-status",
+   "head_sha": "95e68bcd3f2bbeeed6492651a2608c8266567f9f",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_investigate_deployment_status",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "a76ae92721155267",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/learn-sacrifice-logical-structure",
+   "head_sha": "6091fd0a74c5cf2d9498e36ca56b36dd4795cd6b",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_learn_sacrifice_logical_structure",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "a3e8def505982fa8",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/optimize-system-stability-add-skills",
+   "head_sha": "6086cc0599f2164a8d043b4bff45598f923e990b",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_optimize_system_stability_add_skills",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "390bc1ef86473ec0",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/organize-core-assemblies",
+   "head_sha": "a00f42c59178cafe4eda98226a4fd6cb780b4e2b",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_organize_core_assemblies",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "dfdfc3ab9baacdd4",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/task-217537952-1172186696-12c36977-393a-4fcc-b66b-8071473570c2",
+   "head_sha": "ddce340d09642204e2941051746364833474c60b",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@copilot/mrl-mother-all-deliverables",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "90a8f288c7c73538",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/update-directory-structure",
+   "head_sha": "b93a818f7d1c448c40d955731581d03b1c24f735",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_update_directory_structure",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "0294108d2475a55d",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "copilot/update-documentation-files",
+   "head_sha": "f7ac56433dd9e393f195379d1414664a2e16383f",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_update_documentation_files",
+   "confidence": 0.95,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  },
+  {
+   "branch_id": "7ed4427825b2547b",
+   "full_name": "dofaromg/MRL_AI_SYSTEM",
+   "branch_name": "feature/MRL_naming_auditor_v2",
+   "head_sha": "4a4db8a29cf732327e406c204fc69d3d07886281",
+   "canonical": "dofaromg/MRL_AI_SYSTEM@MRL_MRL_naming_auditor_v2",
+   "confidence": 0.9,
+   "reason": "shares HEAD with another branch; safe to archive (NOT delete)"
+  }
+ ]
+}
