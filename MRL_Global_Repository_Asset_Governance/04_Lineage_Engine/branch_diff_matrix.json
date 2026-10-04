@@ -1,0 +1,47 @@
+{
+  "total": 230,
+  "fully_absorbed": 51,
+  "has_unique_commits": 179,
+  "has_unique_files": 179,
+  "errors": 0,
+  "default_branch": "MRL_AI_SYSTEM/memory-system-rules-prep",
+  "by_role_absorbed": {
+    "ACTIVE_MAINLINE": "1/1",
+    "ARCHIVE_BRANCH": "0/4",
+    "FEATURE_BRANCH": "0/1",
+    "MIRROR_BRANCH": "27/154",
+    "RECOVERY_BRANCH": "13/32",
+    "SUB_MAINLINE": "2/2",
+    "UNKNOWN_BRANCH": "8/36"
+  },
+  "by_role_detail": {
+    "UNKNOWN_BRANCH": {
+      "total": 36,
+      "absorbed": 8
+    },
+    "ACTIVE_MAINLINE": {
+      "total": 1,
+      "absorbed": 1
+    },
+    "MIRROR_BRANCH": {
+      "total": 154,
+      "absorbed": 27
+    },
+    "SUB_MAINLINE": {
+      "total": 2,
+      "absorbed": 2
+    },
+    "ARCHIVE_BRANCH": {
+      "total": 4,
+      "absorbed": 0
+    },
+    "FEATURE_BRANCH": {
+      "total": 1,
+      "absorbed": 0
+    },
+    "RECOVERY_BRANCH": {
+      "total": 32,
+      "absorbed": 13
+    }
+  }
+}

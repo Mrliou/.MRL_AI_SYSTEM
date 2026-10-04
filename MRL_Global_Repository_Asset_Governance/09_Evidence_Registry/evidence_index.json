@@ -1,0 +1,89 @@
+{
+ "origin_signature": "MrLiouWord",
+ "generated_at": "2026-10-04",
+ "repo_evidence_total": 10,
+ "by_date": {
+  "20260928": 2,
+  "20261003": 3,
+  "20261004": 5
+ },
+ "entries": [
+  {
+   "date_dir": "20260928",
+   "file": "MRL_Memory_Backfill_20260928.md",
+   "repo_path": "MRL_Docs/Evidence/20260928/MRL_Memory_Backfill_20260928.md",
+   "size": 6624,
+   "sha256": "de32e932c91d4bafe0a71d7bcb3de00f81168a891a17c7947a4974abae5fb672"
+  },
+  {
+   "date_dir": "20260928",
+   "file": "MRL_多世界版本觀測_Dropbox_R01.md",
+   "repo_path": "MRL_Docs/Evidence/20260928/MRL_多世界版本觀測_Dropbox_R01.md",
+   "size": 14691,
+   "sha256": "9f9b876fac1bc7ed59fca05313f81a579d53cb74bdf48175581d45acb25a1051"
+  },
+  {
+   "date_dir": "20261003",
+   "file": "MRL_DL580_內外網接線核對_R01.md",
+   "repo_path": "MRL_Docs/Evidence/20261003/MRL_DL580_內外網接線核對_R01.md",
+   "size": 7568,
+   "sha256": "fff948cc69865ab5c3f57c7253a32ea10981713c68d551310a15de116cc44a4e"
+  },
+  {
+   "date_dir": "20261003",
+   "file": "MRL_DL580_內外網接線核對_R02_交叉比對整合.md",
+   "repo_path": "MRL_Docs/Evidence/20261003/MRL_DL580_內外網接線核對_R02_交叉比對整合.md",
+   "size": 5201,
+   "sha256": "0fa65ac3f3c3877b9deacdff653f6f400149392cda09ff5da4580f1b1a6bf765"
+  },
+  {
+   "date_dir": "20261003",
+   "file": "MRL_DL580_奇異點入口_雲端層設定_R03.md",
+   "repo_path": "MRL_Docs/Evidence/20261003/MRL_DL580_奇異點入口_雲端層設定_R03.md",
+   "size": 4664,
+   "sha256": "cb6097d7d36816dc7ae2c49a9c58fe1c2fd8d2e75476bcfabed9cd71671dd492"
+  },
+  {
+   "date_dir": "20261004",
+   "file": "R04_通道復原_Invalid_tunnel_secret.md",
+   "repo_path": "MRL_Docs/Evidence/20261004/R04_通道復原_Invalid_tunnel_secret.md",
+   "size": 2380,
+   "sha256": "6fa7baf8fe77a51f66b4befe92896280f28df47d35b7920af486b54feb576915"
+  },
+  {
+   "date_dir": "20261004",
+   "file": "R05_FlowRhythm模組接通母體.md",
+   "repo_path": "MRL_Docs/Evidence/20261004/R05_FlowRhythm模組接通母體.md",
+   "size": 2837,
+   "sha256": "d516d8347efb5e94287146ba3070fd25f81c34e0ffbd9b287f02fa849a2445b6"
+  },
+  {
+   "date_dir": "20261004",
+   "file": "R07_模組管線接通_本機AI接通_排程納管.md",
+   "repo_path": "MRL_Docs/Evidence/20261004/R07_模組管線接通_本機AI接通_排程納管.md",
+   "size": 3418,
+   "sha256": "bf0d61c1eb2d46488a8d9a97eea27329c4fcac2683f26aea205ead6964818dff"
+  },
+  {
+   "date_dir": "20261004",
+   "file": "R08_全域資產治理層_scaffold.md",
+   "repo_path": "MRL_Docs/Evidence/20261004/R08_全域資產治理層_scaffold.md",
+   "size": 3447,
+   "sha256": "8dbf3d334e1742fc92dce80380bbdb5ff4c50ee9eeda103fc09d782ee86366db"
+  },
+  {
+   "date_dir": "20261004",
+   "file": "dl580_group1_live.trace.fltnz",
+   "repo_path": "MRL_Docs/Evidence/20261004/dl580_group1_live.trace.fltnz",
+   "size": 1022,
+   "sha256": "69f1559ab23effe9b4b2f7aa61752aa5716126987c1047072018d5192d7fd3ca"
+  }
+ ],
+ "dropbox_mirror_folder": "/MRL_Evidence_20261003/",
+ "dl580_mirror_folders": [
+  "D:\\mrl\\docs\\Evidence\\20260927",
+  "D:\\mrl\\docs\\Evidence\\20260928",
+  "D:\\mrl\\workspace\\MRL_FlowRhythm_Module_20261004_R01",
+  "D:\\mrl\\workspace\\MRL_Module_Integration_20261001_R06"
+ ]
+}

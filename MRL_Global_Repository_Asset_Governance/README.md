@@ -1,48 +1,54 @@
 # MRL_Global_Repository_Asset_Governance
 
-origin_signature: MrLiouWord ｜ 建立日：2026-10-04 ｜ Additive-Only ｜ 建構者：MR.Liou
+origin_signature: MrLiouWord ｜ 建構者：MR.Liou ｜ 建立：2026-10-04 ｜ Additive-Only
 
-> MRL 全域資產治理層。把 **所有 GitHub 倉庫、分支、檔案、關係** 收斂成一張可持續更新的 **神經圖**，由系統指出哪些 PR / branch / asset 要處理，而不是反過來以單一 PR 主導。
+> **建構者原話**：「不是先處理 PR，而是先建立系統，再由系統指出哪些 PR 值得處理。」
+> PR #117 / #123 / #329 / #436 → 全部降級為 `10_Recovery_Action_Queue` 末端執行項。
 
-**鐵律**：建構者 2026-10-04 原話
-> 「不是先處理 PR，而是先建立系統，再由系統指出哪些 PR 值得處理。」
+## 10 子系統狀態（當下狀態 2026-10-04 18:xx Asia/Taipei）
 
-PR #117 / #123 / #329 / #436 等 → 全部降級為 `10_Recovery_Action_Queue` 的末端執行項。
+| # | 子系統 | 狀態 | 關鍵數字 |
+|---|---|---|---|
+| 01 | Repository_Inventory | partial | **500 repo**（list_repos 500 筆硬性視窗；~650 老 repo 待補 add_repo 全量） |
+| 02 | Branch_Registry | partial | **1/500 完成**（dofaromg/MRL_AI_SYSTEM 230 分支）；499 repo 待 add_repo |
+| 03 | **Asset_Registry** | **可跑** | 3,770 檔（default branch 一棵樹）、1,660 唯一 blob、408 重複組；34 parent_module |
+| 03 | dedupe/head_sha_duplicates | 可跑 | 38 組 HEAD-sha 共用（**全部在同一 repo 內**） |
+| 04 | **Lineage_Engine** | **可跑** | 230 分支：fully_absorbed=51、has_unique_commits=179、orphan=0；by_role 吸收率在 `branch_diff_matrix.json` |
+| 05 | **Mainline_Subline_Resolver** | **可跑** | ACTIVE_MAINLINE=1、SUB_MAINLINE=2、archive_candidates=34、unmerged=71；**HTML 視覺化：`MRL_Mainline_Subline_Map.html`** |
+| 06 | **CrossRepo_Deduplicator** | partial | repo×DL580 跨來源盤點（部分可跑）；跨 repo 待 P1 完成 |
+| 07 | **Capability_Mapper** | **可跑** | 29 能力軸 × 9 runtime（DL580 本機 7 + CF 2 Worker）；R07 flowrhythm 命中 repo 3 檔 |
+| 08 | **NeuralGraph_Engine** | **可跑** | 401 nodes / 895 edges；JSON + GraphML（Gephi 可讀） |
+| 09 | **Evidence_Registry** | **可跑** | 10 份 Evidence（SHA-256）+ Dropbox / DL580 鏡像索引 |
+| 10 | Recovery_Action_Queue | spec | 由 05/06 feed；archive 候選 34、unmerged 71；PR 降級 |
 
-## 目錄（10 個子系統）
+## 可跑引擎（_lib/，純 stdlib，零外部依賴）
 
-| # | 子系統 | 本次狀態（當下狀態 2026-10-04） |
-|---|---|---|
-| 01 | `01_Repository_Inventory` | **P0 partial**：list_repos 500 筆上限視窗；dofaromg 469（非 fork 31）+ Mrliou 31（非 fork 12），**約 650 個 pushed_at 早於 2026-02-28 的 repo 待補** |
-| 02 | `02_Branch_Registry` | **P1 partial**：1/500 完成（dofaromg/MRL_AI_SYSTEM，230 分支）；499 repo 需 `add_repo` 批准後 re-run |
-| 03 | `03_dedupe/head_sha_duplicates.json` | 38 組 HEAD-sha 共用；全部仍在同一 repo 內（跨 repo 鏡像偵測待 P1 補完） |
-| 04 | `04_Lineage_Engine` | **spec only**：schema / 流程 README 已寫，計算邏輯串接現有兩個引擎（role_infer、neural_graph）即可 |
-| 05 | `05_Mainline_Subline_Resolver` | **可跑**：對已有 230 分支產出 `mainline_registry.json` / `branch_role_map.json` / `archive_candidate_report.json` / `unmerged_asset_report.json` |
-| 06 | `06_CrossRepo_Deduplicator` | **spec only**：待 P1 全跑完後跨 repo HEAD-sha 比對 |
-| 07 | `07_Capability_Mapper` | **spec only**：Asset → Module → Capability → Runtime → Product 映射待 P2 做完後接 |
-| 08 | `08_NeuralGraph_Engine` | **可跑**：對目前 230 分支產出 `MRL_Branch_NeuralGraph.json`（401 nodes, 895 edges）＋ GraphML（Gephi 可讀） |
-| 09 | `09_Evidence_Registry` | **spec only**：對應 MRL_Docs/Evidence/* 的入口與 SHA256 索引 |
-| 10 | `10_Recovery_Action_Queue` | **spec only**：PR / recovery / archive 的執行項佇列；此佇列由 05 / 06 / 07 的結果 feed |
+- `role_infer.py` — 10 角色推斷（UNKNOWN 預設非 FEATURE）
+- `branch_role_rules.yaml` — 規則說明
+- `neural_graph.py` — 節點／邊建構器 + GraphML 匯出
+- `resolve_mainline.py` — P3 主線／分線判定
+- `build_map_html.py` — HTML 視覺化（single-file，離線可開）
 
-## 可跑引擎（_lib/，純 stdlib，無外部依賴）
-
-- `_lib/role_infer.py` — 分支角色推斷規則引擎（10 角色；prefix + is_default + 內容線索）
-- `_lib/branch_role_rules.yaml` — 推斷規則說明（純文件；邏輯內嵌 role_infer.py）
-- `_lib/neural_graph.py` — 神經圖建構器（Repo / Branch / Commit / Role 節點；CONTAINS / DEFAULT_OF / HEAD_IS / SHARES_HEAD / MIRROR_OF / INFERRED_AS 邊）
-- `_lib/resolve_mainline.py` — P3 主線／分線判定（寫 05/* 四份輸出）
-
-## 一鍵（對目前 1 repo）
-```sh
-python3 _lib/neural_graph.py   --registry 02_Branch_Registry/branch_registry.json \
-                               --dupes    03_dedupe/head_sha_duplicates.json \
-                               --out-json      08_NeuralGraph_Engine/MRL_Branch_NeuralGraph.json \
-                               --out-graphml   08_NeuralGraph_Engine/MRL_Branch_NeuralGraph.graphml
+## 一鍵（對目前資料）
+```bash
+python3 _lib/neural_graph.py --registry 02_Branch_Registry/branch_registry.json \
+    --dupes 03_dedupe/head_sha_duplicates.json \
+    --out-json 08_NeuralGraph_Engine/MRL_Branch_NeuralGraph.json \
+    --out-graphml 08_NeuralGraph_Engine/MRL_Branch_NeuralGraph.graphml
 python3 _lib/resolve_mainline.py --registry 02_Branch_Registry/branch_registry.json \
-                                 --dupes    03_dedupe/head_sha_duplicates.json \
-                                 --out-dir  05_Mainline_Subline_Resolver
+    --dupes 03_dedupe/head_sha_duplicates.json \
+    --out-dir 05_Mainline_Subline_Resolver
+python3 _lib/build_map_html.py
 ```
 
 ## 關鍵限制
-1. `mcp__claude-code-remote__list_repos` 硬性 500 筆（最近 pushed）→ 老 repo 看不到。
-2. `gh api` 只允許 **repo-scoped** 端點（repos/{owner}/{repo}/…）；user/org 層被封。
-3. 跨 repo 要用 `mcp__claude-code-remote__add_repo` 一個一個授權；單 session 不能自動大量掛載。
+1. `list_repos` 硬性 500 筆（最近 pushed）→ ~650 老 repo 看不到
+2. `gh api` 只允許 repo-scoped；user/org 封鎖
+3. 跨 repo 必須 `add_repo` 逐個授權
+4. 03_Asset_Registry 只掃 default branch 一棵樹；P2b all-branch sweep 待
+
+## 重要發現（實機證據）
+- MIRROR_BRANCH 154/230（67%）— `copilot/*` 85、`claude/*` 29、`codex/*` 4、`agent/*` 3，絕大多數與 canonical 分支共用 HEAD
+- RECOVERY_BRANCH 32 條裡只有 13 已被吸收 → 另 19 條**可能保有獨有資產**，不得封存
+- repo × DL580 母體**結構不同**：repo = code/schema/evidence 層；母體 = runtime data 層（含 125 GB models、5.3 GB pip-cache、71 MB RuntimeDaemon_API 等）—— 這是真正的 「散落的檔案」地圖
+- DL580 672 top-level entries 裡 99 個 dir 無 repo 對應（repo-only 28 個模組） → 未來若要「母體 ↔ repo 單向可逆」，這 99 個 dir 各自需要定位到某個 repo 子樹

@@ -1,0 +1,548 @@
+{
+  "MRL_MotherSource_ZhiZhang_FlowAgent_Lineage_v1": {
+    "file_count": 3029,
+    "total_size": 29101165,
+    "capability_hints": {
+      "<none>": 3029
+    },
+    "runtime_hints": {
+      "<none>": 2666,
+      "DL580_7500": 351,
+      "DL580_Bridge_7800": 12
+    },
+    "content_types": {
+      "python": 1335,
+      "text": 504,
+      "archive": 473,
+      "json": 229,
+      "mrl_particle": 157,
+      "markdown": 127,
+      "shell": 76,
+      "svg": 41,
+      "image": 33,
+      "pdf": 32,
+      "csv": 18,
+      "dockerfile": 2,
+      "cpp": 1,
+      "yaml": 1
+    }
+  },
+  "MRL_RuntimeOS_EnterpriseRuntimePlatform_CoreExecutable_v1_4_0": {
+    "file_count": 321,
+    "total_size": 740537,
+    "capability_hints": {
+      "<none>": 321
+    },
+    "runtime_hints": {
+      "<none>": 313,
+      "DL580_Bridge_7800": 7,
+      "DL580_runtime": 1
+    },
+    "content_types": {
+      "json": 263,
+      "javascript": 35,
+      "markdown": 7,
+      "python": 6,
+      "text": 3,
+      "powershell": 2,
+      "shell": 2,
+      "dockerfile": 1,
+      "html": 1,
+      "yaml": 1
+    }
+  },
+  "09_workflow": {
+    "file_count": 58,
+    "total_size": 649493,
+    "capability_hints": {
+      "<none>": 58
+    },
+    "runtime_hints": {
+      "<none>": 57,
+      "DL580_7500": 1
+    },
+    "content_types": {
+      "python": 50,
+      "javascript": 3,
+      "markdown": 2,
+      "text": 2,
+      "yaml": 1
+    }
+  },
+  "MRL_WorldModel": {
+    "file_count": 52,
+    "total_size": 331648,
+    "capability_hints": {
+      "rhythm/world_model": 52
+    },
+    "runtime_hints": {
+      "DL580_7827": 27,
+      "<none>": 17,
+      "DL580_7500": 6,
+      "Cloudflare_Worker": 1,
+      "DL580_Bridge_7800": 1
+    },
+    "content_types": {
+      "mrl_particle": 13,
+      "python": 12,
+      "text": 7,
+      "javascript": 6,
+      "markdown": 6,
+      "json": 5,
+      "shell": 2,
+      "csv": 1
+    }
+  },
+  "docs": {
+    "file_count": 35,
+    "total_size": 181372,
+    "capability_hints": {
+      "documentation": 35
+    },
+    "runtime_hints": {
+      "<none>": 35
+    },
+    "content_types": {
+      "markdown": 35
+    }
+  },
+  "tests": {
+    "file_count": 31,
+    "total_size": 151255,
+    "capability_hints": {
+      "<none>": 31
+    },
+    "runtime_hints": {
+      "<none>": 30,
+      "DL580_7500": 1
+    },
+    "content_types": {
+      "python": 31
+    }
+  },
+  "MRL_UniversalRuntimeLanguage_Core_v1": {
+    "file_count": 29,
+    "total_size": 104751,
+    "capability_hints": {
+      "<none>": 29
+    },
+    "runtime_hints": {
+      "<none>": 28,
+      "DL580_runtime": 1
+    },
+    "content_types": {
+      "python": 21,
+      "markdown": 5,
+      "text": 2,
+      "json": 1
+    }
+  },
+  "MRL_BaseWorld_DB_v1": {
+    "file_count": 23,
+    "total_size": 812958,
+    "capability_hints": {
+      "<none>": 23
+    },
+    "runtime_hints": {
+      "<none>": 23
+    },
+    "content_types": {
+      "sql": 7,
+      "markdown": 5,
+      "text": 5,
+      "pdf": 3,
+      "shell": 2,
+      "yaml": 1
+    }
+  },
+  "MRL_Runtime": {
+    "file_count": 21,
+    "total_size": 36550,
+    "capability_hints": {
+      "<none>": 21
+    },
+    "runtime_hints": {
+      "<none>": 20,
+      "DL580_Bridge_7800": 1
+    },
+    "content_types": {
+      "markdown": 10,
+      "javascript": 9,
+      "python": 2
+    }
+  },
+  "MRL_Wakeup_Seed_v1": {
+    "file_count": 20,
+    "total_size": 145554,
+    "capability_hints": {
+      "<none>": 20
+    },
+    "runtime_hints": {
+      "<none>": 20
+    },
+    "content_types": {
+      "markdown": 9,
+      "json": 5,
+      "text": 3,
+      "python": 2,
+      "powershell": 1
+    }
+  },
+  "MRL_ParticleArchive": {
+    "file_count": 17,
+    "total_size": 185664,
+    "capability_hints": {
+      "<none>": 17
+    },
+    "runtime_hints": {
+      "<none>": 17
+    },
+    "content_types": {
+      "python": 6,
+      "markdown": 5,
+      "json": 2,
+      "css": 1,
+      "html": 1,
+      "javascript": 1,
+      "text": 1
+    }
+  },
+  "deploy": {
+    "file_count": 15,
+    "total_size": 45709,
+    "capability_hints": {
+      "deployment": 15
+    },
+    "runtime_hints": {
+      "DL580_runtime": 9,
+      "<none>": 3,
+      "Cloudflare_Worker": 3
+    },
+    "content_types": {
+      "markdown": 6,
+      "powershell": 6,
+      "text": 2,
+      "shell": 1
+    }
+  },
+  "<ROOT>": {
+    "file_count": 12,
+    "total_size": 120127,
+    "capability_hints": {
+      "<none>": 12
+    },
+    "runtime_hints": {
+      "<none>": 12
+    },
+    "content_types": {
+      "markdown": 5,
+      "javascript": 2,
+      "json": 2,
+      "text": 2,
+      "python": 1
+    }
+  },
+  ".github": {
+    "file_count": 10,
+    "total_size": 24928,
+    "capability_hints": {
+      "<none>": 10
+    },
+    "runtime_hints": {
+      "<none>": 8,
+      "DL580_7827": 1,
+      "DL580_runtime": 1
+    },
+    "content_types": {
+      "yaml": 6,
+      "markdown": 4
+    }
+  },
+  "01_schema": {
+    "file_count": 10,
+    "total_size": 14073,
+    "capability_hints": {
+      "<none>": 10
+    },
+    "runtime_hints": {
+      "<none>": 9,
+      "DL580_Bridge_7800": 1
+    },
+    "content_types": {
+      "json": 9,
+      "markdown": 1
+    }
+  },
+  "MRL_母體收斂包_v1": {
+    "file_count": 10,
+    "total_size": 103706,
+    "capability_hints": {
+      "<none>": 10
+    },
+    "runtime_hints": {
+      "<none>": 10
+    },
+    "content_types": {
+      "markdown": 6,
+      "json": 3,
+      "python": 1
+    }
+  },
+  "MRL_Docs": {
+    "file_count": 8,
+    "total_size": 46190,
+    "capability_hints": {
+      "documentation": 8
+    },
+    "runtime_hints": {
+      "<none>": 5,
+      "DL580_runtime": 3
+    },
+    "content_types": {
+      "markdown": 8
+    }
+  },
+  "06_trace": {
+    "file_count": 7,
+    "total_size": 2883,
+    "capability_hints": {
+      "<none>": 7
+    },
+    "runtime_hints": {
+      "<none>": 7
+    },
+    "content_types": {
+      "json": 3,
+      "text": 3,
+      "markdown": 1
+    }
+  },
+  "MRL_Adapters": {
+    "file_count": 7,
+    "total_size": 4008,
+    "capability_hints": {
+      "<none>": 7
+    },
+    "runtime_hints": {
+      "<none>": 6,
+      "Cloudflare_Worker": 1
+    },
+    "content_types": {
+      "markdown": 7
+    }
+  },
+  "MRL_Mother": {
+    "file_count": 6,
+    "total_size": 2015,
+    "capability_hints": {
+      "memory/mother": 6
+    },
+    "runtime_hints": {
+      "<none>": 6
+    },
+    "content_types": {
+      "markdown": 6
+    }
+  },
+  "data": {
+    "file_count": 6,
+    "total_size": 17139,
+    "capability_hints": {
+      "<none>": 6
+    },
+    "runtime_hints": {
+      "<none>": 6
+    },
+    "content_types": {
+      "json": 4,
+      "markdown": 1,
+      "yaml": 1
+    }
+  },
+  "07_ingest": {
+    "file_count": 5,
+    "total_size": 2148,
+    "capability_hints": {
+      "<none>": 5
+    },
+    "runtime_hints": {
+      "<none>": 5
+    },
+    "content_types": {
+      "yaml": 4,
+      "markdown": 1
+    }
+  },
+  "MRL_Symbolic": {
+    "file_count": 5,
+    "total_size": 3233,
+    "capability_hints": {
+      "<none>": 5
+    },
+    "runtime_hints": {
+      "<none>": 5
+    },
+    "content_types": {
+      "markdown": 4,
+      "mrl_particle": 1
+    }
+  },
+  "scripts": {
+    "file_count": 5,
+    "total_size": 7218,
+    "capability_hints": {
+      "<none>": 5
+    },
+    "runtime_hints": {
+      "<none>": 3,
+      "DL580_runtime": 2
+    },
+    "content_types": {
+      "javascript": 3,
+      "powershell": 1,
+      "shell": 1
+    }
+  },
+  "00_rootlaw": {
+    "file_count": 4,
+    "total_size": 44573,
+    "capability_hints": {
+      "<none>": 4
+    },
+    "runtime_hints": {
+      "<none>": 4
+    },
+    "content_types": {
+      "yaml": 3,
+      "markdown": 1
+    }
+  },
+  "03_memory": {
+    "file_count": 4,
+    "total_size": 13890,
+    "capability_hints": {
+      "<none>": 4
+    },
+    "runtime_hints": {
+      "<none>": 4
+    },
+    "content_types": {
+      "python": 2,
+      "markdown": 1,
+      "text": 1
+    }
+  },
+  "04_runtime": {
+    "file_count": 4,
+    "total_size": 47098,
+    "capability_hints": {
+      "<none>": 4
+    },
+    "runtime_hints": {
+      "<none>": 4
+    },
+    "content_types": {
+      "python": 2,
+      "markdown": 1,
+      "yaml": 1
+    }
+  },
+  "05_persona": {
+    "file_count": 4,
+    "total_size": 17930,
+    "capability_hints": {
+      "<none>": 4
+    },
+    "runtime_hints": {
+      "DL580_7500": 4
+    },
+    "content_types": {
+      "javascript": 1,
+      "markdown": 1,
+      "python": 1,
+      "text": 1
+    }
+  },
+  "src": {
+    "file_count": 4,
+    "total_size": 75139,
+    "capability_hints": {
+      "code": 4
+    },
+    "runtime_hints": {
+      "<none>": 3,
+      "Cloudflare_Worker": 1
+    },
+    "content_types": {
+      "javascript": 3,
+      "html": 1
+    }
+  },
+  "02_principles": {
+    "file_count": 3,
+    "total_size": 3747,
+    "capability_hints": {
+      "<none>": 3
+    },
+    "runtime_hints": {
+      "<none>": 3
+    },
+    "content_types": {
+      "yaml": 2,
+      "markdown": 1
+    }
+  },
+  "08_sources": {
+    "file_count": 2,
+    "total_size": 2688,
+    "capability_hints": {
+      "<none>": 2
+    },
+    "runtime_hints": {
+      "<none>": 2
+    },
+    "content_types": {
+      "markdown": 1,
+      "yaml": 1
+    }
+  },
+  "acceptance": {
+    "file_count": 1,
+    "total_size": 5359,
+    "capability_hints": {
+      "<none>": 1
+    },
+    "runtime_hints": {
+      "<none>": 1
+    },
+    "content_types": {
+      "javascript": 1
+    }
+  },
+  "site": {
+    "file_count": 1,
+    "total_size": 20817,
+    "capability_hints": {
+      "<none>": 1
+    },
+    "runtime_hints": {
+      "<none>": 1
+    },
+    "content_types": {
+      "archive": 1
+    }
+  },
+  "ui": {
+    "file_count": 1,
+    "total_size": 39873,
+    "capability_hints": {
+      "<none>": 1
+    },
+    "runtime_hints": {
+      "<none>": 1
+    },
+    "content_types": {
+      "python": 1
+    }
+  }
+}

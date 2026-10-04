@@ -1,14 +1,16 @@
 # 09_Evidence_Registry
 
-origin_signature: MrLiouWord ｜ 2026-10-04
+origin_signature: MrLiouWord ｜ 2026-10-04 ｜ **可跑**
 
-## 既有證據鏈
-- `MRL_Docs/Evidence/20260927/` — SHA256SUMS.txt、System_Cognition v1、Addendum
-- `MRL_Docs/Evidence/20260928/` — Memory_Backfill
-- `MRL_Docs/Evidence/20261003/` — R01-R03 奇異點入口接線
-- `MRL_Docs/Evidence/20261004/` — R04 通道復原、R05 FlowRhythm 模組、R07 模組管線接通
-- 母體副本：`D:\mrl\docs\Evidence\<date>\`、`D:\mrl\workspace\MRL_FlowRhythm_Module_20261004_R01\`
-- Dropbox 副本：`/MRL_Evidence_20261003/`
+## 輸出
+- `evidence_index.json` — repo 內 `MRL_Docs/Evidence/*` 的 10 份證據，每份有 SHA-256
+- 另標 Dropbox / DL580 的鏡像位置
 
-## 下一步
-- 把治理層（本資料夾）每階段的 output 都 attach SHA-256，進入帳本鏈（可選接到 7825 的 timeline）
+## 當下清單（10 份）
+- 20260928：MRL_Memory_Backfill、MRL_System_Cognition v1
+- 20261003：R01 奇異點入口 → R03 Codex/CodeRabbit 修復
+- 20261004：**R04 通道復原、R05 FlowRhythm 模組、R07 模組管線接通、R08 治理層 scaffold、R09 治理層補完**（本次）
+
+## 鏡像
+- Dropbox：`/MRL_Evidence_20261003/`（R01 起每份都有副本）
+- DL580：`D:\mrl\docs\Evidence\20260927\`、`D:\mrl\docs\Evidence\20260928\`、`D:\mrl\workspace\MRL_FlowRhythm_Module_20261004_R01\`、`D:\mrl\workspace\MRL_Module_Integration_20261001_R06\`

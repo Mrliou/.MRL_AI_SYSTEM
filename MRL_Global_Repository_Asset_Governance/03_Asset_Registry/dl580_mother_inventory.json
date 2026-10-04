@@ -1,0 +1,2799 @@
+{
+ "origin_signature": "MrLiouWord",
+ "host": "WIN-PBVUI7VK2A6",
+ "root": "D:\\mrl",
+ "top_level": {
+  ".DS_Store": {
+   "type": "file",
+   "size": 10244
+  },
+  ".wrangler": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 1946
+  },
+  "AGENTS.md": {
+   "type": "file",
+   "size": 4786
+  },
+  "FluinArchiveRoundTrip": {
+   "type": "dir",
+   "file_count": 14,
+   "total_size": 25715
+  },
+  "MRL_AI_OS": {
+   "type": "dir",
+   "file_count": 653,
+   "total_size": 17633145
+  },
+  "MRL_AI_Transparency_System_v2.0.md": {
+   "type": "file",
+   "size": 2318
+  },
+  "MRL_AI_Weight_Research_Project_Index_v1.0.md": {
+   "type": "file",
+   "size": 3115
+  },
+  "MRL_BOOT": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 344
+  },
+  "MRL_BaseWorld_DB_v2": {
+   "type": "dir",
+   "file_count": 0,
+   "total_size": 0
+  },
+  "MRL_Bridge_LargeFile_Upload_SOP_v1.0.0.md": {
+   "type": "file",
+   "size": 8362
+  },
+  "MRL_CPP_WebConsole.exe": {
+   "type": "file",
+   "size": 461158
+  },
+  "MRL_CommandCenter.html": {
+   "type": "file",
+   "size": 6409
+  },
+  "MRL_Engineering_Log_Complete_20260518.md": {
+   "type": "file",
+   "size": 8576
+  },
+  "MRL_Engineering_Log_v2_complete_20260518.md": {
+   "type": "file",
+   "size": 12481
+  },
+  "MRL_FiveDomain_SyncDef_20260507.md": {
+   "type": "file",
+   "size": 1638
+  },
+  "MRL_GenesisLanguage_Daemon.exe": {
+   "type": "file",
+   "size": 510645
+  },
+  "MRL_GenesisLanguage_System_CPP_DL580_v2_1_RuntimeDaemon_API": {
+   "type": "dir",
+   "file_count": 1040,
+   "total_size": 71854684
+  },
+  "MRL_GenesisLanguage_System_CPP_DL580_v2_1_RuntimeDaemon_API_emptybak_20260513": {
+   "type": "dir",
+   "file_count": 0,
+   "total_size": 0
+  },
+  "MRL_Index": {
+   "type": "dir",
+   "file_count": 7,
+   "total_size": 537961773
+  },
+  "MRL_Law0_Foundation": {
+   "type": "dir",
+   "file_count": 47,
+   "total_size": 14020542
+  },
+  "MRL_Local_Runtime_System_v1.0.0": {
+   "type": "dir",
+   "file_count": 15,
+   "total_size": 25282
+  },
+  "MRL_Memory_Snapshot_FINAL.json": {
+   "type": "file",
+   "size": 567
+  },
+  "MRL_MotherSystem_ControlPanel.b64": {
+   "type": "file",
+   "size": 10004
+  },
+  "MRL_MotherSystem_ControlPanel.py": {
+   "type": "file",
+   "size": 7501
+  },
+  "MRL_NamingConvention_CHANGELOG.md": {
+   "type": "file",
+   "size": 6197
+  },
+  "MRL_NamingConvention_v1.0.0.md": {
+   "type": "file",
+   "size": 5797
+  },
+  "MRL_NamingConvention_v2.0.0.md": {
+   "type": "file",
+   "size": 6496
+  },
+  "MRL_NamingConvention_v3.0.0_FULL.md": {
+   "type": "file",
+   "size": 23168
+  },
+  "MRL_Output": {
+   "type": "dir",
+   "file_count": 2,
+   "total_size": 1701
+  },
+  "MRL_ParticleEarth.js": {
+   "type": "file",
+   "size": 1839
+  },
+  "MRL_ParticleGlobe_v2": {
+   "type": "dir",
+   "file_count": 10,
+   "total_size": 118095
+  },
+  "MRL_Phase_Progress.json": {
+   "type": "file",
+   "size": 22495
+  },
+  "MRL_Phase_Progress.json.bak_pre_phase_b_complete": {
+   "type": "file",
+   "size": 13038
+  },
+  "MRL_Phase_Progress.json.bak_pre_window_045": {
+   "type": "file",
+   "size": 17118
+  },
+  "MRL_Phase_Progress_batch_050.json": {
+   "type": "file",
+   "size": 4118
+  },
+  "MRL_Phase_Progress_batch_051.json": {
+   "type": "file",
+   "size": 3047
+  },
+  "MRL_Refactor_Tool.cjs": {
+   "type": "file",
+   "size": 8873
+  },
+  "MRL_Refactor_Tool_v1.1.cjs": {
+   "type": "file",
+   "size": 10781
+  },
+  "MRL_Trace": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 252
+  },
+  "MRL_Watchdog.py": {
+   "type": "file",
+   "size": 1787
+  },
+  "MRL_Window_Progress_049_v1.0.0.md": {
+   "type": "file",
+   "size": 11343
+  },
+  "MRL_Window_Progress_050_v1.0.0.md": {
+   "type": "file",
+   "size": 6548
+  },
+  "MRL_Window_Progress_050b_v1.0.0.md": {
+   "type": "file",
+   "size": 3713
+  },
+  "MRL_Window_Progress_050c_001_v1.0.0.md": {
+   "type": "file",
+   "size": 3564
+  },
+  "MRL_Window_Progress_050c_v1.0.0.md": {
+   "type": "file",
+   "size": 4198
+  },
+  "MRL_Window_Progress_051_v1.0.0.md": {
+   "type": "file",
+   "size": 6884
+  },
+  "MRL_Window_Progress_052_v1.0.0.md": {
+   "type": "file",
+   "size": 56
+  },
+  "MRL_Window_Progress_Batch063_PuzzleReorganization_20260519.md": {
+   "type": "file",
+   "size": 2390
+  },
+  "MRL_Window_Progress_T4_FlowCore_Naming_Audit_20260519.md": {
+   "type": "file",
+   "size": 3834
+  },
+  "MRL_World_GatewayMRLword銀行_v1_source": {
+   "type": "dir",
+   "file_count": 20,
+   "total_size": 27268
+  },
+  "MRL_apply_bridge_patch.ps1": {
+   "type": "file",
+   "size": 1872
+  },
+  "MRL_apply_bridge_patch_v2.ps1": {
+   "type": "file",
+   "size": 2745
+  },
+  "MRL_apply_bridge_patch_v3.ps1": {
+   "type": "file",
+   "size": 2428
+  },
+  "MRL_audit_misnamed.cjs": {
+   "type": "file",
+   "size": 1953
+  },
+  "MRL_audit_routes_full.cjs": {
+   "type": "file",
+   "size": 2841
+  },
+  "MRL_audit_v2.cjs": {
+   "type": "file",
+   "size": 3238
+  },
+  "MRL_build_unzip_deploy.ps1": {
+   "type": "file",
+   "size": 2369
+  },
+  "MRL_c_big_files_result.json": {
+   "type": "file",
+   "size": 7530
+  },
+  "MRL_c_drive_scan_result.json": {
+   "type": "file",
+   "size": 447
+  },
+  "MRL_c_recent_growth_result.json": {
+   "type": "file",
+   "size": 540
+  },
+  "MRL_check_3a_state.cjs": {
+   "type": "file",
+   "size": 513
+  },
+  "MRL_check_5lines.ps1": {
+   "type": "file",
+   "size": 1703
+  },
+  "MRL_check_destructure_now.cjs": {
+   "type": "file",
+   "size": 718
+  },
+  "MRL_check_property_risk.cjs": {
+   "type": "file",
+   "size": 2017
+  },
+  "MRL_check_query_dot.cjs": {
+   "type": "file",
+   "size": 507
+  },
+  "MRL_check_remaining_old.cjs": {
+   "type": "file",
+   "size": 2126
+  },
+  "MRL_check_req_dot.cjs": {
+   "type": "file",
+   "size": 505
+  },
+  "MRL_check_routes_state.cjs": {
+   "type": "file",
+   "size": 287
+  },
+  "MRL_check_upload.cjs": {
+   "type": "file",
+   "size": 397
+  },
+  "MRL_cleanup_audit.cjs": {
+   "type": "file",
+   "size": 1165
+  },
+  "MRL_d_inventory.ps1": {
+   "type": "file",
+   "size": 1911
+  },
+  "MRL_diag_v2.cjs": {
+   "type": "file",
+   "size": 1101
+  },
+  "MRL_dump_engines.cjs": {
+   "type": "file",
+   "size": 698
+  },
+  "MRL_dump_engines_loop.cjs": {
+   "type": "file",
+   "size": 424
+  },
+  "MRL_dump_search_clean.cjs": {
+   "type": "file",
+   "size": 431
+  },
+  "MRL_dump_search_handler.cjs": {
+   "type": "file",
+   "size": 373
+  },
+  "MRL_extract_v21_v2.ps1": {
+   "type": "file",
+   "size": 1448
+  },
+  "MRL_final_verify.cjs": {
+   "type": "file",
+   "size": 424
+  },
+  "MRL_find_all.done": {
+   "type": "file",
+   "size": 6
+  },
+  "MRL_find_all.log": {
+   "type": "file",
+   "size": 28757
+  },
+  "MRL_find_all.ps1": {
+   "type": "file",
+   "size": 1706
+  },
+  "MRL_find_all_wrapper.ps1": {
+   "type": "file",
+   "size": 238
+  },
+  "MRL_find_cpp_built.ps1": {
+   "type": "file",
+   "size": 1569
+  },
+  "MRL_find_destructures.cjs": {
+   "type": "file",
+   "size": 951
+  },
+  "MRL_find_enginesUsed.cjs": {
+   "type": "file",
+   "size": 1019
+  },
+  "MRL_find_launcher.ps1": {
+   "type": "file",
+   "size": 638
+  },
+  "MRL_find_recent.ps1": {
+   "type": "file",
+   "size": 1672
+  },
+  "MRL_find_recent_out.txt": {
+   "type": "file",
+   "size": 160
+  },
+  "MRL_fix_destructure_keys.cjs": {
+   "type": "file",
+   "size": 1709
+  },
+  "MRL_generate_real_scenarios.ps1": {
+   "type": "file",
+   "size": 4308
+  },
+  "MRL_grep_502.cjs": {
+   "type": "file",
+   "size": 586
+  },
+  "MRL_hello.cpp": {
+   "type": "file",
+   "size": 377
+  },
+  "MRL_hello.exe": {
+   "type": "file",
+   "size": 2568445
+  },
+  "MRL_hello2.exe": {
+   "type": "file",
+   "size": 104084
+  },
+  "MRL_hotfix_template_literals.cjs": {
+   "type": "file",
+   "size": 4001
+  },
+  "MRL_import_test.py": {
+   "type": "file",
+   "size": 433
+  },
+  "MRL_install_mingw64.ps1": {
+   "type": "file",
+   "size": 2047
+  },
+  "MRL_install_mingw64_launcher.ps1": {
+   "type": "file",
+   "size": 1211
+  },
+  "MRL_l3a_renames.json": {
+   "type": "file",
+   "size": 1608
+  },
+  "MRL_l3b_renames.json": {
+   "type": "file",
+   "size": 753
+  },
+  "MRL_layer3_candidates.json": {
+   "type": "file",
+   "size": 1844
+  },
+  "MRL_layer3_commit_plan.txt": {
+   "type": "file",
+   "size": 5257
+  },
+  "MRL_list_backups.cjs": {
+   "type": "file",
+   "size": 506
+  },
+  "MRL_merge_fetch_v2.cjs": {
+   "type": "file",
+   "size": 680
+  },
+  "MRL_merge_p050.cjs": {
+   "type": "file",
+   "size": 679
+  },
+  "MRL_merge_p050b.cjs": {
+   "type": "file",
+   "size": 492
+  },
+  "MRL_merge_p050c.cjs": {
+   "type": "file",
+   "size": 571
+  },
+  "MRL_merge_p050c_001.cjs": {
+   "type": "file",
+   "size": 578
+  },
+  "MRL_merge_progress.cjs": {
+   "type": "file",
+   "size": 649
+  },
+  "MRL_merge_v11.cjs": {
+   "type": "file",
+   "size": 642
+  },
+  "MRL_merge_v2.cjs": {
+   "type": "file",
+   "size": 707
+  },
+  "MRL_merge_v2_strict.cjs": {
+   "type": "file",
+   "size": 1086
+  },
+  "MRL_mingw_install.done": {
+   "type": "file",
+   "size": 28
+  },
+  "MRL_mingw_install.err": {
+   "type": "file",
+   "size": 0
+  },
+  "MRL_mingw_install.log": {
+   "type": "file",
+   "size": 494
+  },
+  "MRL_mingw_install.pid": {
+   "type": "file",
+   "size": 7
+  },
+  "MRL_mingw_install_result.json": {
+   "type": "file",
+   "size": 324
+  },
+  "MRL_mingw_install_wrapper.ps1": {
+   "type": "file",
+   "size": 310
+  },
+  "MRL_mingw_probe.ps1": {
+   "type": "file",
+   "size": 1233
+  },
+  "MRL_mother_index_patch_v7.py": {
+   "type": "file",
+   "size": 4304
+  },
+  "MRL_p0_renames.json": {
+   "type": "file",
+   "size": 75
+  },
+  "MRL_patch_bridge_skill_proxy.py": {
+   "type": "file",
+   "size": 2163
+  },
+  "MRL_patch_index_v5.ps1": {
+   "type": "file",
+   "size": 3385
+  },
+  "MRL_patch_index_v6.ps1": {
+   "type": "file",
+   "size": 4934
+  },
+  "MRL_path_setup_result.json": {
+   "type": "file",
+   "size": 338
+  },
+  "MRL_peek_routes_head.cjs": {
+   "type": "file",
+   "size": 431
+  },
+  "MRL_pre_l3b_audit.cjs": {
+   "type": "file",
+   "size": 2173
+  },
+  "MRL_prep_staging.ps1": {
+   "type": "file",
+   "size": 243
+  },
+  "MRL_probe_find.ps1": {
+   "type": "file",
+   "size": 192
+  },
+  "MRL_progress_049_chunks": {
+   "type": "dir",
+   "file_count": 5,
+   "total_size": 15124
+  },
+  "MRL_quick_look.ps1": {
+   "type": "file",
+   "size": 1081
+  },
+  "MRL_recent_files_3day.json": {
+   "type": "file",
+   "size": 57466
+  },
+  "MRL_refactor_v11_chunks": {
+   "type": "dir",
+   "file_count": 5,
+   "total_size": 14376
+  },
+  "MRL_rename_p23_safe.cjs": {
+   "type": "file",
+   "size": 3842
+  },
+  "MRL_rename_phase1.cjs": {
+   "type": "file",
+   "size": 3573
+  },
+  "MRL_rename_phase23.cjs": {
+   "type": "file",
+   "size": 4783
+  },
+  "MRL_rename_upload.cjs": {
+   "type": "file",
+   "size": 1940
+  },
+  "MRL_rollback.cjs": {
+   "type": "file",
+   "size": 821
+  },
+  "MRL_round_c_out.txt": {
+   "type": "file",
+   "size": 1386
+  },
+  "MRL_round_c_validate.ps1": {
+   "type": "file",
+   "size": 2159
+  },
+  "MRL_round_d_validate.ps1": {
+   "type": "file",
+   "size": 2905
+  },
+  "MRL_routes_violations.json": {
+   "type": "file",
+   "size": 3197
+  },
+  "MRL_run_l3a.cjs": {
+   "type": "file",
+   "size": 570
+  },
+  "MRL_run_l3b.cjs": {
+   "type": "file",
+   "size": 646
+  },
+  "MRL_run_p0_v2.cjs": {
+   "type": "file",
+   "size": 547
+  },
+  "MRL_scan_c_big_files_20260509.ps1": {
+   "type": "file",
+   "size": 913
+  },
+  "MRL_scan_c_drive_20260509.ps1": {
+   "type": "file",
+   "size": 948
+  },
+  "MRL_scan_c_recent_growth_20260509.ps1": {
+   "type": "file",
+   "size": 1168
+  },
+  "MRL_scan_contract_usage.cjs": {
+   "type": "file",
+   "size": 2369
+  },
+  "MRL_scan_layer3.cjs": {
+   "type": "file",
+   "size": 4554
+  },
+  "MRL_scan_template_literals.cjs": {
+   "type": "file",
+   "size": 1901
+  },
+  "MRL_setup_path.ps1": {
+   "type": "file",
+   "size": 1427
+  },
+  "MRL_show_line673.cjs": {
+   "type": "file",
+   "size": 280
+  },
+  "MRL_smoke_v2.cjs": {
+   "type": "file",
+   "size": 2871
+  },
+  "MRL_svc_paths.ps1": {
+   "type": "file",
+   "size": 451
+  },
+  "MRL_svc_to_port.ps1": {
+   "type": "file",
+   "size": 1145
+  },
+  "MRL_syntax_check.py": {
+   "type": "file",
+   "size": 321
+  },
+  "MRL_test_bridge_edge.ps1": {
+   "type": "file",
+   "size": 2590
+  },
+  "MRL_test_endpoints.ps1": {
+   "type": "file",
+   "size": 2946
+  },
+  "MRL_test_results": {
+   "type": "dir",
+   "file_count": 72,
+   "total_size": 297064
+  },
+  "MRL_test_validate_endpoint.py": {
+   "type": "file",
+   "size": 756
+  },
+  "MRL_unzip.cpp": {
+   "type": "file",
+   "size": 4306
+  },
+  "MRL_unzip.exe": {
+   "type": "file",
+   "size": 125413
+  },
+  "MRL_unzip_run.log": {
+   "type": "file",
+   "size": 39870
+  },
+  "MRL_v21_cpp_deploy.done": {
+   "type": "file",
+   "size": 6
+  },
+  "MRL_v21_cpp_deploy.log": {
+   "type": "file",
+   "size": 257
+  },
+  "MRL_v21_cpp_deploy_wrapper.ps1": {
+   "type": "file",
+   "size": 349
+  },
+  "MRL_v21_cpp_launcher.ps1": {
+   "type": "file",
+   "size": 772
+  },
+  "MRL_v21_deploy.done": {
+   "type": "file",
+   "size": 366
+  },
+  "MRL_v21_deploy.log": {
+   "type": "file",
+   "size": 432455
+  },
+  "MRL_v21_deploy_wrapper.ps1": {
+   "type": "file",
+   "size": 372
+  },
+  "MRL_v21_extract2.done": {
+   "type": "file",
+   "size": 114
+  },
+  "MRL_v21_extract2.log": {
+   "type": "file",
+   "size": 103
+  },
+  "MRL_v21_extract2_wrapper.ps1": {
+   "type": "file",
+   "size": 357
+  },
+  "MRL_v21_launcher.ps1": {
+   "type": "file",
+   "size": 808
+  },
+  "MRL_v21_launcher2.ps1": {
+   "type": "file",
+   "size": 801
+  },
+  "MRL_v21_merge_extract.ps1": {
+   "type": "file",
+   "size": 1788
+  },
+  "MRL_v21_probe.ps1": {
+   "type": "file",
+   "size": 430
+  },
+  "MRL_verify_gpp.ps1": {
+   "type": "file",
+   "size": 282
+  },
+  "MRL_verify_v21.ps1": {
+   "type": "file",
+   "size": 1170
+  },
+  "MRL_vm3_probe.ps1": {
+   "type": "file",
+   "size": 689
+  },
+  "MRL_vm3_probe_result.json": {
+   "type": "file",
+   "size": 535
+  },
+  "MRL_web_fetch_handler.js": {
+   "type": "file",
+   "size": 9030
+  },
+  "MRL_web_fetch_v1.0.0_completion.md": {
+   "type": "file",
+   "size": 2273
+  },
+  "MRL_web_fetch_v1.js": {
+   "type": "file",
+   "size": 10506
+  },
+  "MRL_web_fetch_v2_compliant.js": {
+   "type": "file",
+   "size": 10831
+  },
+  "MRL_web_search_handler.js": {
+   "type": "file",
+   "size": 3857
+  },
+  "MRL_web_search_v1.0.0_completion.md": {
+   "type": "file",
+   "size": 1573
+  },
+  "MRL_web_v2.js": {
+   "type": "file",
+   "size": 20160
+  },
+  "MRL_zlib_src": {
+   "type": "dir",
+   "file_count": 20,
+   "total_size": 884483
+  },
+  "Mother_Storage": {
+   "type": "dir",
+   "file_count": 6,
+   "total_size": 85513
+  },
+  "Mrl_w01234567": {
+   "type": "dir",
+   "file_count": 8,
+   "total_size": 61998
+  },
+  "Mrlaw_3": {
+   "type": "dir",
+   "file_count": 46,
+   "total_size": 84534
+  },
+  "_FINAL_REPORT.txt": {
+   "type": "file",
+   "size": 668
+  },
+  "_LAW1_ACCEPT.txt": {
+   "type": "file",
+   "size": 1635
+  },
+  "__wtest.txt": {
+   "type": "file",
+   "size": 17
+  },
+  "_acceptance_result.txt": {
+   "type": "file",
+   "size": 1603
+  },
+  "_acceptance_v2.txt": {
+   "type": "file",
+   "size": 1715
+  },
+  "_cap_probe.ps1": {
+   "type": "file",
+   "size": 2192
+  },
+  "_chunks": {
+   "type": "dir",
+   "file_count": 0,
+   "total_size": 0
+  },
+  "_claude_audit_recent.ps1": {
+   "type": "file",
+   "size": 348
+  },
+  "_claude_audit_recent2.ps1": {
+   "type": "file",
+   "size": 335
+  },
+  "_clean.txt": {
+   "type": "file",
+   "size": 9
+  },
+  "_clean2.txt": {
+   "type": "file",
+   "size": 9
+  },
+  "_cmp2.ps1": {
+   "type": "file",
+   "size": 2163
+  },
+  "_cmp3.ps1": {
+   "type": "file",
+   "size": 2219
+  },
+  "_compare.ps1": {
+   "type": "file",
+   "size": 2077
+  },
+  "_cpp_probe.ps1": {
+   "type": "file",
+   "size": 2259
+  },
+  "_d_root.ps1": {
+   "type": "file",
+   "size": 1509
+  },
+  "_disk.ps1": {
+   "type": "file",
+   "size": 1076
+  },
+  "_find_progress.ps1": {
+   "type": "file",
+   "size": 908
+  },
+  "_find_sync.ps1": {
+   "type": "file",
+   "size": 808
+  },
+  "_inventory.ps1": {
+   "type": "file",
+   "size": 2278
+  },
+  "_law1_v2.txt": {
+   "type": "file",
+   "size": 2158
+  },
+  "_law6_5checks.txt": {
+   "type": "file",
+   "size": 1660
+  },
+  "_mrl_chat2.b64": {
+   "type": "file",
+   "size": 920
+  },
+  "_mrl_chat2.py": {
+   "type": "file",
+   "size": 689
+  },
+  "_mrl_chat_result.json": {
+   "type": "file",
+   "size": 552
+  },
+  "_mrl_chat_test.b64": {
+   "type": "file",
+   "size": 824
+  },
+  "_mrl_chat_test.py": {
+   "type": "file",
+   "size": 617
+  },
+  "_panel_chat_result.json": {
+   "type": "file",
+   "size": 468
+  },
+  "_panel_chk.b64": {
+   "type": "file",
+   "size": 704
+  },
+  "_panel_chk.py": {
+   "type": "file",
+   "size": 527
+  },
+  "_panel_err.log": {
+   "type": "file",
+   "size": 326
+  },
+  "_panel_out.log": {
+   "type": "file",
+   "size": 0
+  },
+  "_pdf_chunks": {
+   "type": "dir",
+   "file_count": 0,
+   "total_size": 0
+  },
+  "_probe.ps1": {
+   "type": "file",
+   "size": 2562
+  },
+  "_probe2.ps1": {
+   "type": "file",
+   "size": 1251
+  },
+  "_probe_20260525.txt": {
+   "type": "file",
+   "size": 24
+  },
+  "_probe_size_16384.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "_probe_size_32768.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "_probe_size_4096.txt": {
+   "type": "file",
+   "size": 4096
+  },
+  "_probe_size_65536.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "_probe_size_8192.txt": {
+   "type": "file",
+   "size": 8192
+  },
+  "_pycheck.ps1": {
+   "type": "file",
+   "size": 1004
+  },
+  "_qwen_fix.err": {
+   "type": "file",
+   "size": 0
+  },
+  "_qwen_fix.log": {
+   "type": "file",
+   "size": 1676
+  },
+  "_qwen_fix.py": {
+   "type": "file",
+   "size": 3481
+  },
+  "_qwen_test.err": {
+   "type": "file",
+   "size": 0
+  },
+  "_qwen_test.log": {
+   "type": "file",
+   "size": 404
+  },
+  "_qwen_test.py": {
+   "type": "file",
+   "size": 1142
+  },
+  "_recheck.txt": {
+   "type": "file",
+   "size": 1167
+  },
+  "_spa.txt": {
+   "type": "file",
+   "size": 167
+  },
+  "_state.txt": {
+   "type": "file",
+   "size": 50
+  },
+  "_status.ps1": {
+   "type": "file",
+   "size": 1580
+  },
+  "_sync_diag.ps1": {
+   "type": "file",
+   "size": 1646
+  },
+  "_t_create.json": {
+   "type": "file",
+   "size": 36
+  },
+  "_t_run.json": {
+   "type": "file",
+   "size": 38
+  },
+  "_test_5173.txt": {
+   "type": "file",
+   "size": 39
+  },
+  "_test_health.txt": {
+   "type": "file",
+   "size": 168
+  },
+  "_tpu_content_search.txt": {
+   "type": "file",
+   "size": 2602
+  },
+  "_tpu_search.txt": {
+   "type": "file",
+   "size": 2859
+  },
+  "_ui_test.txt": {
+   "type": "file",
+   "size": 720
+  },
+  "a3.txt": {
+   "type": "file",
+   "size": 9682
+  },
+  "absorb": {
+   "type": "dir",
+   "file_count": 335,
+   "total_size": 307959744
+  },
+  "absorbed": {
+   "type": "dir",
+   "file_count": 67,
+   "total_size": 364134
+  },
+  "actual_v2_in_routes.js": {
+   "type": "file",
+   "size": 15799
+  },
+  "adapter_test.txt": {
+   "type": "file",
+   "size": 1028
+  },
+  "agent": {
+   "type": "dir",
+   "file_count": 22,
+   "total_size": 78112
+  },
+  "all3_result.json": {
+   "type": "file",
+   "size": 269
+  },
+  "all_db.txt": {
+   "type": "file",
+   "size": 259
+  },
+  "all_listen.json": {
+   "type": "file",
+   "size": 2540
+  },
+  "api": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 5209
+  },
+  "app": {
+   "type": "dir",
+   "file_count": 4,
+   "total_size": 367554
+  },
+  "apply_bridge_out.txt": {
+   "type": "file",
+   "size": 789
+  },
+  "apply_patch_out.txt": {
+   "type": "file",
+   "size": 161
+  },
+  "apply_v2_out.txt": {
+   "type": "file",
+   "size": 3217
+  },
+  "apply_v3_out.txt": {
+   "type": "file",
+   "size": 129
+  },
+  "archive": {
+   "type": "dir",
+   "file_count": 13,
+   "total_size": 1501607
+  },
+  "artifacts": {
+   "type": "dir",
+   "file_count": 0,
+   "total_size": 0
+  },
+  "asi-engine": {
+   "type": "dir",
+   "file_count": 5,
+   "total_size": 46130
+  },
+  "assembly": {
+   "type": "dir",
+   "file_count": 79,
+   "total_size": 1112061
+  },
+  "attention_test.txt": {
+   "type": "file",
+   "size": 2382
+  },
+  "audit.ps1": {
+   "type": "file",
+   "size": 1131
+  },
+  "audit2.ps1": {
+   "type": "file",
+   "size": 6492
+  },
+  "backup": {
+   "type": "dir",
+   "file_count": 11,
+   "total_size": 371588
+  },
+  "backup_dump_20260406.sql": {
+   "type": "file",
+   "size": 15762
+  },
+  "backups": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 22123
+  },
+  "baseline_check.ps1": {
+   "type": "file",
+   "size": 484
+  },
+  "bin": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 65559
+  },
+  "bootstrap_test.txt": {
+   "type": "file",
+   "size": 203
+  },
+  "bridge": {
+   "type": "dir",
+   "file_count": 63,
+   "total_size": 4056298
+  },
+  "bridge.zip": {
+   "type": "file",
+   "size": 1412244
+  },
+  "bridges": {
+   "type": "dir",
+   "file_count": 0,
+   "total_size": 0
+  },
+  "build.ps1": {
+   "type": "file",
+   "size": 3172
+  },
+  "build_mother_layers_20260512.ps1": {
+   "type": "file",
+   "size": 1202
+  },
+  "builder": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 6498
+  },
+  "builder_output": {
+   "type": "dir",
+   "file_count": 3,
+   "total_size": 812
+  },
+  "c_drive_scan_done.flag": {
+   "type": "file",
+   "size": 6
+  },
+  "c_drive_scan_result.json": {
+   "type": "file",
+   "size": 2310
+  },
+  "c_users_done.flag": {
+   "type": "file",
+   "size": 6
+  },
+  "c_users_scan.json": {
+   "type": "file",
+   "size": 2545
+  },
+  "cfscan.ps1": {
+   "type": "file",
+   "size": 1027
+  },
+  "check.py": {
+   "type": "file",
+   "size": 241
+  },
+  "check_fetch.cjs": {
+   "type": "file",
+   "size": 453
+  },
+  "clone.log": {
+   "type": "file",
+   "size": 714
+  },
+  "compare.cjs": {
+   "type": "file",
+   "size": 1405
+  },
+  "config": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 97
+  },
+  "connection_tests": {
+   "type": "dir",
+   "file_count": 5,
+   "total_size": 2000
+  },
+  "d1_insert_body.json": {
+   "type": "file",
+   "size": 3810
+  },
+  "d1_insert_row116.sql": {
+   "type": "file",
+   "size": 1110
+  },
+  "d1list.ps1": {
+   "type": "file",
+   "size": 649
+  },
+  "db-proxy": {
+   "type": "dir",
+   "file_count": 5,
+   "total_size": 36113
+  },
+  "db_baseline.ps1": {
+   "type": "file",
+   "size": 662
+  },
+  "db_baseline2.ps1": {
+   "type": "file",
+   "size": 1176
+  },
+  "db_stats.ps1": {
+   "type": "file",
+   "size": 242
+  },
+  "db_test.txt": {
+   "type": "file",
+   "size": 762
+  },
+  "dblist.txt": {
+   "type": "file",
+   "size": 1447
+  },
+  "diag2.ps1": {
+   "type": "file",
+   "size": 504
+  },
+  "diag3.ps1": {
+   "type": "file",
+   "size": 490
+  },
+  "diag4.ps1": {
+   "type": "file",
+   "size": 434
+  },
+  "diag5.ps1": {
+   "type": "file",
+   "size": 391
+  },
+  "dirscan.json": {
+   "type": "file",
+   "size": 757
+  },
+  "disk_inventory": {
+   "type": "dir",
+   "file_count": 8,
+   "total_size": 12796771
+  },
+  "docs": {
+   "type": "dir",
+   "file_count": 105,
+   "total_size": 1393149
+  },
+  "downloads": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 15073280
+  },
+  "drive_check.json": {
+   "type": "file",
+   "size": 506
+  },
+  "dual_path.txt": {
+   "type": "file",
+   "size": 414
+  },
+  "dual_path_test": {
+   "type": "dir",
+   "file_count": 2,
+   "total_size": 7070
+  },
+  "dump_real_v2.cjs": {
+   "type": "file",
+   "size": 766
+  },
+  "e2e_run_output.txt": {
+   "type": "file",
+   "size": 2343
+  },
+  "e2e_v3.txt": {
+   "type": "file",
+   "size": 2343
+  },
+  "e2e_v3_out.txt": {
+   "type": "file",
+   "size": 2343
+  },
+  "endpoint_test.txt": {
+   "type": "file",
+   "size": 64260
+  },
+  "endpoints_dump.json": {
+   "type": "file",
+   "size": 16331
+  },
+  "engine_test.txt": {
+   "type": "file",
+   "size": 932
+  },
+  "engines": {
+   "type": "dir",
+   "file_count": 117,
+   "total_size": 1380202
+  },
+  "entry": {
+   "type": "dir",
+   "file_count": 8,
+   "total_size": 70963778
+  },
+  "ep_err.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "ep_out.txt": {
+   "type": "file",
+   "size": 1785
+  },
+  "err.txt": {
+   "type": "file",
+   "size": 10036
+  },
+  "et.txt": {
+   "type": "file",
+   "size": 716
+  },
+  "ev2.txt": {
+   "type": "file",
+   "size": 1114
+  },
+  "evt_count.json": {
+   "type": "file",
+   "size": 27
+  },
+  "evt_detail.json": {
+   "type": "file",
+   "size": 6590
+  },
+  "exec_split.ps1": {
+   "type": "file",
+   "size": 1650
+  },
+  "exec_sql.ps1": {
+   "type": "file",
+   "size": 1370
+  },
+  "faceswap": {
+   "type": "dir",
+   "file_count": 8,
+   "total_size": 19362774
+  },
+  "fetch_chunks": {
+   "type": "dir",
+   "file_count": 5,
+   "total_size": 14008
+  },
+  "fill_batches.ps1": {
+   "type": "file",
+   "size": 7144
+  },
+  "find_pg.ps1": {
+   "type": "file",
+   "size": 495
+  },
+  "find_psql.ps1": {
+   "type": "file",
+   "size": 693
+  },
+  "fix.py": {
+   "type": "file",
+   "size": 702
+  },
+  "fix2.py": {
+   "type": "file",
+   "size": 913
+  },
+  "fix3.py": {
+   "type": "file",
+   "size": 258
+  },
+  "fix4.py": {
+   "type": "file",
+   "size": 414
+  },
+  "fix_double.py": {
+   "type": "file",
+   "size": 259
+  },
+  "fix_ops2.py": {
+   "type": "file",
+   "size": 1062
+  },
+  "fix_ops_names.py": {
+   "type": "file",
+   "size": 1902
+  },
+  "fix_ver.cjs": {
+   "type": "file",
+   "size": 183
+  },
+  "fix_ver.js": {
+   "type": "file",
+   "size": 232
+  },
+  "fix_ver2.js": {
+   "type": "file",
+   "size": 188
+  },
+  "fixall.py": {
+   "type": "file",
+   "size": 393
+  },
+  "flowagent": {
+   "type": "dir",
+   "file_count": 152,
+   "total_size": 754349
+  },
+  "flowagent_test.txt": {
+   "type": "file",
+   "size": 1586
+  },
+  "flowcore_loop_v04.py": {
+   "type": "file",
+   "size": 53741
+  },
+  "flowos": {
+   "type": "dir",
+   "file_count": 2,
+   "total_size": 5705756
+  },
+  "fp.txt": {
+   "type": "file",
+   "size": 2972
+  },
+  "fp2.txt": {
+   "type": "file",
+   "size": 4632
+  },
+  "full_insert.ps1": {
+   "type": "file",
+   "size": 6673
+  },
+  "fusion_result.json": {
+   "type": "file",
+   "size": 297
+  },
+  "gateway": {
+   "type": "dir",
+   "file_count": 11,
+   "total_size": 100896
+  },
+  "gen_stats.py": {
+   "type": "file",
+   "size": 711
+  },
+  "getcf.ps1": {
+   "type": "file",
+   "size": 431
+  },
+  "getkey.ps1": {
+   "type": "file",
+   "size": 263
+  },
+  "heart": {
+   "type": "dir",
+   "file_count": 8,
+   "total_size": 31012
+  },
+  "hello.log": {
+   "type": "file",
+   "size": 96
+  },
+  "hello2_out.txt": {
+   "type": "file",
+   "size": 30
+  },
+  "hello_out.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "hird_party": {
+   "type": "dir",
+   "file_count": 0,
+   "total_size": 0
+  },
+  "inf_health.json": {
+   "type": "file",
+   "size": 0
+  },
+  "inf_meta.txt": {
+   "type": "file",
+   "size": 24
+  },
+  "inf_real.txt": {
+   "type": "file",
+   "size": 5817
+  },
+  "inf_stderr_meta.json": {
+   "type": "file",
+   "size": 134
+  },
+  "inf_stderr_tail.txt": {
+   "type": "file",
+   "size": 12082
+  },
+  "inference": {
+   "type": "dir",
+   "file_count": 59,
+   "total_size": 7232286
+  },
+  "initdb": {
+   "type": "dir",
+   "file_count": 14,
+   "total_size": 142402
+  },
+  "inject_status.txt": {
+   "type": "file",
+   "size": 15
+  },
+  "inject_v2_v2.cjs": {
+   "type": "file",
+   "size": 2709
+  },
+  "inject_v2_v2.js": {
+   "type": "file",
+   "size": 2709
+  },
+  "insert_laws.ps1": {
+   "type": "file",
+   "size": 2265
+  },
+  "insert_resume.sql": {
+   "type": "file",
+   "size": 699
+  },
+  "intake_creator_evidence.txt": {
+   "type": "file",
+   "size": 3751
+  },
+  "intake_evidence_chain.txt": {
+   "type": "file",
+   "size": 2547
+  },
+  "intake_flow_tasks_priority_date_log.txt": {
+   "type": "file",
+   "size": 2317
+  },
+  "intake_fpp_fluin_ftkg.txt": {
+   "type": "file",
+   "size": 2439
+  },
+  "intake_infra_mainline_v1.txt": {
+   "type": "file",
+   "size": 713
+  },
+  "intake_llvm_mrl_integration.txt": {
+   "type": "file",
+   "size": 2083
+  },
+  "intake_minimal_unit.txt": {
+   "type": "file",
+   "size": 1885
+  },
+  "intake_mother_skill_transformation.txt": {
+   "type": "file",
+   "size": 3102
+  },
+  "junction_desktop.bat": {
+   "type": "file",
+   "size": 312
+  },
+  "kv2.ps1": {
+   "type": "file",
+   "size": 1747
+  },
+  "kv_index.ps1": {
+   "type": "file",
+   "size": 2970
+  },
+  "law0_atoms.sql": {
+   "type": "file",
+   "size": 6795
+  },
+  "law0_capability_matrix.sql": {
+   "type": "file",
+   "size": 10504
+  },
+  "law0_creator_evidence.sql": {
+   "type": "file",
+   "size": 5333
+  },
+  "law0_flow_tasks_evidence.sql": {
+   "type": "file",
+   "size": 3346
+  },
+  "law0_fpp_atoms.sql": {
+   "type": "file",
+   "size": 7584
+  },
+  "law0_infra_batch_1.sql": {
+   "type": "file",
+   "size": 3281
+  },
+  "law0_infra_batch_2.sql": {
+   "type": "file",
+   "size": 3298
+  },
+  "law0_infra_batch_3.sql": {
+   "type": "file",
+   "size": 3366
+  },
+  "law0_infra_batch_4.sql": {
+   "type": "file",
+   "size": 2708
+  },
+  "law1_reposition.sql": {
+   "type": "file",
+   "size": 1102
+  },
+  "law_triggers.sql": {
+   "type": "file",
+   "size": 785
+  },
+  "layer_a": {
+   "type": "dir",
+   "file_count": 29,
+   "total_size": 12667670
+  },
+  "lib_count.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "locate_search_end.cjs": {
+   "type": "file",
+   "size": 1244
+  },
+  "log": {
+   "type": "dir",
+   "file_count": 3,
+   "total_size": 4077
+  },
+  "log_paths.txt": {
+   "type": "file",
+   "size": 220
+  },
+  "logpaths_combined.txt": {
+   "type": "file",
+   "size": 273
+  },
+  "logs": {
+   "type": "dir",
+   "file_count": 8,
+   "total_size": 19237
+  },
+  "marker.txt": {
+   "type": "file",
+   "size": 1183
+  },
+  "matrix_result.txt": {
+   "type": "file",
+   "size": 176
+  },
+  "matrix_v2.txt": {
+   "type": "file",
+   "size": 238
+  },
+  "mcp": {
+   "type": "dir",
+   "file_count": 5,
+   "total_size": 106697
+  },
+  "mcp_servers": {
+   "type": "dir",
+   "file_count": 10,
+   "total_size": 72665
+  },
+  "memory_snapshots": {
+   "type": "dir",
+   "file_count": 3,
+   "total_size": 4254
+  },
+  "merge_fetch.cjs": {
+   "type": "file",
+   "size": 958
+  },
+  "mig_baseline.json": {
+   "type": "file",
+   "size": 185
+  },
+  "mig_findworld.json": {
+   "type": "file",
+   "size": 365
+  },
+  "mig_md5.json": {
+   "type": "file",
+   "size": 1203
+  },
+  "mig_phase3.json": {
+   "type": "file",
+   "size": 130
+  },
+  "mig_precheck.txt": {
+   "type": "file",
+   "size": 11
+  },
+  "mig_world2.txt": {
+   "type": "file",
+   "size": 72
+  },
+  "models": {
+   "type": "dir",
+   "file_count": 651,
+   "total_size": 125211771712
+  },
+  "modules": {
+   "type": "dir",
+   "file_count": 15,
+   "total_size": 929758
+  },
+  "mother": {
+   "type": "dir",
+   "file_count": 140,
+   "total_size": 3353608
+  },
+  "mother_import_test.txt": {
+   "type": "file",
+   "size": 242
+  },
+  "mother_inventory.txt": {
+   "type": "file",
+   "size": 3012
+  },
+  "mother_tree.csv": {
+   "type": "file",
+   "size": 6459
+  },
+  "move_hf.log": {
+   "type": "file",
+   "size": 10622
+  },
+  "move_ollama.log": {
+   "type": "file",
+   "size": 4455
+  },
+  "move_pip.log": {
+   "type": "file",
+   "size": 83516
+  },
+  "mrl-agi": {
+   "type": "dir",
+   "file_count": 14,
+   "total_size": 187889
+  },
+  "mrl-platform": {
+   "type": "dir",
+   "file_count": 37,
+   "total_size": 425138
+  },
+  "mrl_data.sql": {
+   "type": "file",
+   "size": 7468
+  },
+  "mrl_stats.json": {
+   "type": "file",
+   "size": 448
+  },
+  "mydata": {
+   "type": "dir",
+   "file_count": 0,
+   "total_size": 0
+  },
+  "nerve_link": {
+   "type": "dir",
+   "file_count": 98,
+   "total_size": 27366487
+  },
+  "node_pool": {
+   "type": "dir",
+   "file_count": 0,
+   "total_size": 0
+  },
+  "nssm_cfg.json": {
+   "type": "file",
+   "size": 35589
+  },
+  "operations": {
+   "type": "dir",
+   "file_count": 8,
+   "total_size": 3254719
+  },
+  "p050_chunks": {
+   "type": "dir",
+   "file_count": 3,
+   "total_size": 8732
+  },
+  "packages": {
+   "type": "dir",
+   "file_count": 370,
+   "total_size": 1262856
+  },
+  "particle-chat": {
+   "type": "dir",
+   "file_count": 14,
+   "total_size": 87449
+  },
+  "particle-workers": {
+   "type": "dir",
+   "file_count": 253,
+   "total_size": 613439
+  },
+  "particle_imports": {
+   "type": "dir",
+   "file_count": 12,
+   "total_size": 106259524
+  },
+  "patch_index.ps1": {
+   "type": "file",
+   "size": 1931
+  },
+  "patch_index_output.txt": {
+   "type": "file",
+   "size": 106
+  },
+  "patch_index_v3.ps1": {
+   "type": "file",
+   "size": 1924
+  },
+  "patch_index_v4.ps1": {
+   "type": "file",
+   "size": 1572
+  },
+  "patch_mother_index_report.txt": {
+   "type": "file",
+   "size": 198
+  },
+  "patch_mother_index_v7_to_v8.ps1": {
+   "type": "file",
+   "size": 3175
+  },
+  "patch_multidb.cjs": {
+   "type": "file",
+   "size": 2634
+  },
+  "patch_naming.js": {
+   "type": "file",
+   "size": 3949
+  },
+  "patch_ops.py": {
+   "type": "file",
+   "size": 329
+  },
+  "patch_out.txt": {
+   "type": "file",
+   "size": 161
+  },
+  "patch_v3_out.txt": {
+   "type": "file",
+   "size": 95
+  },
+  "patch_v4_out.txt": {
+   "type": "file",
+   "size": 96
+  },
+  "patch_v5.txt": {
+   "type": "file",
+   "size": 96
+  },
+  "patch_v6_out.txt": {
+   "type": "file",
+   "size": 97
+  },
+  "peek_handler.cjs": {
+   "type": "file",
+   "size": 282
+  },
+  "pf.txt": {
+   "type": "file",
+   "size": 35804
+  },
+  "pf2.txt": {
+   "type": "file",
+   "size": 35804
+  },
+  "phase_a_extra2.json": {
+   "type": "file",
+   "size": 2111
+  },
+  "phase_a_recheck.json": {
+   "type": "file",
+   "size": 1762
+  },
+  "pip-cache": {
+   "type": "dir",
+   "file_count": 8,
+   "total_size": 5285552576
+  },
+  "pip-tmp": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 3522
+  },
+  "pip_error.log": {
+   "type": "file",
+   "size": 1718
+  },
+  "pip_install.log": {
+   "type": "file",
+   "size": 4830
+  },
+  "pipeline_full_result.json": {
+   "type": "file",
+   "size": 835
+  },
+  "pipeline_result.json": {
+   "type": "file",
+   "size": 170
+  },
+  "pl.txt": {
+   "type": "file",
+   "size": 10318
+  },
+  "platform": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 22635
+  },
+  "port8788_check.txt": {
+   "type": "file",
+   "size": 6
+  },
+  "ports.json": {
+   "type": "file",
+   "size": 687
+  },
+  "prep.ps1": {
+   "type": "file",
+   "size": 813
+  },
+  "probe_8788.err": {
+   "type": "file",
+   "size": 0
+  },
+  "probe_8788.out": {
+   "type": "file",
+   "size": 0
+  },
+  "probe_8788.py": {
+   "type": "file",
+   "size": 691
+  },
+  "probe_kill.txt": {
+   "type": "file",
+   "size": 16
+  },
+  "probe_pid.txt": {
+   "type": "file",
+   "size": 27
+  },
+  "probe_verify.json": {
+   "type": "file",
+   "size": 522
+  },
+  "procs.json": {
+   "type": "file",
+   "size": 1055
+  },
+  "product": {
+   "type": "dir",
+   "file_count": 57,
+   "total_size": 20000954
+  },
+  "proxy_locate.ps1": {
+   "type": "file",
+   "size": 480
+  },
+  "proxy_probe.ps1": {
+   "type": "file",
+   "size": 622
+  },
+  "proxy_test.ps1": {
+   "type": "file",
+   "size": 180
+  },
+  "psql_diag.ps1": {
+   "type": "file",
+   "size": 316
+  },
+  "pv2.txt": {
+   "type": "file",
+   "size": 51048
+  },
+  "pv2_result.json": {
+   "type": "file",
+   "size": 1037
+  },
+  "q.sql": {
+   "type": "file",
+   "size": 181
+  },
+  "q_out.txt": {
+   "type": "file",
+   "size": 88
+  },
+  "query": {
+   "type": "file",
+   "size": 11
+  },
+  "r2_upload.ps1": {
+   "type": "file",
+   "size": 2407
+  },
+  "r2scan.ps1": {
+   "type": "file",
+   "size": 1302
+  },
+  "real_scenarios_out.txt": {
+   "type": "file",
+   "size": 993
+  },
+  "reasoning_engine": {
+   "type": "dir",
+   "file_count": 12,
+   "total_size": 5952277
+  },
+  "rec_dry.txt": {
+   "type": "file",
+   "size": 1041
+  },
+  "rec_final.txt": {
+   "type": "file",
+   "size": 172
+  },
+  "rec_real.txt": {
+   "type": "file",
+   "size": 614
+  },
+  "rec_real2.txt": {
+   "type": "file",
+   "size": 171
+  },
+  "rec_round_d.txt": {
+   "type": "file",
+   "size": 174
+  },
+  "refactor_v2": {
+   "type": "dir",
+   "file_count": 217,
+   "total_size": 340712
+  },
+  "reg_info.txt": {
+   "type": "file",
+   "size": 8480
+  },
+  "reg_list.txt": {
+   "type": "file",
+   "size": 197
+  },
+  "reg_test.txt": {
+   "type": "file",
+   "size": 197
+  },
+  "regen.ps1": {
+   "type": "file",
+   "size": 6300
+  },
+  "register_result.txt": {
+   "type": "file",
+   "size": 1190
+  },
+  "restart_result.txt": {
+   "type": "file",
+   "size": 21
+  },
+  "robocopy_appdata_local.bat": {
+   "type": "file",
+   "size": 237
+  },
+  "robocopy_desktop.bat": {
+   "type": "file",
+   "size": 246
+  },
+  "robocopy_desktop.log": {
+   "type": "file",
+   "size": 1055
+  },
+  "robocopy_desktop_done.flag": {
+   "type": "file",
+   "size": 9
+  },
+  "robocopy_downloads.bat": {
+   "type": "file",
+   "size": 217
+  },
+  "round_b_out.txt": {
+   "type": "file",
+   "size": 1343
+  },
+  "round_b_test": {
+   "type": "dir",
+   "file_count": 27,
+   "total_size": 107413
+  },
+  "round_b_validate.ps1": {
+   "type": "file",
+   "size": 1930
+  },
+  "round_c_test": {
+   "type": "dir",
+   "file_count": 27,
+   "total_size": 107907
+  },
+  "round_d_err.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "round_d_out.txt": {
+   "type": "file",
+   "size": 582
+  },
+  "round_d_test": {
+   "type": "dir",
+   "file_count": 220,
+   "total_size": 730912
+  },
+  "runtime_pid.txt": {
+   "type": "file",
+   "size": 33
+  },
+  "runtime_pid2.txt": {
+   "type": "file",
+   "size": 45
+  },
+  "runtime_stderr.log": {
+   "type": "file",
+   "size": 0
+  },
+  "runtime_stdout.log": {
+   "type": "file",
+   "size": 0
+  },
+  "scan3.ps1": {
+   "type": "file",
+   "size": 700
+  },
+  "scan4.ps1": {
+   "type": "file",
+   "size": 660
+  },
+  "scan5.ps1": {
+   "type": "file",
+   "size": 713
+  },
+  "scan_bridge_files.ps1": {
+   "type": "file",
+   "size": 773
+  },
+  "sched_disable.json": {
+   "type": "file",
+   "size": 72
+  },
+  "sched_find.json": {
+   "type": "file",
+   "size": 1920
+  },
+  "schema_dump.txt": {
+   "type": "file",
+   "size": 48230
+  },
+  "search_files.ps1": {
+   "type": "file",
+   "size": 393
+  },
+  "search_round2.csv": {
+   "type": "file",
+   "size": 3
+  },
+  "search_round2.ps1": {
+   "type": "file",
+   "size": 336
+  },
+  "search_round3.csv": {
+   "type": "file",
+   "size": 6534
+  },
+  "search_round3.ps1": {
+   "type": "file",
+   "size": 397
+  },
+  "search_w01234567.csv": {
+   "type": "file",
+   "size": 1640
+  },
+  "session_snapshot_20260504.md": {
+   "type": "file",
+   "size": 4005
+  },
+  "sessions": {
+   "type": "dir",
+   "file_count": 2,
+   "total_size": 7973285
+  },
+  "smoke_b_luxury": {
+   "type": "dir",
+   "file_count": 2,
+   "total_size": 7102
+  },
+  "smoke_run.txt": {
+   "type": "file",
+   "size": 347
+  },
+  "smoke_test_output": {
+   "type": "dir",
+   "file_count": 2,
+   "total_size": 7327
+  },
+  "src": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 2679
+  },
+  "stage1_laws_v2.sql": {
+   "type": "file",
+   "size": 10426
+  },
+  "stage1_laws_v3.sql": {
+   "type": "file",
+   "size": 11812
+  },
+  "stage9_views.sql": {
+   "type": "file",
+   "size": 2329
+  },
+  "stage9_views_v2.sql": {
+   "type": "file",
+   "size": 2441
+  },
+  "stage9_views_v3.sql": {
+   "type": "file",
+   "size": 1883
+  },
+  "step01_acceptance.json": {
+   "type": "file",
+   "size": 1454
+  },
+  "step01_backup.txt": {
+   "type": "file",
+   "size": 11
+  },
+  "step01_full_acceptance.json": {
+   "type": "file",
+   "size": 284
+  },
+  "step01_precheck.json": {
+   "type": "file",
+   "size": 56849
+  },
+  "step01_start.txt": {
+   "type": "file",
+   "size": 44
+  },
+  "step01_stop.txt": {
+   "type": "file",
+   "size": 11
+  },
+  "step01_write.txt": {
+   "type": "file",
+   "size": 22
+  },
+  "step04_dirs.txt": {
+   "type": "file",
+   "size": 75
+  },
+  "step05_final.txt": {
+   "type": "file",
+   "size": 562
+  },
+  "step05_node.txt": {
+   "type": "file",
+   "size": 104
+  },
+  "step05_npm_check.txt": {
+   "type": "file",
+   "size": 47
+  },
+  "step05_npm_pid.txt": {
+   "type": "file",
+   "size": 40
+  },
+  "step05_npm_stderr.log": {
+   "type": "file",
+   "size": 0
+  },
+  "step05_npm_stdout.log": {
+   "type": "file",
+   "size": 72
+  },
+  "step05_poll.txt": {
+   "type": "file",
+   "size": 64
+  },
+  "step05_poll2.txt": {
+   "type": "file",
+   "size": 64
+  },
+  "step05_poll3.txt": {
+   "type": "file",
+   "size": 38
+  },
+  "step05_poll4.txt": {
+   "type": "file",
+   "size": 74
+  },
+  "step05_procs.txt": {
+   "type": "file",
+   "size": 431
+  },
+  "step05_verify.txt": {
+   "type": "file",
+   "size": 61
+  },
+  "step06_active_test.txt": {
+   "type": "file",
+   "size": 129
+  },
+  "step06_check_full.txt": {
+   "type": "file",
+   "size": 36
+  },
+  "step06_combine.txt": {
+   "type": "file",
+   "size": 107
+  },
+  "step06_npm2_stderr.log": {
+   "type": "file",
+   "size": 0
+  },
+  "step06_npm2_stdout.log": {
+   "type": "file",
+   "size": 27
+  },
+  "step06_poll_v2.txt": {
+   "type": "file",
+   "size": 47
+  },
+  "step06_server_pid.txt": {
+   "type": "file",
+   "size": 46
+  },
+  "step06_server_pid2.txt": {
+   "type": "file",
+   "size": 44
+  },
+  "step06_server_stderr.log": {
+   "type": "file",
+   "size": 0
+  },
+  "step06_server_stdout.log": {
+   "type": "file",
+   "size": 1909
+  },
+  "step06_skel_test.txt": {
+   "type": "file",
+   "size": 92
+  },
+  "step1_dirs.json": {
+   "type": "file",
+   "size": 322
+  },
+  "step3_backup.txt": {
+   "type": "file",
+   "size": 11
+  },
+  "svc_check.json": {
+   "type": "file",
+   "size": 886
+  },
+  "svc_final.txt": {
+   "type": "file",
+   "size": 577
+  },
+  "svc_status.txt": {
+   "type": "file",
+   "size": 577
+  },
+  "sweep": {
+   "type": "dir",
+   "file_count": 27,
+   "total_size": 103256
+  },
+  "sync_err_tail.txt": {
+   "type": "file",
+   "size": 2713
+  },
+  "sync_tail.txt": {
+   "type": "file",
+   "size": 4643
+  },
+  "syntax_result.txt": {
+   "type": "file",
+   "size": 8
+  },
+  "t4.txt": {
+   "type": "file",
+   "size": 10140
+  },
+  "test.c": {
+   "type": "file",
+   "size": 524
+  },
+  "test.exe": {
+   "type": "file",
+   "size": 64919
+  },
+  "test.txt": {
+   "type": "file",
+   "size": 5
+  },
+  "test_body.json": {
+   "type": "file",
+   "size": 16
+  },
+  "test_endpoints_t4.ps1": {
+   "type": "file",
+   "size": 709
+  },
+  "test_ping.txt": {
+   "type": "file",
+   "size": 8
+  },
+  "test_results": {
+   "type": "dir",
+   "file_count": 2,
+   "total_size": 509
+  },
+  "tmp": {
+   "type": "dir",
+   "file_count": 5,
+   "total_size": 12423
+  },
+  "tmp_7facets.txt": {
+   "type": "file",
+   "size": 9702
+  },
+  "tmp_7facets.zip": {
+   "type": "file",
+   "size": 1551593
+  },
+  "tmp_b.txt": {
+   "type": "file",
+   "size": 2586
+  },
+  "tmp_cnt.txt": {
+   "type": "file",
+   "size": 25
+  },
+  "tmp_collapse.txt": {
+   "type": "file",
+   "size": 2348
+  },
+  "tmp_env.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "tmp_fa_wakeup.txt": {
+   "type": "file",
+   "size": 2368
+  },
+  "tmp_find_seedcore.py": {
+   "type": "file",
+   "size": 1984
+  },
+  "tmp_fltnz.txt": {
+   "type": "file",
+   "size": 49
+  },
+  "tmp_ft.txt": {
+   "type": "file",
+   "size": 672
+  },
+  "tmp_magic.txt": {
+   "type": "file",
+   "size": 22
+  },
+  "tmp_mrliou_all.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "tmp_nssm.txt": {
+   "type": "file",
+   "size": 542
+  },
+  "tmp_op_cnt.txt": {
+   "type": "file",
+   "size": 6
+  },
+  "tmp_p.txt": {
+   "type": "file",
+   "size": 30
+  },
+  "tmp_pcnt.txt": {
+   "type": "file",
+   "size": 25
+  },
+  "tmp_pid.txt": {
+   "type": "file",
+   "size": 7
+  },
+  "tmp_pp.txt": {
+   "type": "file",
+   "size": 76
+  },
+  "tmp_proc.txt": {
+   "type": "file",
+   "size": 3
+  },
+  "tmp_q.txt": {
+   "type": "file",
+   "size": 6
+  },
+  "tmp_read.ps1": {
+   "type": "file",
+   "size": 188
+  },
+  "tmp_real_hexsig.txt": {
+   "type": "file",
+   "size": 130
+  },
+  "tmp_s.txt": {
+   "type": "file",
+   "size": 92
+  },
+  "tmp_sc1.txt": {
+   "type": "file",
+   "size": 147
+  },
+  "tmp_sc2.txt": {
+   "type": "file",
+   "size": 349
+  },
+  "tmp_seed1.txt": {
+   "type": "file",
+   "size": 2
+  },
+  "tmp_seed_zip.txt": {
+   "type": "file",
+   "size": 28505
+  },
+  "tmp_seedcore_canonical.txt": {
+   "type": "file",
+   "size": 1075
+  },
+  "tmp_seedcore_find.json": {
+   "type": "file",
+   "size": 10360
+  },
+  "tmp_seedcore_hashes.txt": {
+   "type": "file",
+   "size": 1855
+  },
+  "tmp_start.txt": {
+   "type": "file",
+   "size": 180
+  },
+  "tmp_svc.txt": {
+   "type": "file",
+   "size": 92
+  },
+  "tmp_t.txt": {
+   "type": "file",
+   "size": 355
+  },
+  "tmp_tail.txt": {
+   "type": "file",
+   "size": 3563
+  },
+  "tmp_wakeup.txt": {
+   "type": "file",
+   "size": 647
+  },
+  "tmp_we.txt": {
+   "type": "file",
+   "size": 1605
+  },
+  "tmp_ws.txt": {
+   "type": "file",
+   "size": 855
+  },
+  "tmp_zip_b64.txt": {
+   "type": "file",
+   "size": 69826
+  },
+  "tools": {
+   "type": "dir",
+   "file_count": 38,
+   "total_size": 165584
+  },
+  "tree.json": {
+   "type": "file",
+   "size": 124
+  },
+  "ts_check.json": {
+   "type": "file",
+   "size": 658
+  },
+  "unzip_err.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "unzip_out.txt": {
+   "type": "file",
+   "size": 0
+  },
+  "upgrade": {
+   "type": "dir",
+   "file_count": 4,
+   "total_size": 122673
+  },
+  "v2_b64_0.txt": {
+   "type": "file",
+   "size": 4000
+  },
+  "v2_b64_1.txt": {
+   "type": "file",
+   "size": 4000
+  },
+  "v2_b64_2.txt": {
+   "type": "file",
+   "size": 4000
+  },
+  "v2_b64_3.txt": {
+   "type": "file",
+   "size": 4000
+  },
+  "v2_b64_4.txt": {
+   "type": "file",
+   "size": 4000
+  },
+  "v2_b64_5.txt": {
+   "type": "file",
+   "size": 1152
+  },
+  "v2_chunks": {
+   "type": "dir",
+   "file_count": 6,
+   "total_size": 18156
+  },
+  "v2_chunks_OLD_20260505205250": {
+   "type": "dir",
+   "file_count": 8,
+   "total_size": 26880
+  },
+  "v2_p0.txt": {
+   "type": "file",
+   "size": 6306
+  },
+  "v2_p1.txt": {
+   "type": "file",
+   "size": 6102
+  },
+  "v2_p2.txt": {
+   "type": "file",
+   "size": 3453
+  },
+  "v4_e2e.txt": {
+   "type": "file",
+   "size": 2343
+  },
+  "val_body.json": {
+   "type": "file",
+   "size": 4086514
+  },
+  "vault": {
+   "type": "dir",
+   "file_count": 24,
+   "total_size": 20296
+  },
+  "verify.ps1": {
+   "type": "file",
+   "size": 2942
+  },
+  "verify_cat.ps1": {
+   "type": "file",
+   "size": 850
+  },
+  "verify_d.json": {
+   "type": "file",
+   "size": 52143
+  },
+  "verify_mother.txt": {
+   "type": "file",
+   "size": 31
+  },
+  "verify_routes.cjs": {
+   "type": "file",
+   "size": 603
+  },
+  "voice_agent": {
+   "type": "dir",
+   "file_count": 2,
+   "total_size": 2855125
+  },
+  "w01234567": {
+   "type": "dir",
+   "file_count": 0,
+   "total_size": 0
+  },
+  "web_search_v2.js": {
+   "type": "file",
+   "size": 15861
+  },
+  "wire.txt": {
+   "type": "file",
+   "size": 310
+  },
+  "workers": {
+   "type": "dir",
+   "file_count": 5,
+   "total_size": 7320
+  },
+  "workspace": {
+   "type": "dir",
+   "file_count": 481,
+   "total_size": 179487301
+  },
+  "write_guard": {
+   "type": "dir",
+   "file_count": 8,
+   "total_size": 21647
+  },
+  "write_result.txt": {
+   "type": "file",
+   "size": 22
+  },
+  "write_test.txt": {
+   "type": "file",
+   "size": 14
+  },
+  "工程日誌": {
+   "type": "dir",
+   "file_count": 1,
+   "total_size": 4797
+  }
+ }
+}

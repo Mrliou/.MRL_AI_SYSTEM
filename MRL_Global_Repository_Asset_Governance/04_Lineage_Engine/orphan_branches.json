@@ -1,0 +1,6 @@
+{
+  "note": "ahead>0 AND merge_base IS NULL — truly orphaned branches (no shared history with default).",
+  "default_branch": "MRL_AI_SYSTEM/memory-system-rules-prep",
+  "count": 0,
+  "orphans": []
+}
