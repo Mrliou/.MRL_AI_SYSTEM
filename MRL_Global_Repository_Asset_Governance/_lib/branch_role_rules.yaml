@@ -1,0 +1,66 @@
+# MRL 分支角色推斷規則 v0.1
+# origin_signature: MrLiouWord ｜ 2026-10-04 ｜ Additive-Only
+#
+# 用法：
+#   from _lib.role_infer import infer_role
+#   role, evidence = infer_role(branch_name, is_default=False, ahead=None, behind=None, protected=False)
+#
+# 10 種角色（來自建構者 2026-10-04 給的分支治理定義）：
+#   ROOT_MAINLINE           母體 root（典型：main / master，且被多條 SUB_MAINLINE 分出）
+#   ACTIVE_MAINLINE         目前推進中的主線（default branch 的候選）
+#   SUB_MAINLINE            具主線語意的次主線（命名／內容證據）
+#   FEATURE_BRANCH          一次性功能分支
+#   RECOVERY_BRANCH         由資產復原流程產生的分支
+#   MIRROR_BRANCH           由代理（copilot/claude/codex/agent）產生、常與既有分支共用 HEAD
+#   EXTERNAL_SOURCE_BRANCH  吸收外部材料的分支（外部來源分支）
+#   ARCHIVE_BRANCH          已封存／保留但不前進的分支（evidence/backup/archive）
+#   ORPHAN_BRANCH           無父（fork_point 不明）或與整張圖無連通邊
+#   UNKNOWN_BRANCH          尚未夠證據判定的分支（**不是 FEATURE 的預設**）
+#
+# 判定順序：先 default → 再前綴 → 再內容線索 → 落到 UNKNOWN。
+
+prefix_rules:
+  # key: branch name 第一段（slash 之前）；value: {role, confidence, note}
+  main:             { role: ROOT_MAINLINE,          confidence: 0.95, note: "典型 git root" }
+  master:           { role: ROOT_MAINLINE,          confidence: 0.95, note: "典型 git root" }
+  develop:          { role: ACTIVE_MAINLINE,        confidence: 0.80, note: "常見開發主線" }
+  copilot:          { role: MIRROR_BRANCH,          confidence: 0.95, note: "GitHub Copilot 自動生成前綴" }
+  claude:           { role: MIRROR_BRANCH,          confidence: 0.95, note: "Claude agent 自動生成前綴" }
+  codex:            { role: MIRROR_BRANCH,          confidence: 0.90, note: "Codex agent 自動生成前綴" }
+  agent:            { role: MIRROR_BRANCH,          confidence: 0.85, note: "通用 agent 前綴" }
+  MRL_recovered:    { role: RECOVERY_BRANCH,        confidence: 0.95, note: "MR.Liou 建構的 recover 前綴" }
+  recovered:        { role: RECOVERY_BRANCH,        confidence: 0.90, note: "recover 前綴" }
+  recover:          { role: RECOVERY_BRANCH,        confidence: 0.90, note: "recover 前綴" }
+  evidence:         { role: ARCHIVE_BRANCH,         confidence: 0.90, note: "證據封存前綴" }
+  archive:          { role: ARCHIVE_BRANCH,         confidence: 0.95, note: "封存前綴" }
+  archived:         { role: ARCHIVE_BRANCH,         confidence: 0.95, note: "封存前綴" }
+  backup:           { role: ARCHIVE_BRANCH,         confidence: 0.95, note: "備份前綴" }
+  external:         { role: EXTERNAL_SOURCE_BRANCH, confidence: 0.90, note: "外部來源" }
+  vendor:           { role: EXTERNAL_SOURCE_BRANCH, confidence: 0.85, note: "外部 vendor 來源" }
+  upstream:         { role: EXTERNAL_SOURCE_BRANCH, confidence: 0.85, note: "upstream 鏡像" }
+  mirror:           { role: EXTERNAL_SOURCE_BRANCH, confidence: 0.80, note: "鏡像" }
+  feature:          { role: FEATURE_BRANCH,         confidence: 0.80, note: "一次性功能分支" }
+  feat:             { role: FEATURE_BRANCH,         confidence: 0.80, note: "一次性功能分支" }
+  fix:              { role: FEATURE_BRANCH,         confidence: 0.80, note: "一次性修復分支" }
+  hotfix:           { role: FEATURE_BRANCH,         confidence: 0.80, note: "一次性熱修復分支" }
+  release:          { role: SUB_MAINLINE,           confidence: 0.70, note: "release 線" }
+  worldmodel:       { role: SUB_MAINLINE,           confidence: 0.75, note: "MRL 世界模型次主線" }
+  MRL_AI_SYSTEM:    { role: SUB_MAINLINE,           confidence: 0.80, note: "MRL_AI_SYSTEM 路徑型次主線（本 repo 預設即此）" }
+
+# default branch 永遠至少是 ACTIVE_MAINLINE；若又命中 ROOT_MAINLINE 前綴則升為 ROOT_MAINLINE。
+default_branch_floor: ACTIVE_MAINLINE
+
+# 命名特徵（名稱全文判定；補 prefix rule 之外）
+substring_hints:
+  - { contains: "pr-",         role: FEATURE_BRANCH, confidence: 0.60 }
+  - { contains: "wip",         role: FEATURE_BRANCH, confidence: 0.55 }
+  - { contains: "test",        role: FEATURE_BRANCH, confidence: 0.55 }
+
+# 沒前綴（root 的分支）、不是 default、不是上述命中者 → UNKNOWN（而非 FEATURE，避免過度推斷）
+no_slash_default: UNKNOWN_BRANCH
+
+# 內容線索（P1b 之後若能取到 ahead/behind、unique commits、unique files，升權用）
+content_hints:
+  - { when: "unique_commits == 0", role: MIRROR_BRANCH, confidence: 0.90, note: "與既有分支共用 HEAD 或完全 behind" }
+  - { when: "ahead == 0 AND behind > 100", role: ARCHIVE_BRANCH, confidence: 0.75, note: "停滯分支" }
+  - { when: "share_head_with_any_other == true", role: MIRROR_BRANCH, confidence: 0.85, note: "跨命名共用 HEAD（dedupe 證據）" }

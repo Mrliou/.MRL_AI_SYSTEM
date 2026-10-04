@@ -1,0 +1,29 @@
+[
+ {
+  "repository": "dofaromg/MRL_AI_SYSTEM",
+  "active_mainline": "MRL_AI_SYSTEM/memory-system-rules-prep",
+  "active_mainline_head_sha": "d836143fb4320e1359f2d3e4a8b0c4fec4d70b05",
+  "sub_mainlines": [
+   {
+    "name": "MRL_AI_SYSTEM/multi-domain-sync-core-v1",
+    "head_sha": "aa8bb83e6239b45203f8cba5c77af39168758d9a",
+    "confidence": 0.8
+   },
+   {
+    "name": "worldmodel/mrl-dialect-v0",
+    "head_sha": "bdafe70e53333369222d2aaa7b9e12d732caaef6",
+    "confidence": 0.75
+   }
+  ],
+  "total_branches": 230,
+  "role_counts": {
+   "ACTIVE_MAINLINE": 1,
+   "SUB_MAINLINE": 2,
+   "UNKNOWN_BRANCH": 36,
+   "MIRROR_BRANCH": 154,
+   "RECOVERY_BRANCH": 32,
+   "ARCHIVE_BRANCH": 4,
+   "FEATURE_BRANCH": 1
+  }
+ }
+]

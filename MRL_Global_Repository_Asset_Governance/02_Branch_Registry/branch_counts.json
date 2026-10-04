@@ -1,0 +1,28 @@
+{
+  "total_branches": 230,
+  "total_repos_in_inventory": 500,
+  "repos_fetched": 1,
+  "repos_pending_access": 499,
+  "repos_with_errors": 0,
+  "by_owner": {
+    "dofaromg": 230
+  },
+  "by_fork": {
+    "fork_true": 0,
+    "fork_false": 1,
+    "fork_unknown": 0
+  },
+  "by_archived": {
+    "archived_true": 0,
+    "archived_false": 1,
+    "archived_unknown": 0
+  },
+  "repos_with_only_default_branch": [],
+  "repos_with_only_default_branch_count": 0,
+  "max_branches_top10": [
+    [
+      "dofaromg/MRL_AI_SYSTEM",
+      230
+    ]
+  ]
+}

@@ -1,0 +1,224 @@
+services: 9 | repo-resolved: 6
+ord",
+ "generated_at": "2026-10-04",
+ "capability_axis": [
+  "language",
+  "code",
+  "reasoning",
+  "multimodal",
+  "longcontext",
+  "tools",
+  "math",
+  "creative",
+  "retrieval",
+  "memory",
+  "persona",
+  "rhythm",
+  "bridge",
+  "mother_io",
+  "module_dispatch",
+  "edge_io",
+  "telemetry",
+  "particle_db",
+  "baseworld_db",
+  "vector",
+  "convergence",
+  "vault",
+  "steering",
+  "persistence",
+  "jump",
+  "collapse",
+  "trace",
+  "replay",
+  "flowagent"
+ ],
+ "runtimes": [
+  {
+   "port": 7500,
+   "name": "MRL_Particle_Inference_Engine",
+   "model": "Qwen2.5-32B-Instruct",
+   "capabilities": [
+    "language",
+    "code",
+    "reasoning",
+    "memory",
+    "persona"
+   ],
+   "dl580_sources": [
+    "D:\\mrl\\inference\\MRL_Inference_API.py",
+    "D:\\mrl\\inference\\MRL_Inference_Core.py"
+   ],
+   "repo_sources": [],
+   "repo_sources_resolved": []
+  },
+  {
+   "port": 7812,
+   "name": "cat_vault",
+   "capabilities": [
+    "memory",
+    "persistence"
+   ],
+   "dl580_sources": [
+    "D:\\mrl\\agent\\memory\\MRL_memory_vault\\MRL_memory.mseed.jsonl"
+   ],
+   "repo_sources": [],
+   "repo_sources_resolved": []
+  },
+  {
+   "port": 7800,
+   "name": "MRL_Bridge_API",
+   "version": "3.1.0",
+   "capabilities": [
+    "bridge",
+    "mother_io"
+   ],
+   "dl580_sources": [
+    "D:\\mrl\\bridge\\*"
+   ],
+   "repo_sources": [],
+   "repo_sources_resolved": []
+  },
+  {
+   "port": 7825,
+   "name": "MRL_Module_API",
+   "capabilities": [
+    "module_dispatch",
+    "toolbox",
+    "19 modules"
+   ],
+   "dl580_sources": [
+    "D:\\mrl\\workspace\\MRL_Module_Integration_20261001_R06\\*"
+   ],
+   "repo_sources": [],
+   "repo_sources_resolved": []
+  },
+  {
+   "port": 7826,
+   "name": "MRL_FlowCore_Adapter",
+   "capabilities": [
+    "vault",
+    "steering"
+   ],
+   "dl580_sources": [
+    "D:\\mrl\\workspace\\MRL_Module_Integration_20261001_R06\\release\\modules\\MRL_flowcore_adapter.py"
+   ],
+   "repo_sources": [],
+   "repo_sources_resolved": []
+  },
+  {
+   "port": 7827,
+   "name": "MRL_FlowRhythm_Module",
+   "version": "0.2.0",
+   "capabilities": [
+    "rhythm",
+    "jump",
+    "collapse",
+    "trace",
+    "replay"
+   ],
+   "dl580_sources": [
+    "D:\\mrl\\workspace\\MRL_FlowRhythm_Module_20261004_R01\\*"
+   ],
+   "repo_sources": [
+    "MRL_WorldModel/MRL_FlowRhythm_v0/flow_rhythm.py",
+    "MRL_WorldModel/MRL_FlowRhythm_v0/dl580_module/MRL_flowrhythm_adapter.py",
+    "MRL_WorldModel/MRL_Dialect_v0/mrl_dialect.py"
+   ],
+   "repo_sources_resolved": [
+    {
+     "path": "MRL_WorldModel/MRL_FlowRhythm_v0/flow_rhythm.py",
+     "exists": true,
+     "size": 15940,
+     "blob_sha": "dcc6787fcbf54980fdd84d40adc0f520dc852992"
+    },
+    {
+     "path": "MRL_WorldModel/MRL_FlowRhythm_v0/dl580_module/MRL_flowrhythm_adapter.py",
+     "exists": false,
+     "size": null,
+     "blob_sha": null
+    },
+    {
+     "path": "MRL_WorldModel/MRL_Dialect_v0/mrl_dialect.py",
+     "exists": true,
+     "size": 9666,
+     "blob_sha": "fad3a865d485bb0831d79f179505fdd1b5dd0261"
+    }
+   ]
+  },
+  {
+   "port": 7900,
+   "name": "MRL_FlowAgent_API",
+   "version": "1.1.0",
+   "capabilities": [
+    "flowagent",
+    "particle_db",
+    "baseworld_db",
+    "vector"
+   ],
+   "dl580_sources": [
+    "D:\\mrl\\flowagent\\*"
+   ],
+   "repo_sources": [],
+   "repo_sources_resolved": []
+  },
+  {
+   "port": "CF_edge",
+   "name": "mrliousilly (Worker)",
+   "capabilities": [
+    "edge_io",
+    "telemetry",
+    "rhythm_edge",
+    "convergence"
+   ],
+   "repo_sources": [
+    "src/mrl_worker.js",
+    "src/mrl_app_ui.js",
+    "MRL_WorldModel/MRL_FlowRhythm_v0/edge/flow_rhythm.mjs"
+   ],
+   "repo_sources_resolved": [
+    {
+     "path": "src/mrl_worker.js",
+     "exists": true,
+     "size": 14903,
+     "blob_sha": "4182266a8b08f7060aeaea076ff3e79bc7f1ed2a"
+    },
+    {
+     "path": "src/mrl_app_ui.js",
+     "exists": true,
+     "size": 28281,
+     "blob_sha": "4f5e2a452e5f3c283fe6a1b82443e26a63c1618e"
+    },
+    {
+     "path": "MRL_WorldModel/MRL_FlowRhythm_v0/edge/flow_rhythm.mjs",
+     "exists": true,
+     "size": 9770,
+     "blob_sha": "ef14748ffefd16a88429263d88b406f4ad534c2a"
+    }
+   ]
+  },
+  {
+   "port": "CF_edge",
+   "name": "particle-replay (Worker)",
+   "capabilities": [
+    "rhythm_edge"
+   ],
+   "repo_sources": [
+    "MRL_WorldModel/MRL_FlowRhythm_v0/edge/particle-replay/index.mjs"
+   ],
+   "repo_sources_resolved": [
+    {
+     "path": "MRL_WorldModel/MRL_FlowRhythm_v0/edge/particle-replay/index.mjs",
+     "exists": true,
+     "size": 3217,
+     "blob_sha": "9e3dc61e33a22e6eb727af3b627d39f86dd556e9"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "repo_sources 來自 dofaromg/MRL_AI_SYSTEM default branch 的 asset_registry（已逐檔 blob_sha 核對）",
+  "dl580_sources 標路徑模板，實機內容為權威",
+  "七服務（7500/7800/7812/7825/7826/7827/7900）＋ CF 兩 Worker 覆蓋能力軸 29 項",
+  "未接外部 AI（ChatGPT/Claude/Google）；若接，另立 runtime，不改本機路徑"
+ ]
+}

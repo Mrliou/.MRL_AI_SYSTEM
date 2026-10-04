@@ -1,0 +1,241 @@
+{
+ "origin_signature": "MrLiouWord",
+ "generated_at": "2026-10-04",
+ "sources": {
+  "repo_default_branch": "dofaromg/MRL_AI_SYSTEM @ MRL_AI_SYSTEM/memory-system-rules-prep",
+  "dl580_root": "D:\\mrl (host WIN-PBVUI7VK2A6)"
+ },
+ "summary": {
+  "repo_modules_total": 34,
+  "dl580_top_entries_total": 672,
+  "cross_matched": 6,
+  "repo_only_modules": 28,
+  "dl580_only_top_dirs": 99
+ },
+ "cross_matched": [
+  {
+   "repo_module": "MRL_BaseWorld_DB_v1",
+   "dl580_dir": "MRL_BaseWorld_DB_v2",
+   "dl580_file_count": 0,
+   "dl580_total_size": 0,
+   "match": "prefix"
+  },
+  {
+   "repo_module": "MRL_Mother",
+   "dl580_dir": "MRL_MotherSystem_ControlPanel.b64",
+   "dl580_file_count": 0,
+   "dl580_total_size": 0,
+   "match": "prefix"
+  },
+  {
+   "repo_module": "MRL_MotherSource_ZhiZhang_FlowAgent_Lineage_v1",
+   "dl580_dir": "MRL_MotherSystem_ControlPanel.b64",
+   "dl580_file_count": 0,
+   "dl580_total_size": 0,
+   "match": "prefix"
+  },
+  {
+   "repo_module": "MRL_ParticleArchive",
+   "dl580_dir": "MRL_ParticleEarth.js",
+   "dl580_file_count": 0,
+   "dl580_total_size": 0,
+   "match": "prefix"
+  },
+  {
+   "repo_module": "docs",
+   "dl580_dir": "docs",
+   "dl580_file_count": 105,
+   "dl580_total_size": 1393149,
+   "match": "exact"
+  },
+  {
+   "repo_module": "src",
+   "dl580_dir": "src",
+   "dl580_file_count": 1,
+   "dl580_total_size": 2679,
+   "match": "exact"
+  }
+ ],
+ "repo_only_modules": [
+  ".github",
+  "00_rootlaw",
+  "01_schema",
+  "02_principles",
+  "03_memory",
+  "04_runtime",
+  "05_persona",
+  "06_trace",
+  "07_ingest",
+  "08_sources",
+  "09_workflow",
+  "<ROOT>",
+  "MRL_Adapters",
+  "MRL_Docs",
+  "MRL_Runtime",
+  "MRL_RuntimeOS_EnterpriseRuntimePlatform_CoreExecutable_v1_4_0",
+  "MRL_Symbolic",
+  "MRL_UniversalRuntimeLanguage_Core_v1",
+  "MRL_Wakeup_Seed_v1",
+  "MRL_WorldModel",
+  "MRL_母體收斂包_v1",
+  "acceptance",
+  "data",
+  "deploy",
+  "scripts",
+  "site",
+  "tests",
+  "ui"
+ ],
+ "dl580_only_top_dirs_top30": [
+  {
+   "dir": "models",
+   "file_count": 651,
+   "total_size": 125211771712
+  },
+  {
+   "dir": "pip-cache",
+   "file_count": 8,
+   "total_size": 5285552576
+  },
+  {
+   "dir": "MRL_Index",
+   "file_count": 7,
+   "total_size": 537961773
+  },
+  {
+   "dir": "absorb",
+   "file_count": 335,
+   "total_size": 307959744
+  },
+  {
+   "dir": "workspace",
+   "file_count": 481,
+   "total_size": 179487301
+  },
+  {
+   "dir": "particle_imports",
+   "file_count": 12,
+   "total_size": 106259524
+  },
+  {
+   "dir": "MRL_GenesisLanguage_System_CPP_DL580_v2_1_RuntimeDaemon_API",
+   "file_count": 1040,
+   "total_size": 71854684
+  },
+  {
+   "dir": "entry",
+   "file_count": 8,
+   "total_size": 70963778
+  },
+  {
+   "dir": "nerve_link",
+   "file_count": 98,
+   "total_size": 27366487
+  },
+  {
+   "dir": "product",
+   "file_count": 57,
+   "total_size": 20000954
+  },
+  {
+   "dir": "faceswap",
+   "file_count": 8,
+   "total_size": 19362774
+  },
+  {
+   "dir": "MRL_AI_OS",
+   "file_count": 653,
+   "total_size": 17633145
+  },
+  {
+   "dir": "downloads",
+   "file_count": 1,
+   "total_size": 15073280
+  },
+  {
+   "dir": "MRL_Law0_Foundation",
+   "file_count": 47,
+   "total_size": 14020542
+  },
+  {
+   "dir": "disk_inventory",
+   "file_count": 8,
+   "total_size": 12796771
+  },
+  {
+   "dir": "layer_a",
+   "file_count": 29,
+   "total_size": 12667670
+  },
+  {
+   "dir": "sessions",
+   "file_count": 2,
+   "total_size": 7973285
+  },
+  {
+   "dir": "inference",
+   "file_count": 59,
+   "total_size": 7232286
+  },
+  {
+   "dir": "reasoning_engine",
+   "file_count": 12,
+   "total_size": 5952277
+  },
+  {
+   "dir": "flowos",
+   "file_count": 2,
+   "total_size": 5705756
+  },
+  {
+   "dir": "bridge",
+   "file_count": 63,
+   "total_size": 4056298
+  },
+  {
+   "dir": "mother",
+   "file_count": 140,
+   "total_size": 3353608
+  },
+  {
+   "dir": "operations",
+   "file_count": 8,
+   "total_size": 3254719
+  },
+  {
+   "dir": "voice_agent",
+   "file_count": 2,
+   "total_size": 2855125
+  },
+  {
+   "dir": "archive",
+   "file_count": 13,
+   "total_size": 1501607
+  },
+  {
+   "dir": "engines",
+   "file_count": 117,
+   "total_size": 1380202
+  },
+  {
+   "dir": "packages",
+   "file_count": 370,
+   "total_size": 1262856
+  },
+  {
+   "dir": "assembly",
+   "file_count": 79,
+   "total_size": 1112061
+  },
+  {
+   "dir": "modules",
+   "file_count": 15,
+   "total_size": 929758
+  },
+  {
+   "dir": "MRL_zlib_src",
+   "file_count": 20,
+   "total_size": 884483
+  }
+ ]
+}

@@ -1,0 +1,2072 @@
+{
+ "293a48865d20fece": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_AI_SYSTEM/memory-system-rules-prep",
+  "role": "ACTIVE_MAINLINE",
+  "confidence": 0.85,
+  "is_default": true,
+  "head_sha": "d836143fb4320e1359f2d3e4a8b0c4fec4d70b05",
+  "canonical_of": null
+ },
+ "d997957f52448500": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_AI_SYSTEM/multi-domain-sync-core-v1",
+  "role": "SUB_MAINLINE",
+  "confidence": 0.8,
+  "is_default": false,
+  "head_sha": "aa8bb83e6239b45203f8cba5c77af39168758d9a",
+  "canonical_of": null
+ },
+ "24d5a484f3413838": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_CI_PythonCacheFix_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "b8cbc355dcb5b594a3bd9cf865931f8dde4bbf76",
+  "canonical_of": null
+ },
+ "d25f7211548165a8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_DL580_PIDScope_Layer_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "e100c5b8942e6b32c35b788e08a7e8a2bc820af6",
+  "canonical_of": null
+ },
+ "e92dae1ce3148eb7": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_DL580_Workflow_PIDScope_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "009b7e892b5b7d275a3dca2afdb86883fd61a9d6",
+  "canonical_of": null
+ },
+ "ef22a8439c9bf2f9": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_MotherConvergence_Package_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "bd52240bd2d07178a32bb6fc64be426061f99e44",
+  "canonical_of": null
+ },
+ "aa5971e85a1c9307": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_MotherMatrix_Integration_Stack_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "38f8360a9f3952c171a54ca8467d218d0c1c9895",
+  "canonical_of": null
+ },
+ "0db426673fc1a6f0": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_MotherSource_ZhiZhang_FlowAgent_Lineage_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "e5717e4b3a21cb471501d88620d138fbd3efda06",
+  "canonical_of": null
+ },
+ "1fe8c208c747f39d": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_RuntimeParticle_Compression_v4",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "265aa98c1fee9fb9908e305dfcd872b813fc786c",
+  "canonical_of": null
+ },
+ "5919299f01c257ab": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_Runtime_Convergence_API_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "50aeec1fd27eea1a866bca6fcbe7462f9fa57604",
+  "canonical_of": null
+ },
+ "1f7c7ebe85d3a1cd": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_Runtime_Convergence_Audit_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "d9ef615826cc44ad8568c9f9ed4524b9e7c1ff65",
+  "canonical_of": null
+ },
+ "3872f29455af8424": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_Runtime_Convergence_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "9e64d4dcb52505792012f7ab6f5f0de99313a533",
+  "canonical_of": null
+ },
+ "4b9bdb12a33711f4": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_Branch_StructureField_Rename_Alignment_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "075b4ffa7a2ec8ef4964563bb9688698d13785e2",
+  "canonical_of": null
+ },
+ "c275fbade8d18492": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_MRL_naming_auditor_v2",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "4a4db8a29cf732327e406c204fc69d3d07886281",
+  "canonical_of": null
+ },
+ "f470e0b883cd6e3f": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_absorb_reference_adapter_materials_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "c0aebdf38fb921deb57b2768ea0f42a436bc348c",
+  "canonical_of": null
+ },
+ "6745487e7c1224b8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_add_ai_computer_runtime",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "aec422e05990b19082c67c97f7b7e396bfcde461",
+  "canonical_of": null
+ },
+ "baf7ea2231931a60": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_add_creation_rights_evidence_index",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "b72673dae071abd7c6443dd03f9c1c65b1684564",
+  "canonical_of": null
+ },
+ "7620a767bdb62139": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_add_final_product_checklist",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "48ed778b281a597c9823e56b118a0b14951323a2",
+  "canonical_of": null
+ },
+ "affaef421acfdc1f": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_add_geographic_mapping_feature",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "3e5fd1ee35fa212753869dae32bf912bb6db2cab",
+  "canonical_of": null
+ },
+ "ba918f28826a027a": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_add_missing_features_to_mrl_agi",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "073ec1027f055c1f446113ba38e63f71112ecdb2",
+  "canonical_of": null
+ },
+ "27e950fce280911e": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_add_mrl_agi_missing_features",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "a8a1c431da987459f1d43b3ba53530f25fdf0df7",
+  "canonical_of": null
+ },
+ "5c6c204227151841": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_analyze_test_coverage",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "e9440bfa78865c83431959494627c146e3f97bef",
+  "canonical_of": null
+ },
+ "b5937dbace2e0e08": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_assist_pull_merge_comment",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "66db124f393fceeafe3a5456b9610202109dc217",
+  "canonical_of": null
+ },
+ "1616bef60e45c17d": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_codex_add_final_product_checklist",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "ad4a0ba730e2052cf6524c8993b5344bcc7ac56f",
+  "canonical_of": null
+ },
+ "22dde231e68b162b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_complete_unfinished_tasks",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "d48d498f32bec8f8d8d3d0f7ee644521733ec371",
+  "canonical_of": null
+ },
+ "2b768e3135f27e30": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_create_directory_structure",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "351e73707272ad84b518e8b41156afa18161e5fd",
+  "canonical_of": null
+ },
+ "b04cf774c26f08ab": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_create_directory_structure_again",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "29a192e8e0695df5a0efc2dab167cb5e54ef283f",
+  "canonical_of": null
+ },
+ "82c32319289aa495": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_create_sub_issue_for_issue_11",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "e503744ad2974058064e0e25d80d48edfb5ceafc",
+  "canonical_of": null
+ },
+ "293247383ddfcfb8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_develop_system_features",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "6f3c9a3a56ea57dbdd791a7483e41c8da5d5ad80",
+  "canonical_of": null
+ },
+ "b025d39c08e4ac96": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_develop_system_interface_interaction",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "1f68e42ecd8687f003fbdab3cb18d37724b0e740",
+  "canonical_of": null
+ },
+ "78bcc796f89bc8b5": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_discussion_with_partner",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "5c3ee9e329d0f77298d8ccc13dc055a5ebe2a6a6",
+  "canonical_of": null
+ },
+ "310a3f69740baeec": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_dl580_cloudflared_deploy_xoopz",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "776536bddda43891a692491f5fe69c85f213c401",
+  "canonical_of": null
+ },
+ "b85b4eceb2638ca6": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_explore_codebase_implementation_plan",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "4a4db8a29cf732327e406c204fc69d3d07886281",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_MRL_naming_auditor_v2"
+ },
+ "7d1f8cf79d2f6085": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_final_integration_overview_v1_3",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "9b78805615c734a99dcdf50a7699f5ea07cfbdbe",
+  "canonical_of": null
+ },
+ "f56bec849b899ee6": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_fix_flowrhythm_pr147_fail_closed",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "2e15d297db7a45d93d1876adb9f8c04bbcaf04cf",
+  "canonical_of": null
+ },
+ "7e62378eec833803": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_fix_multi_naming_error",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "df42da5d11b9f060c43926b5b60d691f1db9ed0d",
+  "canonical_of": null
+ },
+ "b84a1020f0547028": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_hybrid_knowledge_base_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "e0d50f963e0c0e9a611fa60f6d9d234f666fef04",
+  "canonical_of": null
+ },
+ "f1f073f9b650ab02": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_investigate_deployment_status",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "95e68bcd3f2bbeeed6492651a2608c8266567f9f",
+  "canonical_of": null
+ },
+ "652d02ab7f6f3d5c": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_learn_sacrifice_logical_structure",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "6091fd0a74c5cf2d9498e36ca56b36dd4795cd6b",
+  "canonical_of": null
+ },
+ "52ced0118cf96708": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_ltm_session_query_filter_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "e0e3090fba0773907911a342de07281480dd8061",
+  "canonical_of": null
+ },
+ "030a8baf5125951a": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_memory_system_rules_prep_EuBXH",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "456cbb19fbfe3b0a70ab1174e712bcfca3fbe414",
+  "canonical_of": null
+ },
+ "973c9911c7fab3ff": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_mother_components_runnable_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "7daf2534b47258d829ad508d1a3b2b617d0dacfd",
+  "canonical_of": null
+ },
+ "88d62fcf230787f6": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_mother_integration",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "627b4d0e5713bc2e3cc02153e5851757c70e27f5",
+  "canonical_of": null
+ },
+ "d94ab5cb11b905f4": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_mother_system",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "8aaea20d235b2298f244a582ce7cbf8828402a73",
+  "canonical_of": null
+ },
+ "85a16d0cd9fa7163": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_mother_system_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "15c73b86a04d4cb88b0f87005b14d847afa5ccde",
+  "canonical_of": null
+ },
+ "64fc0aa50c2abf63": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_mrl_mother_runtime_v1_krte6",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "f744bab77634aba5eb85d4502997e00c8e5cd808",
+  "canonical_of": null
+ },
+ "b118a40cfc154a11": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_naming_sovereignty_enforcer_v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "5b1d7e1e282e8eaa0b2776b161db3fe08b9a5848",
+  "canonical_of": null
+ },
+ "e9121ae58d3aa9bd": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_optimize_system_stability_add_skills",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "6086cc0599f2164a8d043b4bff45598f923e990b",
+  "canonical_of": null
+ },
+ "769d7ed0a8c09e90": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_organize_core_assemblies",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "a00f42c59178cafe4eda98226a4fd6cb780b4e2b",
+  "canonical_of": null
+ },
+ "7d7dbb1f98425998": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_particleteam_hardened_v2",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "6c2eb95ca8797bf0ddf44bbd439595b8ce8fa70e",
+  "canonical_of": null
+ },
+ "78a42df50dfe6561": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/MRL_naming_auditor_v2",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "4a4db8a29cf732327e406c204fc69d3d07886281",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_MRL_naming_auditor_v2"
+ },
+ "4c588fc2b20985ce": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/add-ai-computer-runtime",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "aec422e05990b19082c67c97f7b7e396bfcde461",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_ai_computer_runtime"
+ },
+ "c4753883d599f383": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/add-creation-rights-evidence-index",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "b72673dae071abd7c6443dd03f9c1c65b1684564",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_creation_rights_evidence_index"
+ },
+ "8621166f65122ad9": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/add-final-product-checklist",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "48ed778b281a597c9823e56b118a0b14951323a2",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_final_product_checklist"
+ },
+ "fc434f0b2229bfc9": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/add-final-product-checklist-codex",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "ad4a0ba730e2052cf6524c8993b5344bcc7ac56f",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_codex_add_final_product_checklist"
+ },
+ "170ed468db27207b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/add-geographic-mapping-feature",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "3e5fd1ee35fa212753869dae32bf912bb6db2cab",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_geographic_mapping_feature"
+ },
+ "8a6eb8888e075bdd": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/add-missing-features-to-mrl-agi",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "073ec1027f055c1f446113ba38e63f71112ecdb2",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_missing_features_to_mrl_agi"
+ },
+ "6321ad07b33a6cd8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/add-mrl-agi-missing-features",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "a8a1c431da987459f1d43b3ba53530f25fdf0df7",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_mrl_agi_missing_features"
+ },
+ "457c7b7f39cd0ffc": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/analyze-test-coverage",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "e9440bfa78865c83431959494627c146e3f97bef",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_analyze_test_coverage"
+ },
+ "ec3bea1869f603c4": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/assist-pull-merge-comment",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "66db124f393fceeafe3a5456b9610202109dc217",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_assist_pull_merge_comment"
+ },
+ "f650fb9acfd19835": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/complete-unfinished-tasks",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "d48d498f32bec8f8d8d3d0f7ee644521733ec371",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_complete_unfinished_tasks"
+ },
+ "c91eb2bbadf93437": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/create-directory-structure",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "351e73707272ad84b518e8b41156afa18161e5fd",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_create_directory_structure"
+ },
+ "90bb0cc560f407b4": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/create-directory-structure-again",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "29a192e8e0695df5a0efc2dab167cb5e54ef283f",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_create_directory_structure_again"
+ },
+ "623aa30c3f4abee9": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/create-sub-issue-for-issue-11",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "e503744ad2974058064e0e25d80d48edfb5ceafc",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_create_sub_issue_for_issue_11"
+ },
+ "5b14a9c800643d5e": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/develop-system-features",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "6f3c9a3a56ea57dbdd791a7483e41c8da5d5ad80",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_develop_system_features"
+ },
+ "85242cac7e772b53": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/develop-system-interface-interaction",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "1f68e42ecd8687f003fbdab3cb18d37724b0e740",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_develop_system_interface_interaction"
+ },
+ "7337d9df10bee25a": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/discussion-with-partner",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "5c3ee9e329d0f77298d8ccc13dc055a5ebe2a6a6",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_discussion_with_partner"
+ },
+ "e48977395cb372b1": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/dl580-cloudflared-deploy-xoopz",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "776536bddda43891a692491f5fe69c85f213c401",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_dl580_cloudflared_deploy_xoopz"
+ },
+ "f1433c91b71e5ea3": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/dofaromg-patch-1",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "dbf0ebc87f6c8acceb034ba3fad328d45fb99ec1",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@dofaromg-patch-1"
+ },
+ "26f09bc735b3d70f": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/explore-codebase-implementation-plan",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "4a4db8a29cf732327e406c204fc69d3d07886281",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_MRL_naming_auditor_v2"
+ },
+ "2928d3d461c801e5": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/final-integration-overview-v1-3",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "9b78805615c734a99dcdf50a7699f5ea07cfbdbe",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_final_integration_overview_v1_3"
+ },
+ "72b3bce8a09223a6": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/fix-multi-naming-error",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "df42da5d11b9f060c43926b5b60d691f1db9ed0d",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_fix_multi_naming_error"
+ },
+ "45962eab400f9ee7": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/investigate-deployment-status",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "95e68bcd3f2bbeeed6492651a2608c8266567f9f",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_investigate_deployment_status"
+ },
+ "d93551c48e4cd989": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/learn-sacrifice-logical-structure",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "6091fd0a74c5cf2d9498e36ca56b36dd4795cd6b",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_learn_sacrifice_logical_structure"
+ },
+ "71c3149ec56a4a8e": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/memory-system-rules-prep-EuBXH",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "456cbb19fbfe3b0a70ab1174e712bcfca3fbe414",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_memory_system_rules_prep_EuBXH"
+ },
+ "a8fd729a48bdca18": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/mrl-mother-runtime-v1-krte6",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "f744bab77634aba5eb85d4502997e00c8e5cd808",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_mrl_mother_runtime_v1_krte6"
+ },
+ "c35bfb4cd0a3e8df": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/optimize-system-stability-add-skills",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "6086cc0599f2164a8d043b4bff45598f923e990b",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_optimize_system_stability_add_skills"
+ },
+ "33bccc736209a2b8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/organize-core-assemblies",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "a00f42c59178cafe4eda98226a4fd6cb780b4e2b",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_organize_core_assemblies"
+ },
+ "f09887c1ad594745": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/set-up-core-versioning-system",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "2348fa899202c238282a16daccb815ac6067c8ac",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_set_up_core_versioning_system"
+ },
+ "60d3f02d6ae941a1": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/update-directory-structure",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "b93a818f7d1c448c40d955731581d03b1c24f735",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_update_directory_structure"
+ },
+ "f201eb33ccb18e5d": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/update-documentation-files",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "f7ac56433dd9e393f195379d1414664a2e16383f",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_update_documentation_files"
+ },
+ "f351c17023c687f7": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_recovered/update_worker_name_to_mrliousilly",
+  "role": "RECOVERY_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "a4c52673433d9c2670e572221135ef7b18784eda",
+  "canonical_of": null
+ },
+ "de43dd3330babbc8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_set_up_core_versioning_system",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "2348fa899202c238282a16daccb815ac6067c8ac",
+  "canonical_of": null
+ },
+ "b27ccf7bf00bad0e": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_update_directory_structure",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "b93a818f7d1c448c40d955731581d03b1c24f735",
+  "canonical_of": null
+ },
+ "0e8ef3e03ec39f68": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_update_documentation_files",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "f7ac56433dd9e393f195379d1414664a2e16383f",
+  "canonical_of": null
+ },
+ "a70193b6206d7c0c": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MRL_母體系統_完整版_v1",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "8dbcc105a88a36ca4e73ae1961e43b22b7b9980b",
+  "canonical_of": null
+ },
+ "2cf340dd1cf61130": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MrliouAI",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "3c51612c2ddee1b3c561882c20474694dc497792",
+  "canonical_of": null
+ },
+ "a1c2075baf9e80a2": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "MrliouAI-Home",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "98a3ef638103748bff0c48fef487de64ddb62226",
+  "canonical_of": null
+ },
+ "655be1f00f878d2e": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "agent/mrl-builder-production",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.85,
+  "is_default": false,
+  "head_sha": "e39f4b9c5746a2a98ecc17c6718db5cc0be3fbec",
+  "canonical_of": null
+ },
+ "9bb4d95868546f86": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "agent/mrl-environment-canonicalization",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "29ec405c7ce2d44f308315e894358ddc5af63403",
+  "canonical_of": null
+ },
+ "32efa6998ac91113": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "agent/mrl-root-authority-layering",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "8b691c161febff598e1a144aabd8c3cdda74520a",
+  "canonical_of": null
+ },
+ "3a8e4ccdb4d19d82": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "backup/MrliouAI-governance-foundation-20260724",
+  "role": "ARCHIVE_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "29ec405c7ce2d44f308315e894358ddc5af63403",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@agent/mrl-environment-canonicalization"
+ },
+ "30d7de68fbda50fc": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "backup/MrliouAI-root-authority-20260724",
+  "role": "ARCHIVE_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "8b691c161febff598e1a144aabd8c3cdda74520a",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@agent/mrl-root-authority-layering"
+ },
+ "a41d2546516d24dd": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/add-final-product-checklist",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "48ed778b281a597c9823e56b118a0b14951323a2",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_final_product_checklist"
+ },
+ "d938971be034f977": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/codex-rope-review-72viuh",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "a96aa6e9828fc174079bb334eae0ed7a492c4f5a",
+  "canonical_of": null
+ },
+ "315f9fa41e2bd7a2": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/create-sub-issue-for-issue-11",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "e503744ad2974058064e0e25d80d48edfb5ceafc",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_create_sub_issue_for_issue_11"
+ },
+ "d6ab198324629577": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/dl580-7700-engine-recovery-ex6mrc",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "ae3e483d2626f1df1cc006164f5e014eff47f88c",
+  "canonical_of": null
+ },
+ "40f4f7e68a8e734b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/dl580-cloudflared-deploy-xoopz",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "776536bddda43891a692491f5fe69c85f213c401",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_dl580_cloudflared_deploy_xoopz"
+ },
+ "e26810f540e736b7": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/fix-multi-naming-error",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "df42da5d11b9f060c43926b5b60d691f1db9ed0d",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_fix_multi_naming_error"
+ },
+ "2365fe6eb009674f": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/hi-rj50dh",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "f457ff0bc223e331047175cf8e4ea6508abaebb8",
+  "canonical_of": null
+ },
+ "787495fe1fc6a30e": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/huoban-oipbji",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "73eeaff9c86973992910b175b8005ddb3616ffae",
+  "canonical_of": null
+ },
+ "c422337fd0c97652": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/lucid-faraday-viwt8v",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "64bbe1e30f0b6bb73134d78bbb4e0bbfd5671a9c",
+  "canonical_of": null
+ },
+ "51c2ffdca6106a9f": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/magical-heisenberg-hcbip2",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "02fb179e4b97565d669261a06ec26621f36dddb1",
+  "canonical_of": null
+ },
+ "186b2e9de75ec26e": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/memory-system-rules-prep-EuBXH",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "1f11777ff3c377b0330589bcadda1f872c23c7d0",
+  "canonical_of": null
+ },
+ "298da2d33fb8a543": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/mrl-22-service-integration-q48hvy",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "fb05424bcb9cc820b3bd6b740d0e2578c7b07cab",
+  "canonical_of": null
+ },
+ "193fbcdb66463467": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/mrl-ai-system-sdk-refactor-67gx2s",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "e67b8a5fe1959b1b0e4909debe8b95476b4920ff",
+  "canonical_of": null
+ },
+ "11ce39a2b72b5f12": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/mrl-bridge-recovery-2i35nu",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "af0763504496096a4c031eb5459aed961d2f222e",
+  "canonical_of": null
+ },
+ "659ee76a6f9b00cb": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/mrl-cloudflare-logs-route-7vz3nf",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "df8baba8469df1afe20a94fef630c94c6f179fb6",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@copilot/update-documentation-for-api"
+ },
+ "87e0ca90b50b93a3": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/mrl-genai-intake-backfill-5gve0v",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "00fb33797891d912025a3a6c5d031396cb1207f3",
+  "canonical_of": null
+ },
+ "da6fef12b7a7045e": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/mrl-longterm-memory-engine-v1",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "92eed039ded55bd9a0111f0bc0d68be6d2d3d358",
+  "canonical_of": null
+ },
+ "ba1d0e19021ad77d": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/mrl-longterm-memory-positioning-v1",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "396d8531a279ec3442171cb4f76203906fd1abc3",
+  "canonical_of": null
+ },
+ "892819983b0243ab": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/mrl-mother-runtime-v1-krte6",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "f744bab77634aba5eb85d4502997e00c8e5cd808",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_mrl_mother_runtime_v1_krte6"
+ },
+ "bd4f29c1380a7dd3": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/mrl-particle-package-20260716",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "1906a6a27763ea59bbf267a3e0431cd681d277d6",
+  "canonical_of": null
+ },
+ "7709e72acfb31267": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/mrl-prompt-template-idempotent-add-v1",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "2aa9b71cb4aed1fbed29a5d1f00f2a3e1a890f95",
+  "canonical_of": null
+ },
+ "3f4cb008b0abcd20": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/new-session-00raqm",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "748da3513d7c5937bf707330ebdd7db14a6cb364",
+  "canonical_of": null
+ },
+ "33adaa920da4cc2b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/new-session-8no7dt",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "e9e31221db18b7bdccec1b2eecc3b3c3870fb8d7",
+  "canonical_of": null
+ },
+ "5e62f8dadccee44b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/pr77-merge-resolution",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "6691584080c4c81b6b22ec06b090427fb711da94",
+  "canonical_of": null
+ },
+ "b64dea9ad58e58a6": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/pull-133",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "68ff275d94efc3f3aab2d07b6ea98f4ecc2b29a7",
+  "canonical_of": null
+ },
+ "86687a5fb68135a7": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/test-coverage-analysis-9xCXy",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "7cd2806c30ae1a621f084d370bf98cb32c0a7dfd",
+  "canonical_of": null
+ },
+ "face27917e4dde83": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/untitled-session-VWJPv",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "a8a20d70d5509323c1e7aed9a1f6a22a609ad5f0",
+  "canonical_of": null
+ },
+ "34cc5e6b9659edf8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/weekly-recovery-actionlist-20260710",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "90152479b4c003b63c47ee154e2860bfcc626bf5",
+  "canonical_of": null
+ },
+ "a7cfa596ede8b543": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "claude/whitelist-mrliouword-domain-xls2qt",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "1ac5bc0cd5df1e0d6efe9a490d6aa8515bf54f1c",
+  "canonical_of": null
+ },
+ "2ac9d0167a940474": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "codex/add-final-product-checklist",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "0c0b120454a9d27059aaac71b0978bb9be6ae926",
+  "canonical_of": null
+ },
+ "e4bf123bb0acbbcc": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "codex/complete-unfinished-tasks",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "d48d498f32bec8f8d8d3d0f7ee644521733ec371",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_complete_unfinished_tasks"
+ },
+ "6cb32c6dd4c575d8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "codex/discussion-with-partner",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "5c3ee9e329d0f77298d8ccc13dc055a5ebe2a6a6",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_discussion_with_partner"
+ },
+ "506e620caadb200f": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "codex/explore-codebase-implementation-plan",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "315ff6a0c61d2afb28d1911ecc0419410cebb86f",
+  "canonical_of": null
+ },
+ "009ccff0d8cfdea4": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/28729581812",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "0579c8d9e1f95b5499736c8fdc00497f6ae82b24",
+  "canonical_of": null
+ },
+ "b702b1c4fd889997": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/28748298966",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "f1c87f4a4319b65c24ec11d282f77896b162a5fb",
+  "canonical_of": null
+ },
+ "e133ae3152440067": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/52-rspack-nextjs-integration-tests",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "016e22c26b58f74ee9bb4c365b67ffa2901565bb",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@copilot/claudepr77-merge-resolution"
+ },
+ "8f8ad9bd39c239af": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/5dbeff653a6ec62f3b09ac107c6bdf20cac30f45",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "1f11777ff3c377b0330589bcadda1f872c23c7d0",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@claude/memory-system-rules-prep-EuBXH"
+ },
+ "2a2ae6b9ca779fb4": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/add-ai-computer-runtime",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "aec422e05990b19082c67c97f7b7e396bfcde461",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_ai_computer_runtime"
+ },
+ "47cbf024e010d5da": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/add-creation-rights-evidence-index",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "3c5c91b3287dbe64ea3f718c23b8ef9b9eb81e3c",
+  "canonical_of": null
+ },
+ "1f8b17f769ad926b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/add-flow-tasks-feature",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "8dbcc105a88a36ca4e73ae1961e43b22b7b9980b",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_母體系統_完整版_v1"
+ },
+ "3d1c4f28b0e71708": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/add-geographic-mapping-feature",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "3e5fd1ee35fa212753869dae32bf912bb6db2cab",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_geographic_mapping_feature"
+ },
+ "ae0308af17f045b5": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/add-gpu-support",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "424c6d024168f68058c9f7fd3e05368a4c4111c0",
+  "canonical_of": null
+ },
+ "6f350dbebf5a2f56": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/add-missing-features-to-mrl-agi",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "073ec1027f055c1f446113ba38e63f71112ecdb2",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_missing_features_to_mrl_agi"
+ },
+ "7019dd062792462c": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/add-missing-world-definition-components",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "68ff275d94efc3f3aab2d07b6ea98f4ecc2b29a7",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@claude/pull-133"
+ },
+ "f3a5949f11e50a7c": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/add-mrl-agi-missing-features",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "a8a1c431da987459f1d43b3ba53530f25fdf0df7",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_add_mrl_agi_missing_features"
+ },
+ "71ca3f1d3c1a8498": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/add-new-feature-to-ai-system",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "84d2b94e58cbfe4e5e1513b9554e0911c9ee5374",
+  "canonical_of": null
+ },
+ "e6e05f45483799ba": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/analyze-test-coverage",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "e9440bfa78865c83431959494627c146e3f97bef",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_analyze_test_coverage"
+ },
+ "030a1b4d31110d96": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/app",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "a7034f8167bbf7651b4cc4691edc2c43eaec8546",
+  "canonical_of": null
+ },
+ "9e63c7c81c3e8dbc": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/assist-pull-merge-comment",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "66db124f393fceeafe3a5456b9610202109dc217",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_assist_pull_merge_comment"
+ },
+ "f97a074205b5fac8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/check-build-progress",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "2c4530deba11f3a2831d332deb2bc7210e421fdd",
+  "canonical_of": null
+ },
+ "9c66bbe9d1e7508b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/check-global-idle-issues",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "131344d0711242737b98127420ff8f617ad96499",
+  "canonical_of": null
+ },
+ "24fc233c1cda193c": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/check-rope-module-reports",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "1348def0335f7953fef46c4a7e5888dd0a7fe385",
+  "canonical_of": null
+ },
+ "d323cb3c35c23ab7": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/claudepr77-merge-resolution",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "016e22c26b58f74ee9bb4c365b67ffa2901565bb",
+  "canonical_of": null
+ },
+ "ba0f328770eded26": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/continue-developing-core-code",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "0ee4b1a07a0a5580703912e4caeba778bcd3956b",
+  "canonical_of": null
+ },
+ "f98f116d9ffe7e7b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/continue-optimization-integration",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "6868e69c4668269835a152e1087ebb957da13fc9",
+  "canonical_of": null
+ },
+ "c047de05e92fc992": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/create-directory-structure",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "351e73707272ad84b518e8b41156afa18161e5fd",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_create_directory_structure"
+ },
+ "74d621594547d8f8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/create-directory-structure-again",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "29a192e8e0695df5a0efc2dab167cb5e54ef283f",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_create_directory_structure_again"
+ },
+ "8a821bbbdaa805d1": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/create-issue-dofaromg",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "e2d8ee8cd3e739a07ab0317382f3e01c637e22da",
+  "canonical_of": null
+ },
+ "2b185137b730d664": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/create-mrl-formula-parameter-registry-v1",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "9a54f13ef920184c50ba62fc938b339fb5cd992a",
+  "canonical_of": null
+ },
+ "2fefd0b96e696e75": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/create-mrl-technology-timeline",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "4dd99f74088e274ef43214bac11ff15b57abcd80",
+  "canonical_of": null
+ },
+ "8a2d74a2c2f2b4d6": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/develop-system-features",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "6f3c9a3a56ea57dbdd791a7483e41c8da5d5ad80",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_develop_system_features"
+ },
+ "1f1ebaef7736a199": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/develop-system-interface-interaction",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "1f68e42ecd8687f003fbdab3cb18d37724b0e740",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_develop_system_interface_interaction"
+ },
+ "a818cce1f3cf3780": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/dofaromg-mrliouword-setup",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "0e08dc9988d451c0eb89ff6f6c5fc7b22e86e023",
+  "canonical_of": null
+ },
+ "c0b337509de124e7": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/enhance-user-profile-ui",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "041cb0b5003bd7316d40b8fbfcc0f89315c7148d",
+  "canonical_of": null
+ },
+ "283db6e8284367aa": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/explore-codebase-implementation-plan",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "4a4db8a29cf732327e406c204fc69d3d07886281",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_MRL_naming_auditor_v2"
+ },
+ "7c02446a0f01d914": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/final-integration-overview-v1-3",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "9b78805615c734a99dcdf50a7699f5ea07cfbdbe",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_final_integration_overview_v1_3"
+ },
+ "c042a10fe320cfd7": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-code-comments",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "4c709812b80a1f0bbf7c415e36eadc970a46680a",
+  "canonical_of": null
+ },
+ "7ce1f87854b3d846": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-code-for-review-comment",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "9b69d0c5e20cfdbff8f27b0578515a27f41e46fc",
+  "canonical_of": null
+ },
+ "cca25307e15abe9f": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-code-for-review-comment-again",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "25964bed607b1c16c9cffea4e1dbd1a2dc70b393",
+  "canonical_of": null
+ },
+ "2cb94d679ecb08be": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-code-for-review-comments",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "cf89412ac6a694b277a85a463cfa56c23f480711",
+  "canonical_of": null
+ },
+ "ce15804a4f02624b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-code-for-review-comments-again",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "88ad995a75ceae6f5d747f06e5046e2756117d3c",
+  "canonical_of": null
+ },
+ "5abf70a89513bcb4": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-code-review-comment",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "c1d940bf24fa153da0d79f33f102a92db1ec72f8",
+  "canonical_of": null
+ },
+ "c43d8323b191a6ae": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-code-review-comment-71",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "b55e7e757189269323d5d505056b9a29ada70ca2",
+  "canonical_of": null
+ },
+ "3f7dbeadd597110c": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-code-review-comment-again",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "333cfd5d71d6fa84f578668074ae104b8df5c267",
+  "canonical_of": null
+ },
+ "ad1b744e067e8e22": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-coding-issues",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "8dbcc105a88a36ca4e73ae1961e43b22b7b9980b",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_母體系統_完整版_v1"
+ },
+ "dbbd89c1f268baec": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-comments-from-review-thread",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "115ecb3d09c6bda6d304f3493577f5372c3fc89b",
+  "canonical_of": null
+ },
+ "b41cda3fe5dc139c": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-comments-from-review-thread-again",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "39a4b827a14eed48aee312d5d84e58435f068ea2",
+  "canonical_of": null
+ },
+ "1d775d6aacb0053e": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-comments-in-review-thread",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "aac04ae408cfaa2df03cf1397378f1b5634e7fff",
+  "canonical_of": null
+ },
+ "6ffad84d5797ad60": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-comments-in-review-thread-again",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "b38480129b9940e643d73ab0108e787236662f83",
+  "canonical_of": null
+ },
+ "10f38f249a1e1612": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-request-131",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "4c569a95a26d86920885f7337b7224e5c5224460",
+  "canonical_of": null
+ },
+ "b3480630930bfb5f": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-review-comment-3524988019",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "554c8d11cbb7ea6cbca7784e182e96392fd7ccfc",
+  "canonical_of": null
+ },
+ "233ef4baccac3766": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/fix-review-comments-thread",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "2708bd1fd6c17221043bcbd9ba69e7a8b642ed51",
+  "canonical_of": null
+ },
+ "7fdb340705d3e93a": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/frontend-deployment-guide-template",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "f19997d796fb3b58aa16d30520dcead04a334cba",
+  "canonical_of": null
+ },
+ "3cfc0610c646b1b3": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/https-github-com-dofaromg-mrl-ai-system",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "1d3d1410b13e0dc5490d81b042366178e501daeb",
+  "canonical_of": null
+ },
+ "adc5907c7c9bc28e": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/https-github-com-dofaromg-mrl-ai-system-actions-ru",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "db802587e972b45544826afbef5daa30fc071a08",
+  "canonical_of": null
+ },
+ "ca64e9efcd117b13": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/https-github-com-mrliou",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "ce8d26b35d667145feaa25c6fc788875092ce2e7",
+  "canonical_of": null
+ },
+ "ee815a6cc775a877": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/insert-idea-here",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "80d1cf9c96224463987df8c236f1c43c7d64160e",
+  "canonical_of": null
+ },
+ "871c6bf44befbb66": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/investigate-deployment-status",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "95e68bcd3f2bbeeed6492651a2608c8266567f9f",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_investigate_deployment_status"
+ },
+ "f8175e207fbb9562": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/latest-open-pull-requests",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "0e76d600c06158be5723962eb5a70adfa6027571",
+  "canonical_of": null
+ },
+ "a76ae92721155267": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/learn-sacrifice-logical-structure",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "6091fd0a74c5cf2d9498e36ca56b36dd4795cd6b",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_learn_sacrifice_logical_structure"
+ },
+ "194a6dae69bd3fa0": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/merge-main-branch",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "9505321a4f30692e4c8157861588480ea4b52ade",
+  "canonical_of": null
+ },
+ "3a3af565c84046c0": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/mrl-ai-system",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "73d83ed01cde96fbb1e304bd85ba332ad54c2599",
+  "canonical_of": null
+ },
+ "b70af5adfad888cb": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/mrl-ai-system-again",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "9b9b27cdac0ed7d9da83ec43c1383f4460841b70",
+  "canonical_of": null
+ },
+ "d01a08b39a26e9a5": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/mrl-ai-system-another-one",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "d9653df2d50484268a666cda64acef5201237d32",
+  "canonical_of": null
+ },
+ "79928a48452e2dcb": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/mrl-docs-release-align-internal-repository",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "54bc261791c33a27f8e46b17f60ea11ef3a61506",
+  "canonical_of": null
+ },
+ "ef08cccd0e2709cb": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/mrl-mother-all-deliverables",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "ddce340d09642204e2941051746364833474c60b",
+  "canonical_of": null
+ },
+ "1962ebd78b5f12aa": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/mrl-system-autonomous-module-code",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "df04ae2e37c31a91392f296ac0ced3a4d1d06426",
+  "canonical_of": null
+ },
+ "12a9ccbf9a8e6724": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/mrliou-mrl-public-mainline-checkpoint-20260818",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "52c5bd617df3156cc4483a53231c1dbdf50cd782",
+  "canonical_of": null
+ },
+ "a3e8def505982fa8": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/optimize-system-stability-add-skills",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "6086cc0599f2164a8d043b4bff45598f923e990b",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_optimize_system_stability_add_skills"
+ },
+ "390bc1ef86473ec0": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/organize-core-assemblies",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "a00f42c59178cafe4eda98226a4fd6cb780b4e2b",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_organize_core_assemblies"
+ },
+ "7c1854fb37bb3d33": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/reconnect-engineer-persist-system",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "4e7ee0f45ee1f91ac32bcedb15a1381e46b5a6bc",
+  "canonical_of": null
+ },
+ "c66a2820c789851c": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/report-recent-changes",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "b4dde4cb1770e4c982f518a901d956976637a57d",
+  "canonical_of": null
+ },
+ "d006e7842fde322b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/repository-maintenance-follow-up",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "0c45180e965bfbaa9d80f2128c9f2be2b3aab06a",
+  "canonical_of": null
+ },
+ "86c0e9728dda06c0": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/research-repo-structure",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "ac415fd9401b52d011f114cf49363d1b624a5a18",
+  "canonical_of": null
+ },
+ "80c9081fe3669eb0": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/review-nodejs-server-implementation",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "9a5f80cc7d91a30f89e1f32268b8456abafe5bc5",
+  "canonical_of": null
+ },
+ "b636fe9fa67f765b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/set-up-core-versioning-system",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "4325f3f1823d1130664ec9af88952702126334d5",
+  "canonical_of": null
+ },
+ "994e2967752103e9": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/setup-mrl-copilot-agents",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "1eb03562ce79dd5731da251b936747c2e2c576ea",
+  "canonical_of": null
+ },
+ "f876445847907661": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/setup-mrl-engineering-agent-matrix",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "c747ca4cdb723e2b89a5c45207d77957dfd71c12",
+  "canonical_of": null
+ },
+ "96ce1082923ccb77": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/task-217537952-1172186696-0c488ffa-96fe-48a9-9bf6-6d7dbc202161",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "a9f37b488dacbc6aeff7e1bdea62b0dfa01f1862",
+  "canonical_of": null
+ },
+ "dfdfc3ab9baacdd4": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/task-217537952-1172186696-12c36977-393a-4fcc-b66b-8071473570c2",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "ddce340d09642204e2941051746364833474c60b",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@copilot/mrl-mother-all-deliverables"
+ },
+ "2dde89195d826a0d": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/task-217537952-1172186696-1e941e9e-3c4e-4d08-b386-111bd7c04acb",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "0007d49bc4cec2b5ea7c4997637ee193abcd090b",
+  "canonical_of": null
+ },
+ "268ff3487cbb6482": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/task-217537952-1172186696-343e46bc-5cbb-44ba-a34b-295479e8afe7",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "3f81e47aa51c0043e3d07d6f323451e649345452",
+  "canonical_of": null
+ },
+ "515280cbadac1226": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/task-217537952-1172186696-ca210dba-a8f2-4a6d-90d7-9b1103ee570e",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "e6bccdcc30f447520130d11cb34d2169450b54d5",
+  "canonical_of": null
+ },
+ "8a85ab73d01af33c": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/task-217537952-1172186696-d77f5c33-73b1-4cf1-973a-5c58ab430336",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "46c0720d1eb2fab50df1f8b758e59997a5c45242",
+  "canonical_of": null
+ },
+ "90a8f288c7c73538": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/update-directory-structure",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "b93a818f7d1c448c40d955731581d03b1c24f735",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_update_directory_structure"
+ },
+ "0294108d2475a55d": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/update-documentation-files",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "f7ac56433dd9e393f195379d1414664a2e16383f",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_update_documentation_files"
+ },
+ "7d6ea66a2e09bfa2": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/update-documentation-for-api",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "df8baba8469df1afe20a94fef630c94c6f179fb6",
+  "canonical_of": null
+ },
+ "7a268df1f693143c": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "copilot/update-ml-model-parameters",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.95,
+  "is_default": false,
+  "head_sha": "809ca00e60012303b91bf2351a2e486312463e28",
+  "canonical_of": null
+ },
+ "6221854c1c7a6a49": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "dl580-network-wiring-r01",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "65c69a8dffab4b9dc32eec15341857545e3c0204",
+  "canonical_of": null
+ },
+ "d8fb1fb74b37e109": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "dl580-tunnel-recover-20261004",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "3ba33144397107c3490dd0a63dd67292060a728b",
+  "canonical_of": null
+ },
+ "d4de35f44956ffac": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "dofaromg-patch-1",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "dbf0ebc87f6c8acceb034ba3fad328d45fb99ec1",
+  "canonical_of": null
+ },
+ "2c6125939a6d21ff": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "dofaromg-patch-2",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "ee2712687f579a0bb063e761f153758cba160b0b",
+  "canonical_of": null
+ },
+ "a4240ebcf8bca1d1": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "dofaromg-patch-3",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "e0ea2a3be27d57a609dd80a4850ef3a216a39218",
+  "canonical_of": null
+ },
+ "1331277bb5289071": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "dofaromg-patch-704",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "166a8956429bc5e8be3153a5ea4299b7c59b1e96",
+  "canonical_of": null
+ },
+ "577b755f50b9cbaa": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "edge-origin-singularity-v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "f7aa0551cb488d73953140f2cf2d2ebf356fb60c",
+  "canonical_of": null
+ },
+ "5f6057cb70ef9191": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "evidence/mrl-cognition-20260927",
+  "role": "ARCHIVE_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "ea6ae2ad30221a9ae71a0ed640484e9f5fcf575f",
+  "canonical_of": null
+ },
+ "2180cab5d41ea69b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "evidence/mrliou-root-recovery-20260724",
+  "role": "ARCHIVE_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "f8aaf946c3c49de51c3639281ef97ecf39d23a08",
+  "canonical_of": null
+ },
+ "7ed4427825b2547b": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "feature/MRL_naming_auditor_v2",
+  "role": "MIRROR_BRANCH",
+  "confidence": 0.9,
+  "is_default": false,
+  "head_sha": "4a4db8a29cf732327e406c204fc69d3d07886281",
+  "canonical_of": "dofaromg/MRL_AI_SYSTEM@MRL_MRL_naming_auditor_v2"
+ },
+ "194da3941fbba697": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "fix/mrliou-product-telemetry-canonicalization",
+  "role": "FEATURE_BRANCH",
+  "confidence": 0.8,
+  "is_default": false,
+  "head_sha": "cf97e3becc6c75866eb7c44d14786817c060beaa",
+  "canonical_of": null
+ },
+ "203f1f78012643ff": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "flowrhythm-edge-carrier-v0",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "0a6d2feb41918ab10e10c268d3941ec2905ccb78",
+  "canonical_of": null
+ },
+ "156ae099c822987a": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "mrl-edge-integration-v1",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "5855a5538c44edf7a6ac1c55e4e1e5dfda1e52d2",
+  "canonical_of": null
+ },
+ "7fb995723f77186f": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "mrl/pr149-runtime-minimal",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "9854533e95ca69babd51b1b10baebdfc217910eb",
+  "canonical_of": null
+ },
+ "70121734b2ee43f3": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "mrl/pr149-swiftui-assets",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "a8355c7b6f0cbaefc9aaf4897a5cfd0c9843f240",
+  "canonical_of": null
+ },
+ "9ddecb27034c48ba": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "mrl/pr151-ios-hardening",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "fec1a17948c67339693e185914ae89f314565443",
+  "canonical_of": null
+ },
+ "467c1c487bc58554": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "update_worker_name_to_mrliousilly",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "e0832504250863f67bd3c3ac06a9d9b682588598",
+  "canonical_of": null
+ },
+ "b1c2393acbb0c689": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "worldmodel/mrl-dialect-v0",
+  "role": "SUB_MAINLINE",
+  "confidence": 0.75,
+  "is_default": false,
+  "head_sha": "bdafe70e53333369222d2aaa7b9e12d732caaef6",
+  "canonical_of": null
+ },
+ "c91fa945650bf282": {
+  "full_name": "dofaromg/MRL_AI_SYSTEM",
+  "branch_name": "z814241/dof-11-開發-a7fa",
+  "role": "UNKNOWN_BRANCH",
+  "confidence": 0.2,
+  "is_default": false,
+  "head_sha": "8c973afe4995c3bb4c93be4c9feb6f6ba0baf029",
+  "canonical_of": null
+ }
+}
